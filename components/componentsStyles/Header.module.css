@@ -1,0 +1,82 @@
+.totalDiv{
+    position: fixed;
+    width: 100%;
+    height: 9.5vw;
+
+    z-index: 1;
+}
+
+.headerDiv{
+    width: 100%;
+    height: 5.90vw;
+
+    background-color: #F0F0F0;
+    opacity: 0.8;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 8);
+}
+
+.logoDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 4.17vw;
+}
+
+.logoDiv h1{
+    font-size: 2.08vw;
+    font-weight: bold;
+    color: black;
+}
+
+.logoDiv img{
+    width: 2.81vw;
+    height: 3.47vw;
+
+    margin-left: 0.7vw;
+}
+
+.menuDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 2.43vw;
+}
+
+.menuDiv h2{
+    font-size: 2.08vw;
+    font-weight: bold;
+    color: #9B9B9B;
+
+    margin: 0vw 1.74vw;
+}
+
+.menuDiv h2:hover{
+    color: #4D4D4D;
+}
+
+.circleDiv{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle{
+    width: 6.9vw;
+    height: 3.45vw;
+    background-color: #F0F0F0;
+    opacity: 0.7;
+    border-top-left-radius: 6.9vw;
+    border-top-right-radius: 6.9vw;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(180deg);
+}

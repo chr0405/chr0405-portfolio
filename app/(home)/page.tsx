@@ -1,6 +1,8 @@
-export default async function HomePage() {
+import styles from "./home.module.css"
+
+export default async function Home() {
     return (
-        <div>
+        <div className={styles.totalDiv}>
             home
         </div>
     )
