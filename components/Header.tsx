@@ -4,7 +4,7 @@ import styles from "./componentsStyles/Header.module.css"
 
 export default function Header() {
     const divArray = [];
-    
+
     for (let i = 0; i < 15; i++) {
         divArray.push(<div className={styles.circle} key={i}></div>);
     }

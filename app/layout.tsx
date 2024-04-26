@@ -1,6 +1,7 @@
 import "../styles/global.css"
 import { Metadata } from "next"
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 export const metadata : Metadata= {
   title: {
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   )

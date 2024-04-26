@@ -1,0 +1,44 @@
+.totalDiv {
+    width: 100%;
+    height: 10.42vw;
+
+    background-color: #EAD6C4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: absolute;
+}
+
+.centerDetailDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerDetailDiv img {
+    margin: 0.35vw 0.7vw 0vw 0vw;
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+.centerDetailDiv h2 {
+    font-size: 1.39vw;
+}
+
+.rightDiv {
+    position: relative;
+    left: 40%;
+}
+
+.rightDiv h3 {
+    font-size: 1.39vw;
+    color: #9B9B9B;
+}
