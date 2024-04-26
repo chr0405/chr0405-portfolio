@@ -21,10 +21,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: 0.35vw 0vw;
 }
 
 .centerDetailDiv img {
-    margin: 0.35vw 0.7vw 0vw 0vw;
+    margin: 0vw 0.7vw 0vw 0vw;
     width: 1.8vw;
     height: 1.8vw;
 }
