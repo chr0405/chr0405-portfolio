@@ -1,9 +1,9 @@
-import styles from "./home.module.css"
+import Intro from "../../components/Intro"
 
 export default async function Home() {
     return (
-        <div className={styles.totalDiv}>
-            home
-        </div>
+        <>
+            <Intro/>
+        </>
     )
 }
