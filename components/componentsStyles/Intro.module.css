@@ -45,21 +45,68 @@
     overflow: hidden;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
 }
 
+.star2 {
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    overflow: hidden;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    transform: translate(-0%, -0%) rotate(90deg);
+}
+
+.star3 {
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    overflow: hidden;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    transform: translate(-0%, -0%) rotate(45deg);
+}
+
+.star4 {
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    overflow: hidden;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    transform: translate(-0%, -0%) rotate(135deg);
+}
+
+/* 크기 */
 .style1 {
     width: 1px;
     height: 1px;
 }
 .style2 {
     width: 2px;
-    height: 2px;
+    height: 1px;
 }
 .style3 {
     width: 3px;
-    height: 3px;
+    height: 1px;
 }
 
+/* 투명도 */
 .opacity1 {
     opacity: 1;
 }
@@ -70,6 +117,7 @@
     opacity: 0.1;
 }
 
+/* 반짝임 애니메이션 */
 .twinkle1 {
     animation-duration: 0.5s;
     animation-name: twinkling;
@@ -84,7 +132,7 @@
 }
 .twinkle4 {
     animation-duration: 2s;
-    animation-name: twinklingWithNoBoxShadow;
+    animation-name: twinkling;
 }
 
 @keyframes twinkling {
@@ -93,29 +141,10 @@
     }
 
     50% {
-        box-shadow: 0 0 10px 2px rgb(255, 255, 255, 0.4);
+        box-shadow: 0 0 10px 2px rgb(255, 255, 255, 0.5);
     }
 
     100% {
         box-shadow: 0 0 10px 0px rgb(255, 255, 255, 0.1);
-    }
-}
-
-@keyframes twinklingWithNoBoxShadow {
-    0% {
-        background-color: #ffffff;
-        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
-    }
-    20% {
-        background-color: #ffc4c4;
-        box-shadow: 0 0 10px 0px rgb(255, 196, 196, 1);
-    }
-    80% {
-        background-color: #c4cfff;
-        box-shadow: 0 0 10px 0px rgb(196, 207, 255, 1);
-    }
-    100% {
-        background-color: #ffffff;
-        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
     }
 }

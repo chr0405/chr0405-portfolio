@@ -9,8 +9,8 @@ export default function Intro() {
     const [stars, setStars] = useState([]);
 
     useEffect(() => {
-        const windowWidth = window.innerWidth;
-        const windowHeight = window.innerHeight;
+        const windowWidth = innerWidth;
+        const windowHeight = 1024;
 
         function getRandomValue(max) {
             return Math.floor(Math.random() * max);
@@ -22,24 +22,28 @@ export default function Intro() {
 
         const starsArray = [];
 
-        for (let i = 0; i < 100; i++) {
-            const _s = getRandomValue(3);
-            const _o = getRandomValue(3);
-            const _t = getRandomValue(4);
+        for (let i = 0; i < 200; i++) {
+            const styleOption = getRandomValue(3);
+            const opacityOption = getRandomValue(3);
+            const twinkleOption = getRandomValue(4);
             const x = getRandomValue(windowWidth);
             const y = getRandomValue(windowHeight);
 
-            const className = `${styles.star} ${styles[style[_s]]} ${styles[opacity[_o]]} ${styles[twinkle[_t]]}`;
+            const styleName = `${styles[style[styleOption]]}`;
+            const opacityName = `${styles[opacity[opacityOption]]}`;
+            const twinkleName = `${styles[twinkle[twinkleOption]]}`;
 
             starsArray.push({
-                className: className,
+                styleName: styleName,
+                opacityName: opacityName,
+                twinkleName: twinkleName,
                 x: x,
                 y: y
             });
         }
 
         setStars(starsArray);
-    }, []); // Run only once when the component mounts
+    }, []);
 
     return (
         <>
@@ -55,10 +59,15 @@ export default function Intro() {
                         내용입니다. 내용입니다. 내용입니다. 내용입니다.<br/>
                     </p>
                 </div>
-                {stars.map((star, index) => (
-                    <div key={index} className={star.className} style={{ position: 'absolute', top: star.y, left: star.x }}></div>
-                ))}
             </div>
+            {underline && stars.map((star, index) => (
+                <div key={index}>
+                    <div className={`${styles.star} ${star.styleName} ${star.opacityName} ${star.twinkleName}`} style={{ position: 'absolute', top: star.y, left: star.x }}></div>
+                    <div className={`${styles.star2} ${star.styleName} ${star.opacityName} ${star.twinkleName}`} style={{ position: 'absolute', top: star.y, left: star.x }}></div>
+                    <div className={`${styles.star3} ${star.styleName} ${star.opacityName} ${star.twinkleName}`} style={{ position: 'absolute', top: star.y, left: star.x }}></div>
+                    <div className={`${styles.star4} ${star.styleName} ${star.opacityName} ${star.twinkleName}`} style={{ position: 'absolute', top: star.y, left: star.x }}></div>
+                </div>
+            ))}
         </>
     );
 }
