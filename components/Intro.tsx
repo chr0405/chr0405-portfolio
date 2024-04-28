@@ -5,10 +5,10 @@ import styles from "./componentsStyles/Intro.module.css";
 
 export default function Intro() {
 
-    const [underline, setUnderline] = useState(false);
+    const [click, setClick] = useState(false);
     const [stars, setStars] = useState([]);
 
-    useEffect(() => {
+    const backgroundFunction = () => {
         const windowWidth = innerWidth;
         const windowHeight = 1024;
 
@@ -43,14 +43,20 @@ export default function Intro() {
         }
 
         setStars(starsArray);
-    }, []);
+    }
+
+    useEffect(() => {
+        backgroundFunction();
+    }, [click]);
 
     return (
         <>
             <div className={styles.totalDiv}>
                 <div className={styles.textDiv}>
-                    <h1 style={{ textDecoration: underline? "none": "underline" }}
-                        onClick={() => setUnderline(prev => !prev)}>
+                    <h1 className={click? '' : styles.h1TwinklingSetting}
+                        // onClick={() => setClick(prev => !prev)}
+                        onMouseEnter={() => setClick(prev => !prev)}
+                        onMouseLeave={() => setClick(prev => !prev)}>
                         타이틀입니다. 타이틀입니다. 타이틀입니다. 타이틀입니다.
                     </h1>
                     <p>
@@ -60,7 +66,7 @@ export default function Intro() {
                     </p>
                 </div>
             </div>
-            {underline && stars.map((star, index) => (
+            {click && stars.map((star, index) => (
                 <div key={index}>
                     <div className={`${styles.star} ${star.styleName} ${star.opacityName} ${star.twinkleName}`} style={{ position: 'absolute', top: star.y, left: star.x }}></div>
                     <div className={`${styles.star2} ${star.styleName} ${star.opacityName} ${star.twinkleName}`} style={{ position: 'absolute', top: star.y, left: star.x }}></div>
