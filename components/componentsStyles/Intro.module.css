@@ -33,7 +33,7 @@
 }
 
 .h1TwinklingSetting {
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-name: h1Twinkling;
 }
 
@@ -56,6 +56,59 @@
 
     100% {
         text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.textDiv div {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+
+    /* background-color: red; */
+    top: 6vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textDiv img {
+    width: 2.78vw;
+    height: 2.78vw;
+
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.imgMovingSetting {
+    animation-duration: 1s;
+    animation-name: imgMoving;
+}
+
+@keyframes imgMoving {
+    0% {
+        width: 1.39vw;
+        height: 1.39vw;
+    }
+
+    25% {
+        width: 2.08vw;
+        height: 2.08vw;
+    }
+
+    50% {
+        width: 2.78vw;
+        height: 2.78vw;
+    }
+
+    75% {
+        width: 2.08vw;
+        height: 2.08vw;
+    }
+
+    100% {
+        width: 1.39vw;
+        height: 1.39vw;
     }
 }
 
