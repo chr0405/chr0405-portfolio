@@ -11,7 +11,7 @@ export default function Intro() {
     const [stars, setStars] = useState([]);
 
     const backgroundFunction = () => {
-        const windowWidth = innerWidth;
+        const windowWidth = 1600;
         const windowHeight = 1024;
 
         function getRandomValue(max) {
