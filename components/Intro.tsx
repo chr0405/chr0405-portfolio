@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import styles from "./componentsStyles/Intro.module.css";
-import Image from "next/image";
-import mouse from "../img/mouse.png";
+import { CiDesktopMouse1 } from "react-icons/ci";
 
 export default function Intro() {
 
@@ -11,8 +10,8 @@ export default function Intro() {
     const [stars, setStars] = useState([]);
 
     const backgroundFunction = () => {
-        const windowWidth = 1600;
-        const windowHeight = 1024;
+        const windowWidth = 100;
+        const windowHeight = 71.11;
 
         function getRandomValue(max) {
             return Math.floor(Math.random() * max);
@@ -41,8 +40,8 @@ export default function Intro() {
                 styleName: styleName,
                 opacityName: opacityName,
                 twinkleName: twinkleName,
-                x: x,
-                y: y
+                x: `${x}vw`,
+                y: `${y}vw`
             });
         }
 
@@ -59,15 +58,14 @@ export default function Intro() {
                 <div className={styles.textDiv}>
                     <h1 className={click? '' : styles.h1TwinklingSetting}
                         onClick={() => setClick(prev => !prev)}
-                        // onMouseEnter={() => setClick(true)}
-                        // onMouseLeave={() => setClick(prev => !prev)}
                         >
                         안녕하세요.<br/>Front-end 개발자 조하림입니다.
                     </h1>
                     <div style={{ display : click? 'none' : 'flex' }}>
-                        <Image src={mouse} alt="intro mouse"
-                            className={click? '' : styles.imgMovingSetting}
-                            onClick={() => setClick(prev => !prev)}
+                        <CiDesktopMouse1 
+                        className={click? '' : styles.imgMovingSetting}
+                        onClick={() => setClick(prev => !prev)}
+                        style={click ? {} : { filter: 'drop-shadow(0.14vw 0.14vw 0.14vw rgba(255, 255, 255, 1))' }}
                         />
                     </div>
                     <p>
