@@ -2,7 +2,7 @@ import shcool from "../img/shcool.png";
 import license from "../img/license.png";
 import activity from "../img/activity.png";
 
-export const AboutMe = [
+export const TechloreArray = [
     {
         "id" : 1,
         "img" : shcool,

@@ -5,7 +5,7 @@ import message from "../img/message.png";
 import gitHub from "../img/gitHub.png";
 import tistory from "../img/tistory.png";
 
-export const AboutMe = [
+export const AboutMeArray = [
     {
         "id" : 1,
         "img" : profile,
