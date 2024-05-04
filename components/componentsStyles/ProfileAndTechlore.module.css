@@ -1,0 +1,48 @@
+.imgCss {
+    width: 2.08vw;
+    height: 2.08vw;
+}
+
+.textDiv {
+    margin-left: 1.38vw;
+}
+
+.titleCss {
+    color: #4D4D4D;
+    font-weight: bold;
+    font-size: 1.39vw;
+}
+
+.titleAboutUsCss {
+    margin-left: 1.39vw;
+}
+
+.titleTechloreCss {
+    margin-bottom: 0.69vw;
+}
+
+.infoCss {
+    color: #4D4D4D;
+    font-size: 1.39vw;
+}
+
+.infoAboutUsCss {
+    position: absolute;
+    margin-left: 10.42vw;
+}
+
+.aCss {
+    color: #4D4D4D;
+    font-weight: bold;
+    font-size: 1.39vw;
+
+    position: absolute;
+    margin-left: 18.06vw;
+}
+
+.aCss:hover,
+.aCss:focus,
+.aCss:active,
+.aCss:visited {
+    color: #4D4D4D;
+}

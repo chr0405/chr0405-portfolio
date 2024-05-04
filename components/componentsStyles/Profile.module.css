@@ -4,3 +4,201 @@
 
     background: linear-gradient(to bottom, #1B4669, #668DAE);
 }
+
+.centerDiv {
+    position: relative; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.boxDiv {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 2vw;
+
+    width: 69.44vw;
+    height: 41.67vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.39vw;
+}
+
+.leftDiv {
+    width: 34.72vw;
+    height: 41.67vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pictureDiv {
+    background-color: #9B9B9B;
+    border-radius: 2vw;
+
+    width: 22.92vw;
+    height: 28.82vw;
+
+    overflow: hidden;
+}
+
+.pictureDiv img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.centerLine {
+    width: 0.05vw;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.centerLine div {
+    height: 100%;
+    border-left: 0.6vw dashed #9B9B9B;
+}
+
+.rightDiv {
+    width: 34.72vw;
+    height: 41.67vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.individualDiv {
+    width: 25vw;
+    height: 2.08vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 1.04vw 0vw;
+}
+
+.individualDiv2 {
+    width: 24.86vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    margin: 1.04vw 0vw;
+}
+
+.screw {
+    width: 1.04vw;
+    height: 1.04vw;
+    border-radius: 50%;
+    background-color: #C6C6C6;
+
+    position: absolute;
+}
+
+.screwLocation {
+    top : 1.8vw;
+    margin-right: 65vw;
+}
+.screwLocation2 {
+    top : 1.8vw;
+    margin-left: 65vw;
+}
+.screwLocation3 {
+    bottom : 9.8vw;
+    margin-right: 65vw;
+}
+.screwLocation4 {
+    bottom : 9.8vw;
+    margin-left: 65vw;
+}
+
+.switchDiv {
+    width: 18vw;
+    height: 5vw;
+    border-radius: 2.78vw;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    position: relative;
+
+    margin-top: 1.39vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.switchBtn {
+    width: 10vw;
+    height: 5vw;
+    border-radius: 2.78vw;
+    background-color: white;
+
+    position: absolute;
+
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.goToAboutMe {
+    animation-direction: reverse;
+    animation-duration: 1s;
+    animation-name: switchChange;
+}
+
+.goToTechlore {
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-name: switchChange;
+}
+
+@keyframes switchChange {
+    0% {
+        left: 0%;
+    }
+
+    25% {
+        left: 11.25%;
+    }
+
+    50% {
+        left: 22.5%;
+    }
+
+    75% {
+        left: 33.75%;
+    }
+
+    100% {
+        left: 45%;
+    }
+}
+
+.switchDiv p{
+    z-index: 1;
+    margin: 0vw 1.5vw;
+
+    cursor: pointer;
+}

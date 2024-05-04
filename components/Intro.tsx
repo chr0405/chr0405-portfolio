@@ -31,15 +31,9 @@ export default function Intro() {
             const y = getRandomValue(windowHeight);
 
             const className = `${styles[style[styleOption]]} ${styles[opacity[opacityOption]]} ${styles[twinkle[twinkleOption]]}`;
-            const styleName = `${styles[style[styleOption]]}`;
-            const opacityName = `${styles[opacity[opacityOption]]}`;
-            const twinkleName = `${styles[twinkle[twinkleOption]]}`;
 
             starsArray.push({
                 className: className,
-                styleName: styleName,
-                opacityName: opacityName,
-                twinkleName: twinkleName,
                 x: `${x}vw`,
                 y: `${y}vw`
             });
@@ -57,8 +51,7 @@ export default function Intro() {
             <div className={styles.totalDiv}>
                 <div className={styles.textDiv}>
                     <h1 className={click? '' : styles.h1TwinklingSetting}
-                        onClick={() => setClick(prev => !prev)}
-                        >
+                        onClick={() => setClick(prev => !prev)}>
                         안녕하세요.<br/>Front-end 개발자 조하림입니다.
                     </h1>
                     <div style={{ display : click? 'none' : 'flex' }}>

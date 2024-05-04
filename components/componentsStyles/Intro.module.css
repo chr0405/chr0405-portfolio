@@ -33,7 +33,7 @@
     position: absolute;
     top: 0vw;
 
-    /* margin: 0vw 0vw; */
+    cursor: pointer;
 }
 
 .h1TwinklingSetting {
@@ -80,6 +80,8 @@
 .imgMovingSetting {
     width: 2.78vw;
     height: 2.78vw;
+
+    cursor: pointer;
 
     animation-direction: alternate;
     animation-iteration-count: infinite;
