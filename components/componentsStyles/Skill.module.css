@@ -31,9 +31,39 @@
     justify-content: center;
 }
 
-.tilteDiv{
+.fontEndBoxDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tilteDiv {
     font-size: 1.39vw;
     font-weight: bold;
+}
+
+.fontEndBoxDiv h1{
+    margin-bottom: 1vw;
+}
+
+.restTitle{
+    margin-bottom: 2.78vw;
+}
+
+.frontEndLineDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.iconDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0.6vw 0.8vw;
 }
 
 .horizontalDividingLine {
@@ -53,6 +83,13 @@
     width: 55.56vw;
     height: 27.78vw;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restLineDiv {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }

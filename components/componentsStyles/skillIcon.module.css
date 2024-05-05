@@ -1,0 +1,11 @@
+.iconDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.08vw;
+}
+
+.iconName {
+    font-size: 0.97vw;
+    margin-top: 0.69vw;
+}

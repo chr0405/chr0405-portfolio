@@ -14,6 +14,7 @@ import { useState } from "react";
 
 export default function Profile() {
 
+    const [page1, setPage1] = useState(true);
     const [leftSwitch, setLeftSwitch] = useState(false);
     const [rightSwitch, setRightSwitch] = useState(false);
 
@@ -33,7 +34,7 @@ export default function Profile() {
                     </div>
                     {/* 세로 분할 2 */}
                     <div className={styles.rightDiv}>
-                        { leftSwitch && AboutMeArray.map((aboutMe, index) => (
+                        { page1 && AboutMeArray.map((aboutMe, index) => (
                             <div className={styles.individualDiv} key={index}>
                                 <AboutMe
                                     img = {aboutMe.img}
@@ -42,7 +43,7 @@ export default function Profile() {
                                     web={aboutMe.web ? aboutMe.web : null}/>
                             </div>
                         ))}
-                        { ! leftSwitch && TechloreArray.map((aboutMe, index) => (
+                        { ! page1 && TechloreArray.map((aboutMe, index) => (
                             <div className={styles.individualDiv2} key={index}>
                                 <Techlore
                                     img = {aboutMe.img}
@@ -67,10 +68,12 @@ export default function Profile() {
                         <div className={`${styles.switchBtn} ${styles.goToAboutMe}`}></div>
                     }
                     <p onClick={() => {
+                        setPage1(true);
                         setLeftSwitch(true);
                         setRightSwitch(false);
                         }}>About me</p>
                     <p onClick={() => {
+                        setPage1(false);
                         setLeftSwitch(false);
                         setRightSwitch(true);
                         }}>Techlore</p>
