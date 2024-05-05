@@ -19,7 +19,7 @@
 }
 
 .boxDiv {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #F5F5F5;
     border-radius: 2vw;
 
     width: 69.44vw;
@@ -66,6 +66,7 @@
 .centerLine div {
     height: 100%;
     border-left: 0.6vw dashed #9B9B9B;
+    border-right: 0.6vw dashed #9B9B9B;
 }
 
 .rightDiv {
@@ -151,6 +152,10 @@
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+.switchDiv p{
+    font-size: 1.39vw;
+}
+
 .switchBtn {
     width: 10vw;
     height: 5vw;
@@ -164,13 +169,16 @@
 
 .goToAboutMe {
     animation-direction: reverse;
-    animation-duration: 1s;
+    animation-duration: 0.3s;
     animation-name: switchChange;
 }
 
 .goToTechlore {
+    left: 45%;
+    box-shadow: -5px 2px 5px rgba(0, 0, 0, 0.2);
+
     animation-direction: normal;
-    animation-duration: 1s;
+    animation-duration: 0.3s;
     animation-name: switchChange;
 }
 

@@ -10,32 +10,28 @@ import AboutMe from "./AboutMe";
 import { TechloreArray } from "../array/TechloreArray";
 import Techlore from "./Techlore";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Profile() {
 
-    const [leftSwitch, setLeftSwitch] = useState(true);
-    const [btnClassName, setBtnClassName] = useState('');
-
-    const switchBtnFunc = (className: string) => {
-        setBtnClassName(className);
-    }
+    const [leftSwitch, setLeftSwitch] = useState(false);
+    const [rightSwitch, setRightSwitch] = useState(false);
 
     return (
         <div className={styles.totalDiv}>
             <div className={styles.centerDiv}>
                 <div className={styles.boxDiv}>
-                    {/* 왼쪽 */}
+                    {/* 세로 분할 1 */}
                     <div className={styles.leftDiv}>
                         <div className={styles.pictureDiv}>
                             <Image src={idPicture} alt='idPicture'/>
                         </div>
                     </div>
-                    {/* 가운데 선 */}
+                    {/* 세로 분할 선 */}
                     <div className={styles.centerLine}>
                         <div></div>
                     </div>
-                    {/* 오른쪽 */}
+                    {/* 세로 분할 2 */}
                     <div className={styles.rightDiv}>
                         { leftSwitch && AboutMeArray.map((aboutMe, index) => (
                             <div className={styles.individualDiv} key={index}>
@@ -55,7 +51,7 @@ export default function Profile() {
                             </div>
                         ))}
                     </div>
-                    {/* 동그라미 압정 */}
+                    {/* 압정 */}
                     <div className={`${styles.screw} ${styles.screwLocation}`}></div>
                     <div className={`${styles.screw} ${styles.screwLocation2}`}></div>
                     <div className={`${styles.screw} ${styles.screwLocation3}`}></div>
@@ -63,14 +59,20 @@ export default function Profile() {
                 </div>
 
                 <div className={styles.switchDiv}>
-                    <div className={`${styles.switchBtn} ${btnClassName}`}></div>
+                    { (!leftSwitch && !rightSwitch) &&
+                        <div className={styles.switchBtn}></div>
+                    } {rightSwitch &&
+                        <div className={`${styles.switchBtn} ${styles.goToTechlore}`}></div>
+                    } {leftSwitch &&
+                        <div className={`${styles.switchBtn} ${styles.goToAboutMe}`}></div>
+                    }
                     <p onClick={() => {
                         setLeftSwitch(true);
-                        switchBtnFunc(styles.goToAboutMe);
+                        setRightSwitch(false);
                         }}>About me</p>
                     <p onClick={() => {
                         setLeftSwitch(false);
-                        switchBtnFunc(styles.goToTechlore);
+                        setRightSwitch(true);
                         }}>Techlore</p>
                 </div>
             </div>
