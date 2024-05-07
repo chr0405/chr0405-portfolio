@@ -1,0 +1,135 @@
+.totalDiv {
+    width: 34.72vw;
+    height: 50vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.projectDiv {
+    width: 34.72vw;
+    height: 41.67vw;
+
+    background-color: white;
+    border-radius: 1.04vw;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.projectNameDiv {
+    width: 34.72vw;
+    height: 3.61vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.39vw;
+    font-weight: bold;
+}
+
+.projectPictureDiv {
+    width: 34.72vw;
+    height: 25.9vw;
+
+    background-color: #9B9B9B;
+}
+
+.projectPictureDiv img{
+    width: 34.72vw;
+    height: 25.9vw;
+}
+
+.projectPictureSelectTotalDiv {
+    position: relative;
+    height: 0.69vw;
+    /* background-color: black; */
+
+    top: -2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectPictureSelectDiv {
+    width: 0.69vw;
+    height: 0.69vw;
+    border-radius: 50%;
+    margin: 0vw 0.35vw;
+}
+
+.namePeriodDiv{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin-top: 1.38vw;
+}
+
+.namePeriodDiv h1{
+    margin-left: 2.08vw;
+
+    font-size: 1.39vw;
+    font-weight: bold;
+}
+
+.namePeriodDiv p{
+    margin-left: 0.69vw;
+
+    font-size: 0.97vw;
+}
+
+.aboutProject{
+    margin-top: 0.69vw;
+
+    padding: 0vw 2.08vw;
+    font-size: 0.97vw;
+}
+
+.more{
+    margin: 0.69vw 0vw 0vw 2.08vw;
+
+    font-weight: 600;
+    text-decoration-line: underline;
+    color: #3998EF;
+}
+
+.webSiteDiv {
+    width: 34.72vw;
+    height: 6.94vw;
+    margin-top: 1.38vw;
+
+    background-color: white;
+    border-radius: 1.04vw;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.webSite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.18vw;
+    text-decoration: none;
+    color: #595959;
+
+    margin: 0vw 3.47vw;
+}
+
+.webSite img{
+    width: 2.43vw;
+    height: 2.43vw;
+
+    margin-bottom: 0.3vw;
+}
