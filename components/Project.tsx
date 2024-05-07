@@ -4,7 +4,10 @@ import { ProjectArray } from "../array/ProjectArray"
 
 export default function Project() {
     return (
-        <div className={styles.totalDiv}>
+        <div className={styles.totalDiv}
+            style={{
+                "height" : `${ProjectArray.length * 40}vw`
+            }}>
             <div className={styles.projectBoxDiv}>
                 { ProjectArray.map((project, index) => (
                     <IndividualProject
@@ -13,7 +16,11 @@ export default function Project() {
                         name = {project.name}
                         period = {project.period}
                         aboutProject = {project.aboutProject}
+                        mainFunction = {project.mainFunction}
+                        frontEnd = {project.frontEnd}
+                        deployment = {project.deployment}
                         webSite = {project.webSite}
+                        etc= {project.etc}
                     />
                 ))}
             </div>

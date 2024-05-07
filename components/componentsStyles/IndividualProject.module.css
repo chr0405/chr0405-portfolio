@@ -6,6 +6,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+
+    margin: 4vw 4vw;
 }
 
 .projectDiv {
@@ -64,16 +66,20 @@
     margin: 0vw 0.35vw;
 }
 
+.textDiv{
+    padding: 2.08vw;
+}
+
 .namePeriodDiv{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 
-    margin-top: 1.38vw;
+    /* margin-top: 1.38vw; */
 }
 
 .namePeriodDiv h1{
-    margin-left: 2.08vw;
+    /* margin-left: 2.08vw; */
 
     font-size: 1.39vw;
     font-weight: bold;
@@ -85,19 +91,35 @@
     font-size: 0.97vw;
 }
 
-.aboutProject{
+.aboutProject {
     margin-top: 0.69vw;
-
-    padding: 0vw 2.08vw;
     font-size: 0.97vw;
+    width: 31vw;
+    height: 4.75vw;
+    overflow-y: auto;
+}
+
+.aboutProject::-webkit-scrollbar {
+    width: 0.35vw;
+}
+
+.aboutProject::-webkit-scrollbar-thumb {
+    background-color: #C6C6C6;
+    border-radius: 2vw;
+}
+
+.aboutProject::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 .more{
-    margin: 0.69vw 0vw 0vw 2.08vw;
+    margin: 0.69vw 0vw 0vw 0vw;
+    /* padding: 0vw 2.08vw; */
 
     font-weight: 600;
     text-decoration-line: underline;
     color: #3998EF;
+    cursor: pointer;
 }
 
 .webSiteDiv {
