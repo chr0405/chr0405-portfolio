@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "./componentsStyles/ProjectModal.module.css"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface ProjectModalProps {
     capture : any[];
@@ -28,9 +28,25 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
     
     const [captureNum, setCaptureNum] = useState(0);
     
+    useEffect(() => {
+        document.body.style.overflow = 'hidden';
+    }, []);
+
+    const scrollAutoFunc = () => {
+        document.body.style.overflow = 'auto';
+    }
+    
     return (
-        <div className={styles.totalDiv}>
-            <div className={styles.modalDiv}>
+        <div className={styles.totalDiv}
+            onClick={() => {
+                scrollAutoFunc();
+                setModalShow(false);
+            }}>
+            <div className={styles.modalDiv}
+                onClick={(event) => {
+                    event.stopPropagation();
+                    setModalShow(true);
+                }}>
                 {/* left */}
                 <div className={styles.projectPictureDiv}>
                     <Image src={capture[captureNum]} alt="captureImg"/>
@@ -56,7 +72,10 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
                             {name}</h1>
                         {/* X mark */}
                         <div className={styles.closeIconDiv}
-                            onClick={() => (setModalShow(false))}>
+                            onClick={() => {
+                                scrollAutoFunc();
+                                setModalShow(false);
+                            }}>
                             <div></div>
                             <div></div>
                         </div>
@@ -83,7 +102,7 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
                                     <div className={styles.ectContentDiv}>
                                         <div className={styles.ectContentPandADiv}>
                                             <p>{etc.notion}</p>
-                                            <a href={etc.notionLink}>Click →</a>
+                                            <a href={etc.notionLink} target="_blank">Click →</a>
                                         </div>
                                         <p>{etc.aboutNotion}</p>
                                     </div>

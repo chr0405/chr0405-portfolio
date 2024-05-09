@@ -88,14 +88,13 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                 {/* 바로가기 */}
                 <div className={styles.webSiteDiv}>
                     {webSite && webSite.Demo && (
-                        <a className={styles.webSite}
-                        href={webSite.Demo}>
+                        <a className={styles.webSite} href={webSite.Demo} target="_blank">
                             <Image src={DemoImg} alt="DemoImg"/>
                             Demo
                         </a>
                     )}
                     {webSite && webSite.YouTube && (
-                        <a className={styles.webSite} href={webSite.YouTube}>
+                        <a className={styles.webSite} href={webSite.YouTube} target="_blank">
                             <Image style={{
                                 "width" : "2.78vw",
                                 "height" : "2.78vw",
@@ -106,8 +105,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                         </a>
                     )}
                     {webSite && webSite.GitHub && (
-                        <a className={styles.webSite}
-                        href={webSite.GitHub}>
+                        <a className={styles.webSite} href={webSite.GitHub} target="_blank">
                             <Image src={GitHub} alt="GitHub"/>
                             GitHub
                         </a>
