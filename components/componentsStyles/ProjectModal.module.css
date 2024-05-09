@@ -1,0 +1,187 @@
+.totalDiv{
+    position: fixed;
+    
+    top: 0vw;
+    left: 0vw;
+
+    width: 100%;
+    height: 100%;
+
+    background: #00000025;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+}
+
+.modalDiv{
+    width: 76.39vw;
+    height: 34.72vw;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1.04vw;
+    overflow: hidden;
+}
+
+.projectPictureDiv {
+    width: 45.14vw;
+    height: 34.72vw;
+
+    background-color: #9B9B9B;
+}
+
+.projectPictureDiv img{
+    width: 45.14vw;
+    height: 34.72vw;
+}
+
+.projectPictureSelectTotalDiv {
+    position: relative;
+    height: 0.69vw;
+
+    top: -2.5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectPictureSelectDiv {
+    width: 0.69vw;
+    height: 0.69vw;
+    border-radius: 50%;
+    margin: 0vw 0.35vw;
+}
+
+.rightDiv{
+    width: 31.18vw;
+    height: 34.72vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.headerDiv {
+    width: 31.18vw;
+    height: 3.89vw;
+
+    background-color: #B3B3B3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerDiv h1 {
+    position: absolute;
+
+    font-size: 1.39vw;
+    font-weight: bold;
+}
+
+.closeIconDiv{
+    width: 3.89vw;
+    height: 3.89vw;
+
+    position: relative;
+    left: 13vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.closeIconDiv div {
+    position: absolute;
+    width: 45%;
+    height: 0.2vw;
+    background-color: #646464;
+}
+
+.closeIconDiv > div:first-child {
+    transform: rotate(45deg);
+}
+
+.closeIconDiv > div:last-child {
+    transform: rotate(-45deg);
+}
+
+.contentDiv {
+    width: 31.18vw;
+    height: 30.83vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.contentDiv2 {
+    width: 31.0vw;
+    /* 스크롤바 right에 딱 붙이려면 31.18vw */
+    height: 28.75vw;
+    /* background-color: yellow; */
+
+    overflow-y: auto;
+}
+
+.contentDiv2::-webkit-scrollbar {
+    width: 0.35vw;
+}
+
+.contentDiv2::-webkit-scrollbar-thumb {
+    background-color: #B3B3B3;
+    /* 스크롤바 color B3B3B3랑 646464 중 고민... */
+    border-radius: 2vw;
+}
+
+.contentDiv2::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.contentDiv2 h2 {
+    font-weight: 600;
+
+    margin-bottom: 0.69vw;
+    margin-left: 2.69vw;
+}
+
+.contentDiv2 p {
+    margin: 0vw 2.69vw 1.39vw 2.69vw;
+}
+
+.ectContentDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.ectContentPandADiv {
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+.ectContentPandADiv p {
+    margin-bottom: 0.35vw;
+}
+
+.ectContentPandADiv a {
+    margin-bottom: 0.35vw;
+    margin-left: -2vw;
+
+    font-weight: bold;
+    color: #4D4D4D;
+}

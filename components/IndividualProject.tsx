@@ -6,6 +6,7 @@ import styles from "./componentsStyles/IndividualProject.module.css"
 import DemoImg from "../img/home.png";
 import YouTubeImg from "../img/youTube.png";
 import GitHub from "../img/gitHub.png";
+
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
 
@@ -30,12 +31,12 @@ interface IndividualProjectProps {
 }
 
 const IndividualProject : React.FC<IndividualProjectProps> = ({
-     capture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc
+        capture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc
     }) => {
     
     const [captureNum, setCaptureNum] = useState(0);
     const [modalShow, setModalShow] = useState(false);
-    
+
     return (
         <>
             {modalShow &&
@@ -48,7 +49,9 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                     frontEnd = {frontEnd}
                     deployment = {deployment}
                     etc = {etc}
-                />}
+                    setModalShow={setModalShow}
+                />
+            }
             <div className={styles.totalDiv}>
                 {/* 프로젝트 */}
                 <div className={styles.projectDiv}>

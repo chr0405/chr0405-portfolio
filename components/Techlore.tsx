@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./componentsStyles/ProfileAndTechlore.module.css"
+import styles from "./componentsStyles/AboutMeAndTechlore.module.css"
 
 interface TechloreProps {
     img: any;
