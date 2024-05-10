@@ -12,6 +12,9 @@ export default function Header() {
         const targetPage = document.getElementById(pageName);
         if (targetPage) {
             window.scrollBy({ top: targetPage.getBoundingClientRect().top + offset, behavior: 'smooth' });
+            setTimeout(() => {
+                window.location.hash = pageName;
+            }, 100);
         }
     };
 
