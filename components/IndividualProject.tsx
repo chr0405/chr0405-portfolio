@@ -59,7 +59,24 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
 
                     {/* 사진 */}
                     <div className={styles.projectPictureDiv}>
+
                         <Image src={capture[captureNum]} alt="captureImg"/>
+
+                        <div className={styles.sectionDiv}>
+                            {/* left section */}
+                            <div onClick={()=> {
+                                if(captureNum > 0){
+                                    setCaptureNum((pre) => pre - 1);
+                                }
+                            }}></div>
+                            {/* right section */}
+                            <div onClick={()=> {
+                                if(captureNum < (capture.length - 1)){
+                                    setCaptureNum((pre) => pre + 1);
+                                }
+                            }}></div>
+                        </div>
+
                         <div className={styles.projectPictureSelectTotalDiv}
                             style={{display : capture.length > 1 ? 'flex' : 'none'}}>
                             {[...Array(capture.length)].map((_, index) => (
@@ -72,6 +89,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                                 </div>
                             ))}
                         </div>
+
                     </div>
 
                     <div className={styles.textDiv}>

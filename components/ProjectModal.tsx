@@ -49,7 +49,24 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
                 }}>
                 {/* left */}
                 <div className={styles.projectPictureDiv}>
+
                     <Image src={capture[captureNum]} alt="captureImg"/>
+
+                    <div className={styles.sectionDiv}>
+                            {/* left section */}
+                            <div onClick={()=> {
+                                if(captureNum > 0){
+                                    setCaptureNum((pre) => pre - 1);
+                                }
+                            }}></div>
+                            {/* right section */}
+                            <div onClick={()=> {
+                                if(captureNum < (capture.length - 1)){
+                                    setCaptureNum((pre) => pre + 1);
+                                }
+                            }}></div>
+                    </div>
+
                     <div className={styles.projectPictureSelectTotalDiv}
                         style={{display : capture.length > 1 ? 'flex' : 'none'}}>
                         {[...Array(capture.length)].map((_, index) => (
@@ -72,7 +89,8 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
                             {name}</h1>
                         {/* X mark */}
                         <div className={styles.closeIconDiv}
-                            onClick={() => {
+                            onClick={(event) => {
+                                event.stopPropagation();
                                 scrollAutoFunc();
                                 setModalShow(false);
                             }}>
@@ -83,8 +101,7 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
                     {/* content */}
                     <div className={styles.contentDiv}>
                         <div className={styles.contentDiv2}>
-                            <h2>
-                                About Project</h2>
+                            <h2>About Project</h2>
                             <p>{aboutProject}</p>
 
                             <h2>Main Function</h2>

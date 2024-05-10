@@ -48,12 +48,28 @@
     height: 25.9vw;
 }
 
+.sectionDiv {
+    width: 34.72vw;
+    height: 25.9vw;
+
+    position: relative;
+    top: -26.1vw;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.sectionDiv div{
+    width: 11.57vw;
+    height: 25.9vw;
+}
+
 .projectPictureSelectTotalDiv {
     position: relative;
     height: 0.69vw;
-    /* background-color: black; */
-
-    top: -2vw;
+    
+    top: -28vw;
     display: flex;
     align-items: center;
     justify-content: center;
