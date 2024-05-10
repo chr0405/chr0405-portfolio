@@ -8,10 +8,10 @@ import styles from './componentsStyles/Header.module.css';
 export default function Header() {
 
     // 메뉴를 누르면 스크롤 이동
-    const moveToPageFunc = (pageName: string) => {
+    const moveToPageFunc = (pageName: string, offset: number) => {
         const targetPage = document.getElementById(pageName);
         if (targetPage) {
-            targetPage.scrollIntoView({ behavior: 'smooth' });
+            window.scrollBy({ top: targetPage.getBoundingClientRect().top + offset, behavior: 'smooth' });
         }
     };
 
@@ -40,7 +40,7 @@ export default function Header() {
             setCurrentPage('profilePage');
         } else if (skillPage && scrollTop >= skillPage.offsetTop && (projectPage?.offsetTop ?? Infinity) > scrollTop) {
             setCurrentPage('skillPage');
-        } else if (projectPage && scrollTop >= projectPage.offsetTop) {
+        } else if (projectPage && scrollTop >= projectPage.offsetTop ) {
             setCurrentPage('projectPage');
         }
     };
@@ -61,13 +61,13 @@ export default function Header() {
                 </div>
                 
                 <div className={styles.menuDiv}>
-                    <h2 onClick={() => moveToPageFunc('profilePage')}
+                    <h2 onClick={() => moveToPageFunc('profilePage', 0)}
                         style={{'color' : currentPage === 'profilePage' ? '#4D4D4D' : ''}}>
                     &lt;profile/&gt;</h2>
-                    <h2 onClick={() => moveToPageFunc('skillPage')}
+                    <h2 onClick={() => moveToPageFunc('skillPage', 0)}
                         style={{'color' : currentPage === 'skillPage' ? '#4D4D4D' : ''}}>
                     &lt;skill/&gt;</h2>
-                    <h2 onClick={() => moveToPageFunc('projectPage')}
+                    <h2 onClick={() => moveToPageFunc('projectPage', 1)}
                         style={{'color' : currentPage === 'projectPage' ? '#4D4D4D' : ''}}>
                     &lt;project/&gt;</h2>
                 </div>
