@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./componentsStyles/skillIcon.module.css"
+import styles from "./componentsStyles/SkillIcon.module.css"
 
 interface SkillIconProps {
     img: any;
