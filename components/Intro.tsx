@@ -4,16 +4,22 @@ import { useState, useEffect } from "react";
 import styles from "./componentsStyles/Intro.module.css";
 import { CiDesktopMouse1 } from "react-icons/ci";
 
+interface Star {
+    className: string;
+    x: string;
+    y: string;
+}
+
 export default function Intro() {
 
     const [click, setClick] = useState(false);
-    const [stars, setStars] = useState([]);
+    const [stars, setStars] = useState<Star[]>([]);
 
     const backgroundFunction = () => {
         const windowWidth = 100;
         const windowHeight = 71.11;
 
-        function getRandomValue(max) {
+        function getRandomValue(max : number) {
             return Math.floor(Math.random() * max);
         }
 
@@ -21,7 +27,7 @@ export default function Intro() {
         const opacity = ['opacity1', 'opacity2', 'opacity3'];
         const twinkle = ['twinkle1', 'twinkle2', 'twinkle3', 'twinkle4'];
 
-        const starsArray = [];
+        const starsArray: Star[] = [];
 
         for (let i = 0; i < 200; i++) {
             const styleOption = getRandomValue(3);

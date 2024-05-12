@@ -5,7 +5,7 @@ interface AboutMeProps {
     img: any;
     title: string;
     info: string;
-    web: string;
+    web: string | null;
 }
 
 const AboutMe: React.FC<AboutMeProps> = ({ img, title, info, web }) => {
