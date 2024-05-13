@@ -30,20 +30,20 @@ export default function Header() {
     const [currentPage, setCurrentPage] = useState('');
 
     const handleScroll = () => {
-        const introPage = document.getElementById('introPage');
-        const profilePage = document.getElementById('profilePage');
-        const skillPage = document.getElementById('skillPage');
-        const projectPage = document.getElementById('projectPage');
+        const intro = document.getElementById('intro');
+        const profile = document.getElementById('profile');
+        const skill = document.getElementById('skill');
+        const project = document.getElementById('project');
         
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        if (introPage && scrollTop >= introPage.offsetTop && (profilePage?.offsetTop ?? Infinity) > scrollTop) {
-            setCurrentPage('introPage');
-        } else if (profilePage && scrollTop >= profilePage.offsetTop && (skillPage?.offsetTop ?? Infinity) > scrollTop) {
+        if (intro && scrollTop >= intro.offsetTop && (profile?.offsetTop ?? Infinity) > scrollTop) {
+            setCurrentPage('intro');
+        } else if (profile && scrollTop >= profile.offsetTop && (skill?.offsetTop ?? Infinity) > scrollTop) {
             setCurrentPage('profilePage');
-        } else if (skillPage && scrollTop >= skillPage.offsetTop && (projectPage?.offsetTop ?? Infinity) > scrollTop) {
+        } else if (skill && scrollTop >= skill.offsetTop && (project?.offsetTop ?? Infinity) > scrollTop) {
             setCurrentPage('skillPage');
-        } else if (projectPage && scrollTop >= projectPage.offsetTop ) {
+        } else if (project && scrollTop >= project.offsetTop ) {
             setCurrentPage('projectPage');
         }
     };
@@ -64,14 +64,14 @@ export default function Header() {
                 </div>
                 
                 <div className={styles.menuDiv}>
-                    <h2 onClick={() => moveToPageFunc('profilePage', 0)}
-                        style={{'color' : currentPage === 'profilePage' ? '#4D4D4D' : ''}}>
+                    <h2 onClick={() => moveToPageFunc('profile', 0)}
+                        style={{'color' : currentPage === 'profile' ? '#4D4D4D' : ''}}>
                     &lt;profile/&gt;</h2>
-                    <h2 onClick={() => moveToPageFunc('skillPage', 0)}
-                        style={{'color' : currentPage === 'skillPage' ? '#4D4D4D' : ''}}>
+                    <h2 onClick={() => moveToPageFunc('skill', 0)}
+                        style={{'color' : currentPage === 'skill' ? '#4D4D4D' : ''}}>
                     &lt;skill/&gt;</h2>
-                    <h2 onClick={() => moveToPageFunc('projectPage', 1)}
-                        style={{'color' : currentPage === 'projectPage' ? '#4D4D4D' : ''}}>
+                    <h2 onClick={() => moveToPageFunc('project', 1)}
+                        style={{'color' : currentPage === 'project' ? '#4D4D4D' : ''}}>
                     &lt;project/&gt;</h2>
                 </div>
             </div>

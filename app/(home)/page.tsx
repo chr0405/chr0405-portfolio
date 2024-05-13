@@ -7,10 +7,10 @@ import Skill from "../../components/Skill";
 export default function Home() {
     return (
         <>
-            <div id="introPage"><Intro/></div>
-            <div id="profilePage"><Profile/></div>
-            <div id="skillPage"><Skill/></div>
-            <div id="projectPage"><Project/></div>
+            <div id="intro"><Intro/></div>
+            <div id="profile"><Profile/></div>
+            <div id="skill"><Skill/></div>
+            <div id="project"><Project/></div>
         </>
     )
 }
