@@ -40,11 +40,11 @@ export default function Header() {
         if (intro && scrollTop >= intro.offsetTop && (profile?.offsetTop ?? Infinity) > scrollTop) {
             setCurrentPage('intro');
         } else if (profile && scrollTop >= profile.offsetTop && (skill?.offsetTop ?? Infinity) > scrollTop) {
-            setCurrentPage('profilePage');
+            setCurrentPage('profile');
         } else if (skill && scrollTop >= skill.offsetTop && (project?.offsetTop ?? Infinity) > scrollTop) {
-            setCurrentPage('skillPage');
+            setCurrentPage('skill');
         } else if (project && scrollTop >= project.offsetTop ) {
-            setCurrentPage('projectPage');
+            setCurrentPage('project');
         }
     };
 

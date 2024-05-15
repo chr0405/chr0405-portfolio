@@ -6,7 +6,7 @@ export default function Project() {
     return (
         <div className={styles.totalDiv}
             style={{
-                "height" : `${ProjectArray.length * 40}vw`
+                "height" : `${ProjectArray.length * 36}vw`
             }}>
             <div className={styles.projectBoxDiv}>
                 { ProjectArray.map((project, index) => (

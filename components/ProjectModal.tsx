@@ -104,6 +104,9 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
                             <h2>About Project</h2>
                             <p>{aboutProject}</p>
 
+                            <h2>Period</h2>
+                            <p>{period}</p>
+                            
                             <h2>Main Function</h2>
                             <p>{mainFunction}</p>
 
