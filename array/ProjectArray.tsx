@@ -93,7 +93,7 @@ export const ProjectArray = [
             "notionLink" : "https://www.naver.com/",
             "aboutNotion" : "어떤 기록을 해놓은 노션입니다."
         }
-    }, {
+    }, /*{
         "capture" : [
             testImg,
             testImg,
@@ -111,5 +111,5 @@ export const ProjectArray = [
             "YouTube" : "https://www.naver.com/",
             "GitHub" : "https://www.naver.com/",
         }
-    }
+    }*/
 ];
