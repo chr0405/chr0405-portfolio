@@ -1,4 +1,3 @@
-import React from "react";
 import Intro from "../../components/Intro";
 import Profile from "../../components/Profile";
 import Project from "../../components/Project";

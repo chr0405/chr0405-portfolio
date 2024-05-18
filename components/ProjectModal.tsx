@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./componentsStyles/ProjectModal.module.css"
 
 import { useState, useEffect } from "react";
+import { useRouter } from 'next/navigation';
 
 interface ProjectModalProps {
     capture : any[];
@@ -19,33 +20,42 @@ interface ProjectModalProps {
         aboutNotion? : string;
     }
 
-    setModalShow: (show: boolean) => void;
+    show: boolean
+    onClose: () => void;
 }
 
 const ProjectModal : React.FC<ProjectModalProps> = ({
-        capture, name, period, aboutProject, mainFunction, frontEnd, deployment, etc, setModalShow
+        capture, name, period, aboutProject, mainFunction, frontEnd, deployment, etc, show, onClose
     }) => {
     
     const [captureNum, setCaptureNum] = useState(0);
     
     useEffect(() => {
-        document.body.style.overflow = 'hidden';
-    }, []);
+        if (show) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [show]);
 
     const scrollAutoFunc = () => {
         document.body.style.overflow = 'auto';
     }
-    
+
+    const router = useRouter();
+    if (!show) return null;
+
     return (
         <div className={styles.totalDiv}
             onClick={() => {
                 scrollAutoFunc();
-                setModalShow(false);
+                onClose();
+                // router.push('/#project');
+                window.location.hash = 'project';
             }}>
             <div className={styles.modalDiv}
                 onClick={(event) => {
                     event.stopPropagation();
-                    setModalShow(true);
                 }}>
                 {/* left */}
                 <div className={styles.projectPictureDiv}>
@@ -92,7 +102,9 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
                             onClick={(event) => {
                                 event.stopPropagation();
                                 scrollAutoFunc();
-                                setModalShow(false);
+                                onClose();
+                                // router.push('/#project');
+                                window.location.hash = 'project';
                             }}>
                             <div></div>
                             <div></div>

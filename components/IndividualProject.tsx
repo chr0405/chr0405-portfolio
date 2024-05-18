@@ -7,7 +7,8 @@ import DemoImg from "../img/home.png";
 import YouTubeImg from "../img/youTube.png";
 import GitHub from "../img/gitHub.png";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation';
 import ProjectModal from "./ProjectModal";
 
 interface IndividualProjectProps {
@@ -35,27 +36,45 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
     }) => {
     
     const [captureNum, setCaptureNum] = useState(0);
-    const [modalShow, setModalShow] = useState(false);
 
     const [isMouseOverDemo, setIsMouseOverDemo] = useState(false);
     const [isMouseOverYouTube, setIsMouseOverYouTube] = useState(false);
     const [isMouseOverGitHub, setIsMouseOverGitHub] = useState(false);
 
+    // modal
+    const pathname = usePathname();
+    const [modalShow, setModalShow] = useState(false);
+
+    useEffect(() => {
+        if (pathname === `/#project/${name}`) {
+            setModalShow(true);
+        }
+    }, [pathname]);
+
+    const openModal = () => {
+        setModalShow(true);
+        window.history.pushState(null, '', `/#project/${name}`);
+    };
+
+    const closeModal = () => {
+        setModalShow(false);
+        window.history.pushState(null, '', '/#project');
+    };
+
     return (
         <>
-            {modalShow &&
-                <ProjectModal
-                    capture = {capture}
-                    name = {name}
-                    period = {period}
-                    aboutProject = {aboutProject}
-                    mainFunction = {mainFunction}
-                    frontEnd = {frontEnd}
-                    deployment = {deployment}
-                    etc = {etc}
-                    setModalShow={setModalShow}
-                />
-            }
+            <ProjectModal
+                capture = {capture}
+                name = {name}
+                period = {period}
+                aboutProject = {aboutProject}
+                mainFunction = {mainFunction}
+                frontEnd = {frontEnd}
+                deployment = {deployment}
+                etc = {etc}
+                show={modalShow}
+                onClose={closeModal}
+            />
             <div className={styles.totalDiv}>
                 {/* 프로젝트 */}
                 <div className={styles.projectDiv}>
@@ -103,7 +122,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                         </div>
                         <h6 className={styles.aboutProject}>{aboutProject}</h6>
                         <p className={styles.more}
-                            onClick={() => setModalShow(true)}>More →</p>
+                            onClick={openModal}>More →</p>
                     </div>
                 </div>
 
