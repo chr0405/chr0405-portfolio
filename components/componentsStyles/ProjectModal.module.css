@@ -91,7 +91,8 @@
     width: 31.18vw;
     height: 3.89vw;
 
-    background-color: #B3B3B3;
+    background-color: #C6C6C6;
+    /* background-color: #B3B3B3; */
 
     display: flex;
     align-items: center;
@@ -106,8 +107,9 @@
 }
 
 .closeIconDiv{
-    width: 3.89vw;
-    height: 3.89vw;
+    width: 2.4vw;
+    height: 2.4vw;
+    border-radius: 50%;
 
     position: relative;
     left: 13vw;
@@ -117,13 +119,20 @@
     justify-content: center;
 
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.closeIconDiv:hover {
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .closeIconDiv div {
     position: absolute;
-    width: 45%;
+    width: 1.7vw;
+    /* width: 45%; */
     height: 0.2vw;
     background-color: #646464;
+    border-radius: 1vw;
 }
 
 .closeIconDiv > div:first-child {
@@ -148,6 +157,7 @@
 
 .contentDiv2 {
     width: 31.0vw;
+    /* width: 31.18vw; */
     /* 스크롤바 right에 딱 붙이려면 31.18vw */
     height: 28.75vw;
     /* background-color: yellow; */
@@ -160,8 +170,7 @@
 }
 
 .contentDiv2::-webkit-scrollbar-thumb {
-    background-color: #B3B3B3;
-    /* 스크롤바 color B3B3B3랑 646464 중 고민... */
+    background-color: #C6C6C6;
     border-radius: 2vw;
 }
 

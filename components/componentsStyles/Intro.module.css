@@ -111,11 +111,11 @@
 }
 
 .textDiv p {
-    font-size: 1.8vw;
+    font-size: 1.39vw;
     color: #FFFFFF;
 
     text-align: center;
-    /* margin: 0vw 0vw; */
+    line-height: 1.5;
 
     position: absolute;
     top: 14vw;

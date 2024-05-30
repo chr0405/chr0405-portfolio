@@ -33,6 +33,8 @@
     justify-content: center;
 
     font-size: 1.39vw;
+    /* 20px */
+
     font-weight: bold;
 }
 
@@ -83,7 +85,8 @@
 }
 
 .textDiv{
-    padding: 2.08vw;
+    /* padding: 2.08vw; */
+    margin-top: 1.4vw;
 }
 
 .namePeriodDiv{
@@ -98,6 +101,7 @@
     /* margin-left: 2.08vw; */
 
     font-size: 1.39vw;
+    /* 20px */
     font-weight: bold;
 }
 
@@ -132,6 +136,7 @@
     margin: 0.69vw 0vw 0vw 0vw;
     /* padding: 0vw 2.08vw; */
 
+    /* font-size: 0.97vw; */
     font-weight: 600;
     text-decoration-line: underline;
     color: #3998EF;
@@ -249,7 +254,7 @@
     align-items: center;
     justify-content: center;
 
-    font-size: 1.18vw;
+    /* font-size: 1.18vw; */
     text-decoration: none;
     color: #595959;
 
