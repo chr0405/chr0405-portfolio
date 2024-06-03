@@ -61,6 +61,10 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
         window.history.pushState(null, '', '/#project');
     };
 
+    const [imgPage, setImgPage] = useState(true);
+    const [leftSwitch, setLeftSwitch] = useState(false);
+    const [rightSwitch, setRightSwitch] = useState(false);
+
     return (
         <>
             <ProjectModal
@@ -71,6 +75,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                 mainFunction = {mainFunction}
                 frontEnd = {frontEnd}
                 deployment = {deployment}
+                webSite = {webSite}
                 etc = {etc}
                 show={modalShow}
                 onClose={closeModal}
@@ -78,42 +83,77 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
             <div className={styles.totalDiv}>
                 {/* 프로젝트 */}
                 <div className={styles.projectDiv}>
-                    <div className={styles.projectNameDiv}>{name}</div>
-
-                    {/* 사진 */}
-                    <div className={styles.projectPictureDiv}>
-
-                        <Image src={capture[captureNum]} alt="captureImg"/>
-
-                        <div className={styles.sectionDiv}>
-                            {/* left section */}
-                            <div onClick={()=> {
-                                if(captureNum > 0){
-                                    setCaptureNum((pre) => pre - 1);
+                    <div className={styles.projectNameDiv}>
+                        <div>{name}</div>
+                        {webSite.YouTube &&
+                            <div className={styles.switchDiv}>
+                                { (!leftSwitch && !rightSwitch) &&
+                                    <div className={styles.switchBtn}></div>
+                                } {rightSwitch &&
+                                    <div className={`${styles.switchBtn} ${styles.goToYouTube}`}></div>
+                                } {leftSwitch &&
+                                    <div className={`${styles.switchBtn} ${styles.goToPicture}`}></div>
                                 }
-                            }}></div>
-                            {/* right section */}
-                            <div onClick={()=> {
-                                if(captureNum < (capture.length - 1)){
-                                    setCaptureNum((pre) => pre + 1);
-                                }
-                            }}></div>
-                        </div>
-
-                        <div className={styles.projectPictureSelectTotalDiv}
-                            style={{display : capture.length > 1 ? 'flex' : 'none'}}>
-                            {[...Array(capture.length)].map((_, index) => (
-                                <div className={styles.projectPictureSelectDiv}
-                                    style={{backgroundColor : index === captureNum ? '#4D4D4D' : '#C6C6C6'}}
-                                    key={index}
-                                    onClick={() => {
-                                        setCaptureNum(index);
-                                    }}>
-                                </div>
-                            ))}
-                        </div>
-
+                                <p onClick={() => {
+                                    setImgPage(true);
+                                    setLeftSwitch(true);
+                                    setRightSwitch(false);
+                                    }}>Picture</p>
+                                <p onClick={() => {
+                                    setImgPage(false);
+                                    setLeftSwitch(false);
+                                    setRightSwitch(true);
+                                    }}>youTube</p>
+                            </div>
+                        }
                     </div>
+                    
+                    {/* 사진 */}
+                    {imgPage &&
+                        <>
+                            <div className={styles.projectPictureDiv}>
+
+                            <Image src={capture[captureNum]} alt="captureImg"/>
+
+                            <div className={styles.sectionDiv}>
+                                {/* left section */}
+                                <div onClick={()=> {
+                                    if(captureNum > 0){
+                                        setCaptureNum((pre) => pre - 1);
+                                    }
+                                }}></div>
+                                {/* right section */}
+                                <div onClick={()=> {
+                                    if(captureNum < (capture.length - 1)){
+                                        setCaptureNum((pre) => pre + 1);
+                                    }
+                                }}></div>
+                            </div>
+
+                            <div className={styles.projectPictureSelectTotalDiv}
+                                style={{display : capture.length > 1 ? 'flex' : 'none'}}>
+                                {[...Array(capture.length)].map((_, index) => (
+                                    <div className={styles.projectPictureSelectDiv}
+                                        style={{backgroundColor : index === captureNum ? '#4D4D4D' : '#C6C6C6'}}
+                                        key={index}
+                                        onClick={() => {
+                                            setCaptureNum(index);
+                                        }}>
+                                    </div>
+                                ))}
+                            </div>
+
+                            </div>
+                        </>
+                    }
+
+                    {/* 유튜브 */}
+                    {!imgPage &&
+                        <iframe className={styles.projectYouTubeIframe}
+                        src={webSite.YouTube}
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        ></iframe>
+                    }
 
                     <div className={styles.textDiv}>
                         <div className={styles.namePeriodDiv}>

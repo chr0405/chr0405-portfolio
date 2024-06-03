@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
 
-    z-index: 1;
+    z-index: 2;
 }
 
 .modalDiv{
@@ -38,6 +38,11 @@
 }
 
 .projectPictureDiv img{
+    width: 45.14vw;
+    height: 34.72vw;
+}
+
+.projectYouTubeIframe {
     width: 45.14vw;
     height: 34.72vw;
 }
@@ -99,6 +104,90 @@
     justify-content: center;
 }
 
+
+.switchDiv {
+    width: 9vw;
+    height: 2.8vw;
+    border-radius: 2.78vw;
+    background-color: #F0F0F0;
+
+    position: relative;
+    margin-right: 15vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switchDiv p{
+    font-size: 0.97vw;
+    font-weight: 400;
+    
+    z-index: 1;
+
+    cursor: pointer;
+}
+
+.switchDiv p:first-of-type {
+    margin-left: 0.5vw;
+}
+
+.switchDiv p:last-of-type {
+    margin-right: 0.5vw;
+}
+
+.switchBtn {
+    width: 4.5vw;
+    height: 2.8vw;
+    border-radius: 2.78vw;
+    background-color: white;
+
+    position: absolute;
+
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.goToPicture {
+    animation-direction: reverse;
+    animation-duration: 0.3s;
+    animation-name: switchChange;
+}
+
+.goToYouTube {
+    left: 45%;
+    box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.2);
+    
+    width: 5vw;
+
+    animation-direction: normal;
+    animation-duration: 0.3s;
+    animation-name: switchChange;
+}
+
+@keyframes switchChange {
+    0% {
+        left: 0%;
+    }
+
+    25% {
+        left: 11.25%;
+    }
+
+    50% {
+        left: 22.5%;
+    }
+
+    75% {
+        left: 33.75%;
+    }
+
+    100% {
+        left: 45%;
+    }
+}
+
 .headerDiv h1 {
     position: absolute;
 
@@ -112,7 +201,7 @@
     border-radius: 50%;
 
     position: relative;
-    left: 13vw;
+    left: 1.5vw;
 
     display: flex;
     align-items: center;
@@ -156,8 +245,8 @@
 }
 
 .contentDiv2 {
-    width: 31.0vw;
-    /* width: 31.18vw; */
+    /* width: 31.0vw; */
+    width: 31.18vw;
     /* 스크롤바 right에 딱 붙이려면 31.18vw */
     height: 28.75vw;
     /* background-color: yellow; */
@@ -166,7 +255,8 @@
 }
 
 .contentDiv2::-webkit-scrollbar {
-    width: 0.35vw;
+    /* width: 0.35vw; */
+    width: 0.5vw;
 }
 
 .contentDiv2::-webkit-scrollbar-thumb {
@@ -183,9 +273,13 @@
 
     margin-bottom: 0.69vw;
     margin-left: 2.69vw;
+
+    /* font-size: 1.11vw; */
 }
 
 .contentDiv2 p {
+    /* font-size: 1.11vw; */
+
     margin: 0vw 2.69vw 1.39vw 2.69vw;
 }
 

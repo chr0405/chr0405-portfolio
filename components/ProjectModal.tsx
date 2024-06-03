@@ -2,34 +2,38 @@
 
 import Image from "next/image";
 import styles from "./componentsStyles/ProjectModal.module.css"
-
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/navigation';
 
 interface ProjectModalProps {
-    capture : any[];
-    name : string;
-    period : string;
-    aboutProject : string;
-    mainFunction : string;
-    frontEnd : string;
-    deployment : string;
-    etc? : {
-        notion? : string;
-        notionLink? : string;
-        aboutNotion? : string;
-    }
-
-    show: boolean
+    capture: any[];
+    name: string;
+    period: string;
+    aboutProject: string;
+    mainFunction: string;
+    frontEnd: string;
+    deployment: string;
+    etc?: {
+        notion?: string;
+        notionLink?: string;
+        aboutNotion?: string;
+    };
+    webSite: {
+        YouTube?: string;
+    };
+    show: boolean;
     onClose: () => void;
 }
 
-const ProjectModal : React.FC<ProjectModalProps> = ({
-        capture, name, period, aboutProject, mainFunction, frontEnd, deployment, etc, show, onClose
-    }) => {
-    
+const ProjectModal: React.FC<ProjectModalProps> = ({
+    capture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc, show, onClose
+}) => {
     const [captureNum, setCaptureNum] = useState(0);
-    
+    const [imgPage, setImgPage] = useState(true);
+    const [leftSwitch, setLeftSwitch] = useState(false);
+    const [rightSwitch, setRightSwitch] = useState(false);
+    const router = useRouter();
+
     useEffect(() => {
         if (show) {
             document.body.style.overflow = 'hidden';
@@ -40,9 +44,8 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
 
     const scrollAutoFunc = () => {
         document.body.style.overflow = 'auto';
-    }
+    };
 
-    const router = useRouter();
     if (!show) return null;
 
     return (
@@ -50,60 +53,87 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
             onClick={() => {
                 scrollAutoFunc();
                 onClose();
-                // router.push('/#project');
                 window.location.hash = 'project';
             }}>
             <div className={styles.modalDiv}
                 onClick={(event) => {
                     event.stopPropagation();
                 }}>
-                {/* left */}
-                <div className={styles.projectPictureDiv}>
+                {/* left 사진 */}
+                {imgPage &&
+                    <div className={styles.projectPictureDiv}>
+                        <Image src={capture[captureNum]} alt="captureImg" />
 
-                    <Image src={capture[captureNum]} alt="captureImg"/>
-
-                    <div className={styles.sectionDiv}>
+                        <div className={styles.sectionDiv}>
                             {/* left section */}
-                            <div onClick={()=> {
-                                if(captureNum > 0){
+                            <div onClick={() => {
+                                if (captureNum > 0) {
                                     setCaptureNum((pre) => pre - 1);
                                 }
                             }}></div>
                             {/* right section */}
-                            <div onClick={()=> {
-                                if(captureNum < (capture.length - 1)){
+                            <div onClick={() => {
+                                if (captureNum < (capture.length - 1)) {
                                     setCaptureNum((pre) => pre + 1);
                                 }
                             }}></div>
-                    </div>
+                        </div>
 
-                    <div className={styles.projectPictureSelectTotalDiv}
-                        style={{display : capture.length > 1 ? 'flex' : 'none'}}>
-                        {[...Array(capture.length)].map((_, index) => (
-                            <div className={styles.projectPictureSelectDiv}
-                                style={{backgroundColor : index === captureNum ? '#4D4D4D' : '#C6C6C6'}}
-                                key={index}
-                                onClick={() => {
-                                    setCaptureNum(index);
-                                }}>
-                            </div>
-                        ))}
+                        <div className={styles.projectPictureSelectTotalDiv}
+                            style={{ display: capture.length > 1 ? 'flex' : 'none' }}>
+                            {[...Array(capture.length)].map((_, index) => (
+                                <div className={styles.projectPictureSelectDiv}
+                                    style={{ backgroundColor: index === captureNum ? '#4D4D4D' : '#C6C6C6' }}
+                                    key={index}
+                                    onClick={() => {
+                                        setCaptureNum(index);
+                                    }}>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                }
+
+                {/* left 유튜브 */}
+                {!imgPage &&
+                    <iframe className={styles.projectYouTubeIframe}
+                        src={webSite.YouTube}
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    ></iframe>
+                }
 
                 {/* right */}
                 <div className={styles.rightDiv}>
                     {/* header */}
                     <div className={styles.headerDiv}>
-                        <h1>
-                            {name}</h1>
+                        <h1>{name}</h1>
+                        {webSite.YouTube &&
+                            <div className={styles.switchDiv}>
+                                {(!leftSwitch && !rightSwitch) &&
+                                    <div className={styles.switchBtn}></div>
+                                } {rightSwitch &&
+                                    <div className={`${styles.switchBtn} ${styles.goToYouTube}`}></div>
+                                } {leftSwitch &&
+                                    <div className={`${styles.switchBtn} ${styles.goToPicture}`}></div>
+                                }
+                                <p onClick={() => {
+                                    setImgPage(true);
+                                    setLeftSwitch(true);
+                                    setRightSwitch(false);
+                                }}>Picture</p>
+                                <p onClick={() => {
+                                    setImgPage(false);
+                                    setLeftSwitch(false);
+                                    setRightSwitch(true);
+                                }}>youTube</p>
+                            </div>
+                        }
                         {/* X mark */}
                         <div className={styles.closeIconDiv}
                             onClick={(event) => {
                                 event.stopPropagation();
                                 scrollAutoFunc();
                                 onClose();
-                                // router.push('/#project');
                                 window.location.hash = 'project';
                             }}>
                             <div></div>
@@ -118,7 +148,7 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
 
                             <h2>Period</h2>
                             <p>{period}</p>
-                            
+
                             <h2>Main Function</h2>
                             <p>{mainFunction}</p>
 
@@ -145,7 +175,7 @@ const ProjectModal : React.FC<ProjectModalProps> = ({
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default ProjectModal;

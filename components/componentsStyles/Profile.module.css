@@ -155,6 +155,11 @@
 
 .switchDiv p{
     font-size: 1.39vw;
+    
+    z-index: 1;
+    margin: 0vw 1.5vw;
+
+    cursor: pointer;
 }
 
 .switchBtn {
@@ -203,11 +208,4 @@
     100% {
         left: 45%;
     }
-}
-
-.switchDiv p{
-    z-index: 1;
-    margin: 0vw 1.5vw;
-
-    cursor: pointer;
 }
