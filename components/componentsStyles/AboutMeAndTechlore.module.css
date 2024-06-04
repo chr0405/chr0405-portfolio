@@ -3,8 +3,23 @@
     height: 2.08vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .imgCss {
+        width: 5.08vw;
+        height: 5.08vw;
+    }
+}
+
 .textDiv {
     margin-left: 1.38vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .textDiv {
+        margin-left: 3vw;
+
+        width: 40vw;
+    }
 }
 
 .titleCss {
@@ -12,8 +27,20 @@
     font-size: 1.39vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .titleCss {
+        font-size: 3.5vw;
+    }
+}
+
 .titleAboutUsCss {
     margin-left: 1.39vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .titleAboutUsCss {
+        margin-left: 3vw;
+    }
 }
 
 .titleTechloreCss {
@@ -22,6 +49,13 @@
 
 .infoCss {
     font-size: 1.39vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .infoCss {
+        font-size: 3.5vw;
+        left: 15vw;
+    }
 }
 
 .infoAboutUsCss {
@@ -35,6 +69,14 @@
 
     position: absolute;
     margin-left: 18.06vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .aCss {
+        font-size: 3.5vw;
+    
+        left: 25vw;
+    }
 }
 
 .aCss:hover,

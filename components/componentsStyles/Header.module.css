@@ -47,7 +47,6 @@
 
 @media only screen and (max-width: 768px) {
     .logoDiv h1 {
-        /* font-size: 3.5vw; */
         font-size: 4vw;
     }
 }
@@ -103,7 +102,9 @@
 @media only screen and (max-width: 768px) {
     .circleDiv {
         overflow: hidden;
-        width: 768px;
+        width: 150vw;
+
+        /* background-color: red; */
     }
 }
 
@@ -121,9 +122,9 @@
 
 @media only screen and (max-width: 768px) {
     .circle {
-        width: 12vw; /* 원의 크기를 키움 */
+        width: 11vw;
         height: 5vw;
-        border-top-left-radius: 12vw;
-        border-top-right-radius: 12vw;
+        border-top-left-radius: 11vw;
+        border-top-right-radius: 11vw;
     }
 }

@@ -154,6 +154,17 @@
     margin: 1.04vw 0vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .individualDiv {
+        width: 62vw;
+        height: 5vw;
+
+        margin: 2.04vw 0vw;
+
+        /* background-color: red; */
+    }
+}
+
 .individualDiv2 {
     width: 24.86vw;
 
@@ -167,6 +178,14 @@
     transform: translate(-50%, 0%);
 
     margin: 1.04vw 0vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .individualDiv2 {
+        width: 48vw;
+
+        margin: 2.04vw 0vw;
+    }
 }
 
 .screw {
@@ -240,7 +259,7 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv {
-        width: 28vw;
+        width: 35vw;
         height: 10vw;
 
         margin-top: 6.39vw;
@@ -260,7 +279,7 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv p {
-        font-size: 2.68vw;
+        font-size: 3.5vw;
     }
 }
 
@@ -277,7 +296,7 @@
 
 @media only screen and (max-width: 768px) {
     .switchBtn {
-        width: 14vw;
+        width: 18vw;
         height: 10vw;
 
         border-radius: 12.78vw;
