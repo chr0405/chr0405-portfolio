@@ -5,6 +5,12 @@
     background: linear-gradient(to bottom, #1B4669, #668DAE);
 }
 
+@media only screen and (max-width: 768px) {
+    .totalDiv {
+        height: 200vh;
+    }
+}
+
 .centerDiv {
     position: relative; 
     top: 50%;
@@ -18,9 +24,7 @@
 }
 
 .boxDiv {
-    /* background-color: #F5F5F5; */
     background-color: white;
-    /* border-radius: 2vw; */
     border-radius: 1.04vw;
 
     width: 69.44vw;
@@ -34,12 +38,30 @@
     margin-bottom: 1.39vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .boxDiv {
+        width: 83.33vw;
+        height: 150vh;
+
+        flex-direction: column;
+        
+        margin-bottom: 0vw;
+    }
+}
+
 .leftDiv {
     width: 34.72vw;
     height: 41.67vw;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .leftDiv {
+        width: 83.33vw;
+        height: 50%;
+    }
 }
 
 .pictureDiv {
@@ -50,6 +72,13 @@
     height: 28.82vw;
 
     overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .pictureDiv {
+        width: 45.83vw;
+        height: 57.63vw;
+    }
 }
 
 .pictureDiv img {
@@ -64,10 +93,33 @@
     overflow: hidden;
 }
 
+@media only screen and (max-width: 768px) {
+    .centerLine {
+        width: 100%;
+        height: 0.2vh;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .centerLine div {
     height: 100%;
     border-left: 0.6vw dashed #9B9B9B;
     border-right: 0.6vw dashed #9B9B9B;
+}
+
+@media only screen and (max-width: 768px) {
+    .centerLine div {
+        position: relative;
+        margin-top: 0.6vh;
+        width: 100%;
+        border-top: 1vh dashed #9B9B9B;
+
+        height: 0.01vh;
+    }
 }
 
 .rightDiv {
@@ -77,6 +129,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .rightDiv {
+        width: 83.33vw;
+        height: 50%;
+    }
 }
 
 .individualDiv {
@@ -119,6 +178,13 @@
     position: absolute;
 }
 
+@media only screen and (max-width: 768px) {
+    .screw {
+        width: 2.08vw;
+        height: 2.08vw;
+    }
+}
+
 .screwLocation {
     top : 1.8vw;
     margin-right: 65vw;
@@ -134,6 +200,25 @@
 .screwLocation4 {
     bottom : 9.8vw;
     margin-left: 65vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .screwLocation {
+        top : 2.8vw;
+        margin-right: 75vw;
+    }
+    .screwLocation2 {
+        top : 2.8vw;
+        margin-left: 75vw;
+    }
+    .screwLocation3 {
+        bottom : 19.8vw;
+        margin-right: 75vw;
+    }
+    .screwLocation4 {
+        bottom : 19.8vw;
+        margin-left: 75vw;
+    }
 }
 
 .switchDiv {
@@ -153,6 +238,17 @@
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+@media only screen and (max-width: 768px) {
+    .switchDiv {
+        width: 28vw;
+        height: 10vw;
+
+        margin-top: 6.39vw;
+
+        border-radius: 12.78vw;
+    }
+}
+
 .switchDiv p{
     font-size: 1.39vw;
     
@@ -160,6 +256,12 @@
     margin: 0vw 1.5vw;
 
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .switchDiv p {
+        font-size: 2.68vw;
+    }
 }
 
 .switchBtn {
@@ -171,6 +273,15 @@
     position: absolute;
 
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 768px) {
+    .switchBtn {
+        width: 14vw;
+        height: 10vw;
+
+        border-radius: 12.78vw;
+    }
 }
 
 .goToAboutMe {
@@ -186,6 +297,12 @@
     animation-direction: normal;
     animation-duration: 0.3s;
     animation-name: switchChange;
+}
+
+@media only screen and (max-width: 768px) {
+    .goToTechlore {
+        left: 50%;
+    }
 }
 
 @keyframes switchChange {

@@ -47,7 +47,8 @@
 
 @media only screen and (max-width: 768px) {
     .logoDiv h1 {
-        font-size: 3.5vw;
+        /* font-size: 3.5vw; */
+        font-size: 4vw;
     }
 }
 
@@ -83,7 +84,7 @@
 
 @media only screen and (max-width: 768px) {
     .menuDiv h2 {
-        font-size: 3.15vw;
+        font-size: 3.5vw;
     }
 }
 
