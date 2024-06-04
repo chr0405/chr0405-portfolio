@@ -12,6 +12,7 @@ import git from "../img/skillIcon/git.png";
 import GitHub from "../img/skillIcon/GitHub.png";
 import netlify from "../img/skillIcon/netlify.png";
 import Vercel from "../img/skillIcon/Vercel.png";
+import aws from "../img/skillIcon/aws.png";
 import Notion from "../img/skillIcon/Notion.png";
 import Figma from "../img/skillIcon/Figma.png";
 
@@ -121,6 +122,12 @@ export const SkillArray = {
             "backgroundColor" : "#E1E1E1",
             "width" : 2.92,
             "height" : 2.55
+        }, {
+            "img" : aws,
+            "name" : "aws",
+            "backgroundColor" : "#E1E1E1",
+            "width" : 2.92,
+            "height" : 2.92
         }
     ],
     "Communication" : [

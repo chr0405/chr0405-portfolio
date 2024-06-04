@@ -59,6 +59,16 @@
     justify-content: flex-start;
 }
 
+.iconTotalDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    width: 16vw;
+}
+
 .iconDiv {
     display: flex;
     flex-direction: column;
@@ -113,6 +123,7 @@
     width: 33.3%;
     height: 27.78vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }

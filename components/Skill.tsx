@@ -72,20 +72,20 @@ export default function Skill() {
 
                     {/* 세로 분할 1 */}
                     <div className={styles.bottomDetailDiv}>
-                        <div>
-                            <h1 className={`${styles.tilteDiv} ${styles.restTitle}`}>Version Control</h1>
-                            {/* Version Control 아이콘 전체 div */}
-                            <div className={styles.restLineDiv}>
+                        <h1 className={`${styles.tilteDiv} ${styles.restTitle}`}>Version Control</h1>
+                        {/* Version Control 아이콘 전체 div */}
+                        <div className={styles.restLineDiv}>
+                            <div className={styles.iconTotalDiv}>
                                 {/* 개별 아이콘 */}
                                 { SkillArray.VersionControl.map((VCIcon, index) => (
-                                    <div className={styles.iconDiv} key={index}>
+                                        <div className={styles.iconDiv} key={index}>
                                         <SkillIcon
                                             img = {VCIcon.img}
                                             name = {VCIcon.name}
                                             backgroundColor = {VCIcon.backgroundColor}
                                             width = {VCIcon.width}
                                             height = {VCIcon.height}/>
-                                    </div>
+                                        </div>
                                 ))}
                             </div>
                         </div>
@@ -98,21 +98,21 @@ export default function Skill() {
 
                     {/* 세로 분할 2 */}
                     <div className={styles.bottomDetailDiv}>
-                        <div>
-                            <h1 className={`${styles.tilteDiv} ${styles.restTitle}`}>Deployment</h1>
-                            {/* Deployment 아이콘 전체 div */}
-                            <div className={styles.restLineDiv}>
+                        <h1 className={`${styles.tilteDiv} ${styles.restTitle}`}>Deployment</h1>
+                        {/* Deployment 아이콘 전체 div */}
+                        <div className={styles.restLineDiv}>
+                            <div className={styles.iconTotalDiv}>
                                 {/* 개별 아이콘 */}
-                                { SkillArray.Deployment.map((DepIcon, index) => (
-                                    <div className={styles.iconDiv} key={index}>
-                                        <SkillIcon
-                                            img = {DepIcon.img}
-                                            name = {DepIcon.name}
-                                            backgroundColor = {DepIcon.backgroundColor}
-                                            width = {DepIcon.width}
-                                            height = {DepIcon.height}/>
-                                    </div>
-                                ))}
+                                    { SkillArray.Deployment.map((DepIcon, index) => (
+                                        <div className={styles.iconDiv} key={index}>
+                                            <SkillIcon
+                                                img = {DepIcon.img}
+                                                name = {DepIcon.name}
+                                                backgroundColor = {DepIcon.backgroundColor}
+                                                width = {DepIcon.width}
+                                                height = {DepIcon.height}/>
+                                        </div>
+                                    ))}
                             </div>
                         </div>
                     </div>
@@ -124,10 +124,10 @@ export default function Skill() {
 
                     {/* 세로 분할 3 */}
                     <div className={styles.bottomDetailDiv}>
-                        <div>
-                            <h1 className={`${styles.tilteDiv} ${styles.restTitle}`}>Communication</h1>
-                            {/* Communication 아이콘 전체 div */}
-                            <div className={styles.restLineDiv}>
+                        <h1 className={`${styles.tilteDiv} ${styles.restTitle}`}>Communication</h1>
+                        {/* Communication 아이콘 전체 div */}
+                        <div className={styles.restLineDiv}>
+                            <div className={styles.iconTotalDiv}>
                                 {/* 개별 아이콘 */}
                                 { SkillArray.Communication.map((communiIcon, index) => (
                                     <div className={styles.iconDiv} key={index}>

@@ -5,8 +5,8 @@
 
 @media only screen and (max-width: 768px) {
     .imgCss {
-        width: 5.08vw;
-        height: 5.08vw;
+        width: 4.08vw;
+        height: 2.08vh;
     }
 }
 
@@ -16,9 +16,7 @@
 
 @media only screen and (max-width: 768px) {
     .textDiv {
-        margin-left: 3vw;
-
-        width: 40vw;
+        width: 100%;
     }
 }
 
@@ -29,7 +27,9 @@
 
 @media only screen and (max-width: 768px) {
     .titleCss {
-        font-size: 3.5vw;
+        font-size: 1.8vh;
+
+        width: 36vw;
     }
 }
 
@@ -39,12 +39,18 @@
 
 @media only screen and (max-width: 768px) {
     .titleAboutUsCss {
-        margin-left: 3vw;
+        margin-left: 1.39vh;
     }
 }
 
 .titleTechloreCss {
     margin-bottom: 0.69vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .titleTechloreCss {
+        margin-left: 1.39vh;
+    }
 }
 
 .infoCss {
@@ -53,8 +59,8 @@
 
 @media only screen and (max-width: 768px) {
     .infoCss {
-        font-size: 3.5vw;
-        left: 15vw;
+        font-size: 1.6vh;
+        left: 7vh;
     }
 }
 
@@ -73,9 +79,8 @@
 
 @media only screen and (max-width: 768px) {
     .aCss {
-        font-size: 3.5vw;
-    
-        left: 25vw;
+        font-size: 1.8vh;
+        left: 29vw;
     }
 }
 

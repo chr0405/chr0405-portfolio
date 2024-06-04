@@ -13,7 +13,6 @@
 
 .textDiv {
     position: relative; 
-    /* top: 42%; */
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -30,8 +29,8 @@
 @media only screen and (max-width: 768px) {
     .textDiv {
         top: 55%;
-        width: 90vw;
-        height: 55vw;
+        width: 100vw;
+        height: 40vh;
     }
 }
 
@@ -51,7 +50,7 @@
 
 @media only screen and (max-width: 768px) {
     .textDiv h1 {
-        font-size: 5vw;
+        font-size: 3vh;
         font-weight: bold;
     }
 }
@@ -97,10 +96,10 @@
 
 @media only screen and (max-width: 768px) {
     .textDiv div {
-        width: 10vw;
-        height: 10vw;
+        width: 20vw;
+        height: 10vh;
     
-        top: 15vw;
+        top: 30%;
     }
 }
 
@@ -121,8 +120,8 @@
 
 @media only screen and (max-width: 768px) {
     .imgMovingSetting {
-        width: 4.17vw;
-        height: 4.17vw;
+        width: 8vw;
+        height: 8vw;
 
         animation-name: imgMovingMobile;
     }
@@ -148,19 +147,19 @@
 
 @keyframes imgMovingMobile {
     0% {
-        width: 4.17vw;
-        height: 4.17vw;
+        width: 8vw;
+        height:8vw;
         text-shadow: 0.14vw 0.14vw 0.69vw rgba(255, 255, 255, 0.5);
     }
 
     50% {
-        width: 5.56vw;
-        height: 5.56vw;
+        width: 10vw;
+        height: 10vw;
     }
 
     100% {
-        width: 4.17vw;
-        height: 4.17vw;
+        width:8vw;
+        height:8vw;
     }
 }
 
@@ -177,8 +176,8 @@
 
 @media only screen and (max-width: 768px) {
     .textDiv p {
-        font-size: 3.5vw;
-        top: 28vw;
+        font-size: 1.8vh;
+        top: 60%;
     }
 }
   
