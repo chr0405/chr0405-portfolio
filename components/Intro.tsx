@@ -17,7 +17,8 @@ export default function Intro() {
 
     const backgroundFunction = () => {
         const windowWidth = 100;
-        const windowHeight = 71.11;
+        // const windowHeight = 71.11;
+        const windowHeight = 100;
 
         function getRandomValue(max : number) {
             return Math.floor(Math.random() * max);
@@ -41,7 +42,8 @@ export default function Intro() {
             starsArray.push({
                 className: className,
                 x: `${x}vw`,
-                y: `${y}vw`
+                // y: `${y}vw`
+                y: `${y}vh`
             });
         }
 
