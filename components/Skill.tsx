@@ -78,7 +78,7 @@ export default function Skill() {
                             <div className={styles.iconTotalDiv}>
                                 {/* 개별 아이콘 */}
                                 { SkillArray.VersionControl.map((VCIcon, index) => (
-                                        <div className={styles.iconDiv} key={index}>
+                                        <div className={styles.iconDiv2} key={index}>
                                         <SkillIcon
                                             img = {VCIcon.img}
                                             name = {VCIcon.name}
@@ -104,7 +104,7 @@ export default function Skill() {
                             <div className={styles.iconTotalDiv}>
                                 {/* 개별 아이콘 */}
                                     { SkillArray.Deployment.map((DepIcon, index) => (
-                                        <div className={styles.iconDiv} key={index}>
+                                        <div className={styles.iconDiv2} key={index}>
                                             <SkillIcon
                                                 img = {DepIcon.img}
                                                 name = {DepIcon.name}
@@ -130,7 +130,7 @@ export default function Skill() {
                             <div className={styles.iconTotalDiv}>
                                 {/* 개별 아이콘 */}
                                 { SkillArray.Communication.map((communiIcon, index) => (
-                                    <div className={styles.iconDiv} key={index}>
+                                    <div className={styles.iconDiv2} key={index}>
                                         <SkillIcon
                                             img = {communiIcon.img}
                                             name = {communiIcon.name}

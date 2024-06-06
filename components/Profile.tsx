@@ -67,16 +67,22 @@ export default function Profile() {
                     } {leftSwitch &&
                         <div className={`${styles.switchBtn} ${styles.goToAboutMe}`}></div>
                     }
-                    <p onClick={() => {
+                    <div className={styles.switchTextDiv}>
+                        <p className={styles.switchP}
+                        onClick={() => {
                         setPage1(true);
                         setLeftSwitch(true);
                         setRightSwitch(false);
                         }}>About me</p>
-                    <p onClick={() => {
+                    </div>
+                    <div className={styles.switchTextDiv}>
+                        <p className={styles.switchP}
+                        onClick={() => {
                         setPage1(false);
                         setLeftSwitch(false);
                         setRightSwitch(true);
                         }}>Techlore</p>
+                    </div>
                 </div>
             </div>
         </div>

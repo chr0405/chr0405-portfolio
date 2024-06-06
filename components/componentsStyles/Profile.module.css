@@ -275,7 +275,18 @@
     }
 }
 
-.switchDiv p{
+.switchTextDiv{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+
+    /* background-color: red; */
+}
+
+.switchP {
     font-size: 1.39vw;
     
     z-index: 1;
@@ -285,9 +296,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .switchDiv p {
-        margin: 0vw 0.5vh;
-        font-size: 1.6vh;
+    .switchP {
+        /* margin: 0vw 0.5vh; */
+        font-size: 1.4vh;
     }
 }
 

@@ -5,7 +5,24 @@
     border-radius: 2.08vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .iconDiv {
+        border-radius: 3vh;
+    }
+}
+
+.iconImg {
+    width: 10px;
+}
+
 .iconName {
     font-size: 0.97vw;
     margin-top: 0.69vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .iconName {
+        font-size: 1.4vh;
+        margin-top: 0.3vh;
+    }
 }

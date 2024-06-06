@@ -17,15 +17,11 @@ const SkillIcon: React.FC<SkillIconProps> = ({ img, name, backgroundColor, width
                 className={styles.iconDiv}
                 style={{
                     "backgroundColor" : `${backgroundColor}`,
-                    "width" : `${width + 1.53}vw`,
-                    "height" : `4.44vw`
+                    "width" : `${(width + 1.53) * 16}px`,
+                    "height" : '70px'
+                    // "height" : '4.44vw'
                 }}>
-
-                <Image src={img} alt={name}
-                    style={{
-                        "width" : `${width}vw`,
-                        "height" : `${height}vw`
-                    }}/>
+                <Image src={img} alt={name} width={width * 16} height={height * 16}/>
             </div>
             <p className={styles.iconName}>{name}</p>
         </>
