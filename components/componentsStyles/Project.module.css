@@ -1,13 +1,13 @@
 .totalDiv {
     width: 100%;
-
+    
     background: linear-gradient(to bottom, #B9CEE3, #DBECF6);
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+ 
 .projectBoxDiv {
     display: flex;
     align-items: center;

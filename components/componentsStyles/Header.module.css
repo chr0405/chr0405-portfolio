@@ -47,7 +47,8 @@
 
 @media only screen and (max-width: 768px) {
     .logoDiv h1 {
-        font-size: 2vh;
+        /* font-size: 4vw; */
+        font-size: 1.8vh;
     }
 }
 
