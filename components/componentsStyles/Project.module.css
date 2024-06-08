@@ -2,7 +2,8 @@
     width: 100%;
     
     background: linear-gradient(to bottom, #B9CEE3, #DBECF6);
-    
+    /* background-color: yellow; */
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,4 +14,6 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
+    /* background-color: green; */
 }

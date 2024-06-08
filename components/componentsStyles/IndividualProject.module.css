@@ -10,6 +10,17 @@
     margin: 4vw 4vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .totalDiv {
+        width: 83.33vw;
+        height: 120vw;
+    
+        margin: 10vw 0vw 10vw 0vw;
+    
+        justify-content: space-between;
+    }
+}
+
 .projectDiv {
     width: 34.72vw;
     height: 41.67vw;
@@ -24,6 +35,15 @@
     justify-content: flex-start;
 }
 
+@media only screen and (max-width: 768px) {
+    .projectDiv {
+        width: 83.33vw;
+        height: 100vw;
+    
+        border-radius: 1vh;
+    }
+}
+
 .projectNameDiv {
     width: 34.72vw;
     height: 3.61vw;
@@ -33,17 +53,24 @@
     justify-content: center;
 
     font-size: 1.39vw;
-    /* 20px */
 
     font-weight: bold;
 }
 
-.projectNameDiv div{
+@media only screen and (max-width: 768px) {
+    .projectNameDiv {
+        width: 83.33vw;
+        height: 8.66vw;
+    
+        font-size: 1.8vh;
+    }
+}
+
+.projectName {
     position: absolute;
 }
 
 .switchDiv {
-    /* width: 9vw; */
     width: 9vw;
     height: 2.8vw;
     border-radius: 2.78vw;
@@ -51,13 +78,24 @@
 
     position: relative;
     margin-left: 25vw;
-    /* margin-top: 7vw; */
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+    /* background-color: red; */
+}
+
+@media only screen and (max-width: 768px) {
+    .switchDiv {
+        width: 25vw;
+        height: 6.72vw;
+        
+        border-radius: 2vh;
+        margin-left: 56vw;
+    }
 }
 
 .switchDiv p{
@@ -67,6 +105,12 @@
     z-index: 1;
 
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .switchDiv p{
+        font-size: 1.4vh;
+    }
 }
 
 .switchDiv p:first-of-type {
@@ -88,6 +132,15 @@
     box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
+@media only screen and (max-width: 768px) {
+    .switchBtn {
+        width: 12vw;
+        height: 6.72vw;
+        
+        border-radius: 2vh;
+    }
+}
+
 .goToPicture {
     animation-direction: reverse;
     animation-duration: 0.3s;
@@ -103,6 +156,12 @@
     animation-direction: normal;
     animation-duration: 0.3s;
     animation-name: switchChange;
+}
+
+@media only screen and (max-width: 768px) {
+    .goToYouTube {
+        width: 13.8vw;
+    }
 }
 
 @keyframes switchChange {
@@ -134,14 +193,35 @@
     background-color: #9B9B9B;
 }
 
+@media only screen and (max-width: 768px) {
+    .projectPictureDiv {
+        width: 83.33vw;
+        height: 62.16vw;
+    }
+}
+
 .projectPictureDiv img{
     width: 34.72vw;
     height: 25.9vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .projectPictureDiv img {
+        width: 83.33vw;
+        height: 62.16vw;
+    }
+}
+
 .projectYouTubeIframe {
     width: 34.72vw;
     height: 25.9vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .projectYouTubeIframe {
+        width: 83.33vw;
+        height: 62.16vw;
+    }
 }
 
 .sectionDiv {
@@ -154,11 +234,31 @@
     display: flex;
     align-items: center;
     justify-content:space-between;
+
+    background-color: red;
+}
+
+@media only screen and (max-width: 768px) {
+    .sectionDiv {
+        width: 83.33vw;
+        height: 62.16vw;
+
+        top: -62.16vw;
+    }
 }
 
 .sectionDiv div{
     width: 11.57vw;
     height: 25.9vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .sectionDiv div {
+        width: 50%;
+        height: 100%;
+
+        background-color: yellow;
+    }
 }
 
 .projectPictureSelectTotalDiv {
@@ -247,6 +347,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .webSiteDiv {
+        width: 83.33vw;
+        height: 16.66vw;
+
+        margin-top: 0vw;
+
+        border-radius: 1vh;
+    }
 }
 
 .onMouseEnter{
