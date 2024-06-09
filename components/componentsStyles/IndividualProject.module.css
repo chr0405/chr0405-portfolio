@@ -117,8 +117,20 @@
     margin-left: 0.5vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .switchDiv p:first-of-type {
+        margin-left: 1vw;
+    }
+}
+
 .switchDiv p:last-of-type {
     margin-right: 0.5vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .switchDiv p:last-of-type {
+        margin-right: 0.4vw;
+    }
 }
 
 .switchBtn {
@@ -235,7 +247,7 @@
     align-items: center;
     justify-content:space-between;
 
-    background-color: red;
+    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -257,7 +269,7 @@
         width: 50%;
         height: 100%;
 
-        background-color: yellow;
+        /* background-color: yellow; */
     }
 }
 
@@ -281,6 +293,22 @@
 .textDiv{
     /* padding: 2.08vw; */
     margin-top: 1.4vw;
+    /* background-color: red; */
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .textDiv {
+        left: 4.5vw;
+        margin-top: 1vw;
+
+        /* background-color: red; */
+    }
 }
 
 .namePeriodDiv{
@@ -297,24 +325,55 @@
     font-weight: bold;
 }
 
+@media only screen and (max-width: 768px) {
+    .namePeriodDiv h1 {
+        font-size: 1.8vh;
+    }
+}
+
 .namePeriodDiv p{
     margin-left: 0.69vw;
 
     font-size: 0.97vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .namePeriodDiv p {
+        margin-left: 2.07vw;
+
+        font-size: 1.2vh;
+    }
+}
+
 .aboutProject {
     margin-top: 0.69vw;
-    font-size: 1.11vw;
     width: 31vw;
-    /* height: 4.76vw; */
     height: 5.2vw;
     overflow-y: auto;
+
+    /* background-color: red; */
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutProject {
+        width: 90%;
+        height: 6.5vh;
+
+        margin: 2vw 0vw;
+
+        font-size: 1.4vh;
+    }
 }
 
 .aboutProject::-webkit-scrollbar {
     /* width: 0.35vw; */
     width: 0.5vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutProject::-webkit-scrollbar {
+        width: 1.5vw;
+    }
 }
 
 .aboutProject::-webkit-scrollbar-thumb {
@@ -333,6 +392,13 @@
     text-decoration-line: underline;
     color: #3998EF;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .more {
+        font-size: 1.4vh;
+        margin-top: 0vw;
+    }
 }
 
 .webSiteDiv {
@@ -380,6 +446,15 @@
     animation-name: DivTwinkling1;
 }
 
+@media only screen and (max-width: 768px) {
+    .onMouseEnterDiv1 {
+        width: 15vw;
+        height: 15vw;
+
+        margin: 0vw 3vw;
+    }
+}
+
 @keyframes DivTwinkling1 {
     0% {
         background-color: rgba(255, 255, 255, 0);
@@ -410,6 +485,13 @@
     animation-name: DivTwinkling2;
 }
 
+@media only screen and (max-width: 768px) {
+    .onMouseEnterDiv2 {
+        width: 11.25vw;
+        height: 11.25vw;
+    }
+}
+
 @keyframes DivTwinkling2 {
     0% {
         background-color: rgba(255, 255, 255, 0);
@@ -437,6 +519,13 @@
     position: absolute;
 }
 
+@media only screen and (max-width: 768px) {
+    .onMouseEnterDiv3 {
+        width: 7.5vw;
+        height: 7.5vw;
+    }
+}
+
 .onMouseLeaveDiv {
     border-radius: 50%;
     
@@ -451,22 +540,43 @@
     margin: 0vw 2.5vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .onMouseLeaveDiv {
+        margin: 0vw 7.5vw;
+    }
+}
+
 .webSite {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    font-size: 1.11vw;
     text-decoration: none;
     color: #595959;
 
     /* margin: 0vw 3.47vw; */
 }
 
+@media only screen and (max-width: 768px) {
+    .webSite {
+        font-size: 1.4vh;
+    }
+}
+
+
 .webSite img{
     width: 2.43vw;
     height: 2.43vw;
 
     margin-bottom: 0.3vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .webSite img{
+        width: 7.29vw;
+        height: 7.29vw;
+    
+        margin-bottom: 1vw;
+    }
 }

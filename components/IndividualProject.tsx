@@ -34,7 +34,44 @@ interface IndividualProjectProps {
 const IndividualProject : React.FC<IndividualProjectProps> = ({
         capture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc
     }) => {
-    
+
+    const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
+
+    const [mobileView, setMobileView] = useState(false);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+        console.log(window.innerWidth);
+
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
+            console.log(mobileView);
+        } else {
+            setMobileView(false);
+            console.log(mobileView);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
+    }, []);
+
+    useEffect(() => {
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
+            console.log(mobileView);
+        } else {
+            setMobileView(false);
+            console.log(mobileView);
+        }
+
+    }, []);
+
     const [captureNum, setCaptureNum] = useState(0);
 
     const [isMouseOverDemo, setIsMouseOverDemo] = useState(false);
@@ -192,8 +229,8 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                                 <div className={isMouseOverYouTube ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv3}` : ''}>
                                     <a className={styles.webSite} href={webSite.YouTube} target="_blank">
                                         <Image style={{
-                                            "width" : "2.78vw",
-                                            "height" : "2.78vw",
+                                            "width" : mobileView? "8.34vw" : "2.78vw",
+                                            "height" : mobileView? "8.34vw" :  "2.78vw",
                                             "marginBottom" : "0.05vw",
                                         }}
                                             src={YouTubeImg} alt="YouTubeImg"/>
