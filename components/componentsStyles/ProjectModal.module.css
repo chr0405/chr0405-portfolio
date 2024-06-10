@@ -30,6 +30,19 @@
     overflow: hidden;
 }
 
+@media only screen and (max-width: 768px) {
+    .modalDiv {
+        width: 83.33vw;
+        height: 180vw;
+
+        border-radius: 1vh;
+    
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
 .projectPictureDiv {
     width: 45.14vw;
     height: 34.72vw;
@@ -37,14 +50,35 @@
     background-color: #9B9B9B;
 }
 
-.projectPictureDiv img{
+@media only screen and (max-width: 768px) {
+    .projectPictureDiv {
+        width: 83.33vw;
+        height: 62.16vw;
+    }
+}
+
+.projectPictureDiv img {
     width: 45.14vw;
     height: 34.72vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .projectPictureDiv img {
+        width: 83.33vw;
+        height: 62.16vw;
+    }
 }
 
 .projectYouTubeIframe {
     width: 45.14vw;
     height: 34.72vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .projectYouTubeIframe {
+        width: 83.33vw;
+        height: 62.16vw;
+    }
 }
 
 .sectionDiv {
@@ -59,9 +93,29 @@
     justify-content:space-between;
 }
 
+@media only screen and (max-width: 768px) {
+    .sectionDiv {
+        width: 83.33vw;
+        height: 62.16vw;
+
+        top: -62.33vw;
+
+        /* background-color: red; */
+    }
+}
+
 .sectionDiv div{
     width: 15.05vw;
     height: 34.72vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .sectionDiv div {
+        width: 50%;
+        height: 100%;
+
+        /* background-color: yellow; */
+    }
 }
 
 .projectPictureSelectTotalDiv {
