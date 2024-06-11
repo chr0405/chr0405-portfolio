@@ -9,12 +9,28 @@
     justify-content: center;
 }
 
+@media only screen and (max-width: 768px) {
+    .totalDiv {
+        height: 10vh;
+        justify-content: flex-start;
+    }
+}
+
 .centerDiv {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
     position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+    .centerDiv {
+        position: relative;
+        width: 50%;
+
+        left: 2%;
+    }
 }
 
 .centerDetailDiv {
@@ -25,14 +41,35 @@
     margin: 0.35vw 0vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .centerDetailDiv {
+        margin: 0vw 0vw;
+    }
+}
+
 .centerDetailDiv img {
     margin: 0vw 0.7vw 0vw 0vw;
     width: 1.8vw;
     height: 1.8vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .centerDetailDiv img {
+        width: 6vw;
+        height: 40%;
+    }
+}
+
 .centerDetailDiv h2 {
     font-size: 1.39vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .centerDetailDiv h2 {
+        font-size: 1.4vh;
+
+        width: 32vw;
+    }
 }
 
 .rightDiv {
@@ -40,7 +77,19 @@
     left: 40%;
 }
 
+@media only screen and (max-width: 768px) {
+    .rightDiv {
+        left: 6%;
+    }
+}
+
 .rightDiv h3 {
     font-size: 1.39vw;
     color: #9B9B9B;
+}
+
+@media only screen and (max-width: 768px) {
+    .rightDiv h3 {
+        font-size: 1.4vh;
+    }
 }

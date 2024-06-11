@@ -80,7 +80,7 @@
     background-color: #E1E1E1;
 
     position: relative;
-    margin-left: 25vw;
+    margin-left: -25vw;
 
     display: flex;
     justify-content: space-between;
@@ -98,7 +98,7 @@
         height: 3vh;
         
         border-radius: 2vh;
-        margin-left: 56vw;
+        margin-left: -56vw;
     }
 }
 
