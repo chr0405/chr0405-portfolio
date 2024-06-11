@@ -13,6 +13,7 @@ import ProjectModal from "./ProjectModal";
 
 interface IndividualProjectProps {
     capture : any[];
+    aboutCapture : any[];
     name : string;
     period : string;
     aboutProject : string;
@@ -32,7 +33,7 @@ interface IndividualProjectProps {
 }
 
 const IndividualProject : React.FC<IndividualProjectProps> = ({
-        capture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc
+        capture, aboutCapture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc
     }) => {
 
     const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -106,6 +107,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
         <>
             <ProjectModal
                 capture = {capture}
+                aboutCapture = {aboutCapture}
                 name = {name}
                 period = {period}
                 aboutProject = {aboutProject}

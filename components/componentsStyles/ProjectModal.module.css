@@ -63,6 +63,10 @@
         margin-top: -0.7vh;
         /* top: 8.4vw; */
         top: 4.4vh;
+
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
     }
 }
 
@@ -76,6 +80,23 @@
         width: 83.33vw;
         /* height: 62.16vw; */
         height: 28vh;
+    }
+}
+
+.projectPictureDiv div {
+    position: relative;
+    top: -97%;
+    font-size: 1.11vw;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+@media only screen and (max-width: 768px) {
+    .projectPictureDiv div {
+        font-size: 1.6vh;
     }
 }
 
@@ -103,11 +124,13 @@
     height: 34.72vw;
 
     position: relative;
-    top: -35vw;
+    margin-top: -2.6vw;
 
     display: flex;
     align-items: center;
     justify-content:space-between;
+
+    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -115,21 +138,28 @@
         width: 83.33vw;
         height: 100%;
 
-        /* background-color: red; */
-
-        top: -63vw;
+        margin-top: -3vh;
     }
 }
 
 .sectionDiv div{
-    width: 15.05vw;
+    width: 22.57vw;
     height: 34.72vw;
+
+    /* background-color: yellow; */
+
+    position: relative;
+    margin-top: 67.4vw;
+
+    /* border: 2px solid black;  */
 }
 
 @media only screen and (max-width: 768px) {
     .sectionDiv div {
         width: 50%;
         height: 100%;
+
+        margin-top: 54.4vh;
     }
 }
 
@@ -137,7 +167,7 @@
     position: relative;
     height: 0.69vw;
 
-    top: -37vw;
+    margin-top: -1.5vw;
 
     display: flex;
     align-items: center;
@@ -147,7 +177,7 @@
 @media only screen and (max-width: 768px) {
     .projectPictureSelectTotalDiv {
         /* top: -66vw; */
-        top: -30vh;
+        margin-top: -1.5vh;
     }
 }
 

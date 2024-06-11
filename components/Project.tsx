@@ -55,6 +55,7 @@ export default function Project() {
                     <IndividualProject
                         key={index}
                         capture = {project.capture}
+                        aboutCapture = {project.aboutCapture}
                         name = {project.name}
                         period = {project.period}
                         aboutProject = {project.aboutProject}

@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 
 interface ProjectModalProps {
     capture: any[];
+    aboutCapture : any[];
     name: string;
     period: string;
     aboutProject: string;
@@ -26,7 +27,7 @@ interface ProjectModalProps {
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
-    capture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc, show, onClose
+    capture, aboutCapture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc, show, onClose
 }) => {
     const [captureNum, setCaptureNum] = useState(0);
     const [imgPage, setImgPage] = useState(true);
@@ -63,6 +64,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {imgPage &&
                     <div className={styles.projectPictureDiv}>
                         <Image src={capture[captureNum]} alt="captureImg" />
+                        <div>{aboutCapture[captureNum]}</div>
 
                         <div className={styles.sectionDiv}>
                             {/* left section */}

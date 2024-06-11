@@ -3,10 +3,16 @@ import { Metadata } from "next"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
-export const metadata : Metadata= {
+// public 디렉토리의 이미지 경로를 지정
+const faviconUrl = "/star_favicon.png";
+
+export const metadata: Metadata = {
   title: {
-    template : "CHR portfolio",
-    default : "CHR portfolio",
+    template: "CHR portfolio",
+    default: "CHR portfolio",
+  },
+  icons: {
+    icon: faviconUrl,
   },
 }
 
@@ -18,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   )
