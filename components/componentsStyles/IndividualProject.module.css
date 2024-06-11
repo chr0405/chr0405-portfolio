@@ -13,7 +13,8 @@
 @media only screen and (max-width: 768px) {
     .totalDiv {
         width: 83.33vw;
-        height: 120vw;
+        /* height: 120vw; */
+        height: 54.2vh;
     
         margin: 10vw 0vw 10vw 0vw;
     
@@ -38,7 +39,8 @@
 @media only screen and (max-width: 768px) {
     .projectDiv {
         width: 83.33vw;
-        height: 100vw;
+        /* height: 100vw; */
+        height: 45.5vh;
     
         border-radius: 1vh;
     }
@@ -60,7 +62,8 @@
 @media only screen and (max-width: 768px) {
     .projectNameDiv {
         width: 83.33vw;
-        height: 8.66vw;
+        /* height: 8.66vw; */
+        height: 4vh;
     
         font-size: 1.8vh;
     }
@@ -91,7 +94,8 @@
 @media only screen and (max-width: 768px) {
     .switchDiv {
         width: 25vw;
-        height: 6.72vw;
+        /* height: 6.72vw; */
+        height: 3vh;
         
         border-radius: 2vh;
         margin-left: 56vw;
@@ -129,7 +133,7 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv p:last-of-type {
-        margin-right: 1vw;
+        margin-right: 1.5vw;
     }
 }
 
@@ -147,7 +151,7 @@
 @media only screen and (max-width: 768px) {
     .switchBtn {
         width: 12vw;
-        height: 6.72vw;
+        height: 3vh;
         
         border-radius: 2vh;
     }
@@ -208,7 +212,8 @@
 @media only screen and (max-width: 768px) {
     .projectPictureDiv {
         width: 83.33vw;
-        height: 62.16vw;
+        /* height: 62.16vw; */
+        height: 28.05vh;
     }
 }
 
@@ -220,7 +225,8 @@
 @media only screen and (max-width: 768px) {
     .projectPictureDiv img {
         width: 83.33vw;
-        height: 62.16vw;
+        /* height: 62.16vw; */
+        height: 28.05vh;
     }
 }
 
@@ -232,7 +238,8 @@
 @media only screen and (max-width: 768px) {
     .projectYouTubeIframe {
         width: 83.33vw;
-        height: 62.16vw;
+        /* height: 62.16vw; */
+        height: 28.05vh;
     }
 }
 
@@ -253,7 +260,8 @@
 @media only screen and (max-width: 768px) {
     .sectionDiv {
         width: 83.33vw;
-        height: 62.16vw;
+        /* height: 62.16vw; */
+        height: 28.05vh;
 
         top: -62.16vw;
     }
@@ -285,7 +293,8 @@
 
 @media only screen and (max-width: 768px) {
     .projectPictureSelectTotalDiv {
-        top: -66vw;
+        /* top: -66vw; */
+        top: -30vh;
     }
 }
 
@@ -298,8 +307,9 @@
 
 @media only screen and (max-width: 768px) {
     .projectPictureSelectDiv {
-        width: 2vw;
-        height: 2vw;
+        width: 1.8vw;
+        /* height: 1.8vw; */
+        height: 0.85vh;
         margin: 0vw 0.8vw;
     }
 }
@@ -370,7 +380,7 @@
         width: 90%;
         height: 6.5vh;
 
-        margin: 1.5vw 0vw;
+        margin: 0.8vh 0vw;
 
         font-size: 1.4vh;
     }
@@ -429,7 +439,8 @@
 @media only screen and (max-width: 768px) {
     .webSiteDiv {
         width: 83.33vw;
-        height: 16.66vw;
+        /* height: 16.66vw; */
+        height: 7.5vh;
 
         margin-top: 0vw;
 
@@ -586,7 +597,8 @@
 @media only screen and (max-width: 768px) {
     .webSite img{
         width: 7.29vw;
-        height: 7.29vw;
+        /* height: 7.29vw; */
+        height: 3.29vh;
     
         margin-bottom: 1vw;
     }
