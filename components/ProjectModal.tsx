@@ -122,7 +122,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                                     setImgPage(true);
                                     setLeftSwitch(true);
                                     setRightSwitch(false);
-                                }}>Picture</p>
+                                }}>Pictures</p>
                                 <p onClick={() => {
                                     setImgPage(false);
                                     setLeftSwitch(false);

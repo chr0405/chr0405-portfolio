@@ -299,7 +299,7 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv p:first-of-type {
-        margin-left: 2vw;
+        margin-left: 1vw;
     }
 }
 
@@ -517,6 +517,9 @@
     /* font-size: 1.11vw; */
 
     margin: 0vw 2.69vw 1.39vw 2.69vw;
+
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 768px) {

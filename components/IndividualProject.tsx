@@ -137,7 +137,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                                     setImgPage(true);
                                     setLeftSwitch(true);
                                     setRightSwitch(false);
-                                    }}>Picture</p>
+                                    }}>Pictures</p>
                                 <p onClick={() => {
                                     setImgPage(false);
                                     setLeftSwitch(false);
