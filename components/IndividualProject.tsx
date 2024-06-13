@@ -12,6 +12,7 @@ import { usePathname } from 'next/navigation';
 import ProjectModal from "./ProjectModal";
 
 interface IndividualProjectProps {
+    mainCapture : any;
     capture : any[];
     aboutCapture : any[];
     name : string;
@@ -23,6 +24,7 @@ interface IndividualProjectProps {
     webSite : {
         Demo? : string;
         YouTube? : string;
+        YouTubeEmbed? : string;
         GitHub? : string;
     };
     etc? : {
@@ -33,7 +35,7 @@ interface IndividualProjectProps {
 }
 
 const IndividualProject : React.FC<IndividualProjectProps> = ({
-        capture, aboutCapture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc
+        mainCapture, capture, aboutCapture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc
     }) => {
 
     const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -152,24 +154,22 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                         <>
                             <div className={styles.projectPictureDiv}>
 
-                            <Image src={capture[captureNum]} alt="captureImg"/>
+                            <Image src={mainCapture} alt="captureImg"/>
 
-                            <div className={styles.sectionDiv}>
-                                {/* left section */}
+                            {/* <div className={styles.sectionDiv}>
                                 <div onClick={()=> {
                                     if(captureNum > 0){
                                         setCaptureNum((pre) => pre - 1);
                                     }
                                 }}></div>
-                                {/* right section */}
                                 <div onClick={()=> {
                                     if(captureNum < (capture.length - 1)){
                                         setCaptureNum((pre) => pre + 1);
                                     }
                                 }}></div>
-                            </div>
+                            </div> */}
 
-                            <div className={styles.projectPictureSelectTotalDiv}
+                            {/* <div className={styles.projectPictureSelectTotalDiv}
                                 style={{display : capture.length > 1 ? 'flex' : 'none'}}>
                                 {[...Array(capture.length)].map((_, index) => (
                                     <div className={styles.projectPictureSelectDiv}
@@ -180,7 +180,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                                         }}>
                                     </div>
                                 ))}
-                            </div>
+                            </div> */}
 
                             </div>
                         </>
@@ -189,7 +189,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                     {/* 유튜브 */}
                     {!imgPage &&
                         <iframe className={styles.projectYouTubeIframe}
-                        src={webSite.YouTube}
+                        src={webSite.YouTubeEmbed}
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         ></iframe>
                     }

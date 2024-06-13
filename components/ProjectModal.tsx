@@ -166,7 +166,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                                     <div className={styles.ectContentDiv}>
                                         <div className={styles.ectContentPandADiv}>
                                             <p>{etc.notion}</p>
-                                            <a href={etc.notionLink} target="_blank">Click →</a>
+                                            <a href={etc.notionLink} target="_blank">{etc.notionLink ? 'Click →' : ''}</a>
                                         </div>
                                         <p>{etc.aboutNotion}</p>
                                     </div>

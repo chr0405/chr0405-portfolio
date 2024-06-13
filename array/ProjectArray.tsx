@@ -1,14 +1,56 @@
 import testImg from "../img/testImg.png";
 
+import main from "../img/Friend/main.png";
+import report from "../img/Friend/report.png";
+import report1 from "../img/Friend/report1.png";
+import report2 from "../img/Friend/report2.png";
+import report3 from "../img/Friend/report3.png";
+import matching from "../img/Friend/matching.png";
+import matching1 from "../img/Friend/matching1.png";
+import matching2 from "../img/Friend/matching2.png";
+import matching3 from "../img/Friend/matching3.png";
+import userList from "../img/Friend/userList.png";
+import joinList from "../img/Friend/joinList.png";
+import profile from "../img/Friend/profile.png";
+import profile1 from "../img/Friend/profile1.png";
+import logIn from "../img/Friend/logIn.png";
+import mypage from "../img/Friend/mypage.png";
+import userInfo from "../img/Friend/userInfo.png";
+
 export const ProjectArray = [
     {
+        "mainCapture" : main,
         "capture" : [
-            testImg,
-            testImg,
-            testImg,
-            testImg
+            main,
+            report,
+            report1,
+            report2,
+            report3,
+            matching,
+            matching1,
+            matching2,
+            matching3,
+            userList,
+            joinList,
+            profile,
+            profile1,
+            logIn,
+            mypage,
+            userInfo,
         ],
         "aboutCapture" : [
+            "이 사진은 어떠한 사진",
+            "이 사진은 저떠한 사진",
+            "이 사진은 어떠한 사진",
+            "이 사진은 저떠한 사진",
+            "이 사진은 어떠한 사진",
+            "이 사진은 저떠한 사진",
+            "이 사진은 어떠한 사진",
+            "이 사진은 저떠한 사진",
+            "이 사진은 어떠한 사진",
+            "이 사진은 저떠한 사진",
+            "이 사진은 어떠한 사진",
+            "이 사진은 저떠한 사진",
             "이 사진은 어떠한 사진",
             "이 사진은 저떠한 사진",
             "이 사진은 어떠한 사진",
@@ -16,19 +58,52 @@ export const ProjectArray = [
         ],
         "name" : "Friend",
         "period" : "2024.01 ~ 2024.02",
-        "aboutProject" : "Friend는 교내 매칭 서비스를 구현한 웹사이트입니다.\n대학생 IT 연합 동아리 UMC 5기에서 진행한 10인 팀 프로젝트입니다.\n\n교내 매칭 서비스는 대학 행사에서 큰 인기를 얻고 있습니다.\n하지만 행사 기간 중으로 참여 기간이 제한되어 있고, 관리자의 부재가 늘 아쉬움으로 남았습니다.\n\n웹사이트로 구현함으로써 위 문제를 해결하고, 개인 정보, 이상형, 기피 사항을 제공받아 매칭의 만족도를 높였습니다.\n또한 공지사항, Q&A, 신고 게시판을 통해 이용과 관리가 편리하게 만들었습니다.",
-        "mainFunction" : "주요 기능에 대해 설명하는 글입니다. 주요 기능에 대해 설명하는 글입니다. 주요 기능에 대해 설명하는 글입니다. 주요 기능에 대해 설명하는 글입니다.",
-        "frontEnd" : "test, test, test, test",
-        "deployment" : "test",
+        "aboutProject" : `Friend는 교내 매칭 서비스를 구현한 웹사이트입니다.
+대학생 IT 연합 동아리 UMC 5기에서 진행한 10인 팀 프로젝트입니다.
+
+교내 매칭 서비스는 대학 행사에서 큰 인기를 얻고 있습니다.
+하지만 행사 기간 중으로 참여 기간이 제한되어 있고, 관리자의 부재가 늘 아쉬움으로 남았습니다.
+
+웹사이트로 구현함으로써 위 문제를 해결하고, 개인 정보, 이상형, 기피 사항을 제공받아 매칭의 만족도를 높였습니다.
+또한 공지사항, Q&A, 신고 게시판을 통해 이용과 관리가 편리하게 만들었습니다.`,
+        "mainFunction" : `서비스 가입 시 부경대 학생 인증
+개인 정보 입력과 수정
+이용자의 매칭 신청
+매칭 상대 신고
+관리자의 가입 신청자 승인
+관리자의 이용자 개인 정보 검토 및 매칭
+신고 접수 및 처리
+게시판 글쓰기`,
+        "My Contributions": `프론트엔드 팀장 역할:
+Git을 통한 프론트엔드 코드 관리와 버전 통제
+Notion을 통한 개발 진행 상황 관리와 역할 분배
+화상 회의를 통한 프로젝트 진행 주도와 개발 방향 피드백
+
+이용자 신고 기능 담당:
+이용자가 매칭 상대를 신고할 수 있도록 신고 대상 목록과 신고 사유 작성 및 제출 기능 구현
+관리자가 신고 내역을 모아볼 수 있도록 신고글 게시판 구현
+신고글 처리 프로세스와 이용자 경고 기능 구현
+
+매칭 기능 담당:
+관리자의 매칭 신청자 매칭 기능 구현
+매칭 완료 내역 조회 기능 구현
+
+이용자, 가입 신청자, 매칭 신청자 열람 기능 담당:
+가입 신청자 목록과 상세 프로필 조회 기능 구현
+이용자 목록과 상세 프로필 조회 기능 구현
+매칭 신청자 목록과 상세 프로필 조회 기능 구현`,
+        "frontEnd" : "react, styled-components, Redux, Axios",
+        "deployment" : "netlify",
         "webSite" : {
-            "Demo" : "https://www.naver.com/",
-            "YouTube" : "https://www.youtube.com/embed/jvkPfVLO6fc",
+            "Demo" : "https://dev--rococo-dragon-c69f42.netlify.app/",
+            "YouTube" : "https://www.youtube.com/watch?v=jvkPfVLO6fc",
+            "YouTubeEmbed" : "https://www.youtube.com/embed/jvkPfVLO6fc",
             "GitHub" : "https://github.com/chr0405/FE?tab=readme-ov-file#yarn-build-fails-to-minify",
         },
         "etc" : {
-            "notion" : "notion",
-            "notionLink" : "https://www.naver.com/",
-            "aboutNotion" : "어떤 기록을 해놓은 노션입니다."
+            "etcName" : "Front-end Notion",
+            "etcLink" : "https://bottlenose-barberry-5ba.notion.site/Friend-FE-489356d3cfff48a5ad3682515a3e5a7f",
+            "aboutEtc" : "Front-end 팀장으로서 개발 진행 과정 전반을 기록해둔 Notion입니다.",
         }
     }, {
         "capture" : [
@@ -54,11 +129,6 @@ export const ProjectArray = [
             "YouTube" : "https://www.naver.com/",
             "GitHub" : "https://www.naver.com/",
         },
-        "etc" : {
-            "notion" : "notion",
-            "notionLink" : "https://www.naver.com/",
-            "aboutNotion" : "어떤 기록을 해놓은 노션입니다."
-        }
     }, {
         "capture" : [
             testImg,

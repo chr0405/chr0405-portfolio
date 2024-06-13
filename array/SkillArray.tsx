@@ -66,7 +66,7 @@ export const SkillArray = {
                 "height" : 2.92
             },{
                 "img" : styledComponents,
-                "name" : "styledComponents",
+                "name" : "styled-components",
                 "backgroundColor" : "#9D9D9D",
                 "width" : 3.58,
                 "height" : 2.92
