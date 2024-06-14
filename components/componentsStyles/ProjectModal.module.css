@@ -17,7 +17,7 @@
 }
 
 .modalDiv{
-    width: 76.39vw;
+    width: 77.39vw;
     height: 34.72vw;
 
     background-color: white;
@@ -48,7 +48,8 @@
     width: 45.14vw;
     height: 34.72vw;
 
-    background-color: #9B9B9B;
+    background-color: #E8E8E8;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 768px) {
@@ -72,20 +73,27 @@
 
 .projectPictureDiv img {
     width: 45.14vw;
-    height: 34.72vw;
+    height: 25.72vw;
+
+    /* object-fit: cover; */
+
+    margin-top: 3.85vw;
 }
 
 @media only screen and (max-width: 768px) {
     .projectPictureDiv img {
         width: 83.33vw;
         /* height: 62.16vw; */
-        height: 28vh;
+        height: 20vh;
+
+        position: relative;
+        top: 4.6vw;
     }
 }
 
-.projectPictureDiv div {
+.projectPictureDiv p {
     position: relative;
-    top: -97%;
+    top: -82%;
     font-size: 1.11vw;
     font-weight: 600;
 
@@ -95,8 +103,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .projectPictureDiv div {
+    .projectPictureDiv p {
         font-size: 1.6vh;
+        top: -21vh;
     }
 }
 
@@ -124,7 +133,7 @@
     height: 34.72vw;
 
     position: relative;
-    margin-top: -2.6vw;
+    margin-top: -31.14vw;
 
     display: flex;
     align-items: center;
@@ -138,7 +147,7 @@
         width: 83.33vw;
         height: 100%;
 
-        margin-top: -3vh;
+        margin-top: -23.7vh;
     }
 }
 
@@ -149,7 +158,7 @@
     /* background-color: yellow; */
 
     position: relative;
-    margin-top: 67.4vw;
+    margin-top: 0vw;
 
     /* border: 2px solid black;  */
 }
@@ -158,8 +167,6 @@
     .sectionDiv div {
         width: 50%;
         height: 100%;
-
-        margin-top: 54.4vh;
     }
 }
 
@@ -167,7 +174,7 @@
     position: relative;
     height: 0.69vw;
 
-    margin-top: -1.5vw;
+    margin-top: -7.5vw;
 
     display: flex;
     align-items: center;
@@ -177,7 +184,7 @@
 @media only screen and (max-width: 768px) {
     .projectPictureSelectTotalDiv {
         /* top: -66vw; */
-        margin-top: -1.5vh;
+        margin-top: -2vh;
     }
 }
 
@@ -185,7 +192,7 @@
     width: 0.69vw;
     height: 0.69vw;
     border-radius: 50%;
-    margin: 0vw 0.35vw;
+    margin: 9vw 0.35vw 0vw 0.35vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -209,7 +216,7 @@
 }
 
 .headerDiv {
-    width: 31.18vw;
+    width: 32.3vw;
     height: 3.89vw;
 
     background-color: #C6C6C6;
@@ -435,7 +442,8 @@
 }
 
 .contentDiv {
-    width: 31.18vw;
+    /* width: 31.18vw; */
+    width: 32.3vw;
     /* height: 30.83vw; */
 
     display: flex;
@@ -458,9 +466,9 @@
 }
 
 .contentDiv2 {
-    /* width: 31.0vw; */
-    width: 31.18vw;
-    /* 스크롤바 right에 딱 붙이려면 31.18vw */
+    /* width: 31.5vw; */
+    width: 32.3vw;
+    /* 스크롤바 right에 딱 붙이려면 32.3vw */
     height: 28.75vw;
 
     overflow-y: auto;

@@ -12,22 +12,23 @@ interface ProjectModalProps {
     period: string;
     aboutProject: string;
     mainFunction: string;
+    MyContributions: string;
     frontEnd: string;
     deployment: string;
     etc?: {
-        notion?: string;
-        notionLink?: string;
-        aboutNotion?: string;
+        etcName?: string;
+        etcLink?: string;
+        aboutEtc?: string;
     };
     webSite: {
-        YouTube?: string;
+        YouTubeEmbed?: string;
     };
     show: boolean;
     onClose: () => void;
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
-    capture, aboutCapture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc, show, onClose
+    capture, aboutCapture, name, period, aboutProject, mainFunction, MyContributions, frontEnd, deployment, webSite, etc, show, onClose
 }) => {
     const [captureNum, setCaptureNum] = useState(0);
     const [imgPage, setImgPage] = useState(true);
@@ -64,7 +65,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {imgPage &&
                     <div className={styles.projectPictureDiv}>
                         <Image src={capture[captureNum]} alt="captureImg" />
-                        <div>{aboutCapture[captureNum]}</div>
+                        <p>{aboutCapture[captureNum]}</p>
 
                         <div className={styles.sectionDiv}>
                             {/* left section */}
@@ -99,7 +100,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {/* left 유튜브 */}
                 {!imgPage &&
                     <iframe className={styles.projectYouTubeIframe}
-                        src={webSite.YouTube}
+                        src={webSite.YouTubeEmbed}
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
                 }
@@ -109,7 +110,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     {/* header */}
                     <div className={styles.headerDiv}>
                         <h1>{name}</h1>
-                        {webSite.YouTube &&
+                        {webSite.YouTubeEmbed &&
                             <div className={styles.switchDiv}>
                                 {(!leftSwitch && !rightSwitch) &&
                                     <div className={styles.switchBtn}></div>
@@ -154,6 +155,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                             <h2>Main Function</h2>
                             <p>{mainFunction}</p>
 
+                            <h2>My Contributions</h2>
+                            <p>{MyContributions}</p>
+
                             <h2>Front-end</h2>
                             <p>{frontEnd}</p>
 
@@ -165,10 +169,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                                     <h2>etc.</h2>
                                     <div className={styles.ectContentDiv}>
                                         <div className={styles.ectContentPandADiv}>
-                                            <p>{etc.notion}</p>
-                                            <a href={etc.notionLink} target="_blank">{etc.notionLink ? 'Click →' : ''}</a>
+                                            <p>{etc.etcName}</p>
+                                            <a href={etc.etcLink} target="_blank">{etc.etcLink ? 'Click →' : ''}</a>
                                         </div>
-                                        <p>{etc.aboutNotion}</p>
+                                        <p>{etc.aboutEtc}</p>
                                     </div>
                                 </>
                             )}

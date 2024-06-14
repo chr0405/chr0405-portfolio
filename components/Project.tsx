@@ -61,6 +61,7 @@ export default function Project() {
                         period = {project.period}
                         aboutProject = {project.aboutProject}
                         mainFunction = {project.mainFunction}
+                        MyContributions = {project.MyContributions}
                         frontEnd = {project.frontEnd}
                         deployment = {project.deployment}
                         webSite = {project.webSite}

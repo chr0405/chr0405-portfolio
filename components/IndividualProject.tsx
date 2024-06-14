@@ -19,6 +19,7 @@ interface IndividualProjectProps {
     period : string;
     aboutProject : string;
     mainFunction : string;
+    MyContributions : string;
     frontEnd : string;
     deployment : string;
     webSite : {
@@ -28,14 +29,14 @@ interface IndividualProjectProps {
         GitHub? : string;
     };
     etc? : {
-        notion? : string;
-        notionLink? : string;
-        aboutNotion? : string;
+        etcName? : string;
+        etcLink? : string;
+        aboutEtc? : string;
     }
 }
 
 const IndividualProject : React.FC<IndividualProjectProps> = ({
-        mainCapture, capture, aboutCapture, name, period, aboutProject, mainFunction, frontEnd, deployment, webSite, etc
+        mainCapture, capture, aboutCapture, name, period, aboutProject, mainFunction, MyContributions, frontEnd, deployment, webSite, etc
     }) => {
 
     const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -114,6 +115,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                 period = {period}
                 aboutProject = {aboutProject}
                 mainFunction = {mainFunction}
+                MyContributions = {MyContributions}
                 frontEnd = {frontEnd}
                 deployment = {deployment}
                 webSite = {webSite}
