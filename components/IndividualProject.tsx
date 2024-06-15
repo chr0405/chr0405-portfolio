@@ -128,7 +128,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                 <div className={styles.projectDiv}>
                     <div className={styles.projectNameDiv}>
                         <div  className={styles.projectName}>{name}</div>
-                        {webSite.YouTube &&
+                        {webSite.YouTubeEmbed &&
                             <div className={styles.switchDiv}>
                                 { (!leftSwitch && !rightSwitch) &&
                                     <div className={styles.switchBtn}></div>

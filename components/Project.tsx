@@ -48,7 +48,7 @@ export default function Project() {
     return (
         <div className={styles.totalDiv}
             style={{
-                "height" : mobileView? `${ProjectArray.length * 66}vh` : `${ProjectArray.length * 35}vw`
+                "height" : mobileView? `${ProjectArray.length * 66}vh` : `${Math.round(ProjectArray.length / 2) * 68}vw`
             }}>
             <div className={styles.projectBoxDiv}>
                 { ProjectArray.map((project, index) => (

@@ -262,8 +262,11 @@
     border-radius: 2.78vw;
     background-color: #F0F0F0;
 
-    position: relative;
-    margin-right: 16vw;
+    /* position: relative;
+    margin-right: 16vw; */
+
+    position: absolute;
+    left: 3vw;
 
     display: flex;
     justify-content: space-between;
@@ -280,8 +283,9 @@
         
         border-radius: 2vh;
 
+        position: relative;
         margin-right: 0vw;
-        left: -24vw;
+        left: -28vw;
     }
 }
 
@@ -391,8 +395,8 @@
     height: 2.4vw;
     border-radius: 50%;
 
-    position: relative;
-    left: 1vw;
+    position: absolute;
+    right: 1vw;
 
     display: flex;
     align-items: center;
@@ -408,8 +412,8 @@
         /* height: 5.76vw; */
         height: 65%;
 
-        position: relative;
-        left: 24vw;
+        position: absolute;
+        right: 2vw;
     }
 }
 

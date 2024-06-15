@@ -53,6 +53,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     return (
         <div className={styles.totalDiv}
             onClick={() => {
+                setCaptureNum(0);
+                setImgPage(true);
+                setLeftSwitch(false);
+                setRightSwitch(false);
+
                 scrollAutoFunc();
                 onClose();
                 window.location.hash = 'project';
@@ -135,6 +140,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                         <div className={styles.closeIconDiv}
                             onClick={(event) => {
                                 event.stopPropagation();
+                                setCaptureNum(0);
+                                setImgPage(true);
+                                setLeftSwitch(false);
+                                setRightSwitch(false);
+                
                                 scrollAutoFunc();
                                 onClose();
                                 window.location.hash = 'project';
@@ -155,8 +165,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                             <h2>Main Function</h2>
                             <p>{mainFunction}</p>
 
-                            <h2>My Contributions</h2>
-                            <p>{MyContributions}</p>
+                            {MyContributions &&
+                                <>
+                                    <h2>My Contributions</h2>
+                                    <p>{MyContributions}</p>
+                                </>
+                            }
+                            
 
                             <h2>Front-end</h2>
                             <p>{frontEnd}</p>
