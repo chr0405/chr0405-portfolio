@@ -75,7 +75,7 @@
     width: 45.14vw;
     height: 25.72vw;
 
-    object-fit: cover;
+    /* object-fit: cover; */
 
     margin-top: 3.85vw;
 }
