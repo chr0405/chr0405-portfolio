@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from "next/image";
-import styles from "./componentsStyles/SkillIcon.module.css";
+import styles from "./componentsStyles/icon.module.css";
 
 interface SkillIconProps {
     img: any;
