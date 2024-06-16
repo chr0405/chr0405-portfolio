@@ -32,6 +32,15 @@ import comment from "../img/Tnovel/comment.jpg";
 import comment1 from "../img/Tnovel/comment1.jpg";
 import mobileView from "../img/Tnovel/mobileView.jpg";
 
+import portfolioMain from "../img/CHRportfolio/portfolioMain.png";
+import intro from "../img/CHRportfolio/intro.png";
+import portfolioProfile from "../img/CHRportfolio/profile.png";
+import skill from "../img/CHRportfolio/skill.png";
+import project from "../img/CHRportfolio/project.png";
+import projectYouTubeEmbed from "../img/CHRportfolio/projectYouTubeEmbed.png";
+import projectModal from "../img/CHRportfolio/projectModal.png";
+import projectModalYouTubeEmbed from "../img/CHRportfolio/projectModalYouTubeEmbed.png";
+
 export const ProjectArray = [
     {
         "mainCapture" : main,
@@ -199,17 +208,24 @@ PC 환경에서 콜백 함수를 통해 결제 성공을 확인
             "GitHub" : "https://github.com/chr0405/Gridge-Test-WEB?tab=readme-ov-file",
         },
     },  {
+        "mainCapture" : portfolioMain,
         "capture" : [
-            testImg,
-            testImg,
-            testImg,
-            testImg
+            intro,
+            portfolioProfile,
+            skill,
+            project,
+            projectYouTubeEmbed,
+            projectModal,
+            projectModalYouTubeEmbed,
         ],
         "aboutCapture" : [
-            "이 사진은 어떠한 사진",
-            "이 사진은 어떠한 사진",
-            "이 사진은 어떠한 사진",
-            "이 사진은 어떠한 사진",
+            "자기소개",
+            "내 프로필",
+            "기술 스택",
+            "참여한 프로젝트 내역",
+            "참여한 프로젝트 내역 (유튜브 임베디드)",
+            "프로젝트 세부 내용 모달",
+            "프로젝트 세부 내용 모달 (유튜브 임베디드)",
         ],
         "name" : "CHR portfolio",
         "period" : "2024.04 ~ 2024.05",
@@ -235,10 +251,10 @@ PC 환경에서 콜백 함수를 통해 결제 성공을 확인
         "frontEnd" : "TypeScript, NextJs, CSS Modules",
         "deployment" : "Vercel",
         "webSite" : {
-            "Demo" : "https://www.naver.com/",
-            "YouTube" : "https://www.naver.com/",
-            "YouTubeEmbed" : "https://www.youtube.com/embed/87onRxoCdH8",
-            "GitHub" : "https://www.naver.com/",
+            "Demo" : "/",
+            "YouTube" : "https://youtu.be/fh2z5ffxiVk",
+            "YouTubeEmbed" : "https://www.youtube.com/embed/fh2z5ffxiVk",
+            "GitHub" : "https://github.com/chr0405/chr0405-portfolio.git",
         },
     },
 ];
