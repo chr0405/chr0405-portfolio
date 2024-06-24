@@ -16,37 +16,44 @@ export default function Intro() {
     const [stars, setStars] = useState<Star[]>([]);
 
     const backgroundFunction = () => {
-        const windowWidth = 100;
-        // const windowHeight = 71.11;
-        const windowHeight = 100;
-
-        function getRandomValue(max : number) {
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        
+        let numStars: number;
+        if (windowWidth <= 480) {
+            numStars = 50;
+        } else if (windowWidth <= 768) {
+            numStars = 100;
+        } else {
+            numStars = 200;
+        }
+    
+        function getRandomValue(max: number) {
             return Math.floor(Math.random() * max);
         }
-
+    
         const style = ['style1', 'style2', 'style3'];
         const opacity = ['opacity1', 'opacity2', 'opacity3'];
         const twinkle = ['twinkle1', 'twinkle2', 'twinkle3', 'twinkle4'];
-
+    
         const starsArray: Star[] = [];
-
-        for (let i = 0; i < 200; i++) {
+    
+        for (let i = 0; i < numStars; i++) {
             const styleOption = getRandomValue(3);
             const opacityOption = getRandomValue(3);
             const twinkleOption = getRandomValue(4);
-            const x = getRandomValue(windowWidth);
-            const y = getRandomValue(windowHeight);
-
+            const x = getRandomValue(100); // vw 단위로 설정
+            const y = getRandomValue(100); // vh 단위로 설정
+    
             const className = `${styles[style[styleOption]]} ${styles[opacity[opacityOption]]} ${styles[twinkle[twinkleOption]]}`;
-
+    
             starsArray.push({
                 className: className,
                 x: `${x}vw`,
-                // y: `${y}vw`
                 y: `${y}vh`
             });
         }
-
+    
         setStars(starsArray);
     }
 

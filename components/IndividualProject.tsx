@@ -17,26 +17,22 @@ interface IndividualProjectProps {
     aboutCapture : any[];
     name : string;
     period : string;
+    mainAboutProject : string;
     aboutProject : string;
+    frontEnd : string;
     mainFunction : string;
     MyContributions : string;
-    frontEnd : string;
-    deployment : string;
+    troubleShooting : string;
     webSite : {
         Demo? : string;
         YouTube? : string;
         YouTubeEmbed? : string;
         GitHub? : string;
     };
-    etc? : {
-        etcName? : string;
-        etcLink? : string;
-        aboutEtc? : string;
-    }
 }
 
 const IndividualProject : React.FC<IndividualProjectProps> = ({
-        mainCapture, capture, aboutCapture, name, period, aboutProject, mainFunction, MyContributions, frontEnd, deployment, webSite, etc
+        mainCapture, capture, aboutCapture, name, period, mainAboutProject, aboutProject, frontEnd, mainFunction, MyContributions, troubleShooting, webSite,
     }) => {
 
     const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -114,12 +110,11 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                 name = {name}
                 period = {period}
                 aboutProject = {aboutProject}
+                frontEnd = {frontEnd}
                 mainFunction = {mainFunction}
                 MyContributions = {MyContributions}
-                frontEnd = {frontEnd}
-                deployment = {deployment}
+                troubleShooting = {troubleShooting}
                 webSite = {webSite}
-                etc = {etc}
                 show={modalShow}
                 onClose={closeModal}
             />
@@ -155,35 +150,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                     {imgPage &&
                         <>
                             <div className={styles.projectPictureDiv}>
-
-                            <Image src={mainCapture} alt="captureImg"/>
-
-                            {/* <div className={styles.sectionDiv}>
-                                <div onClick={()=> {
-                                    if(captureNum > 0){
-                                        setCaptureNum((pre) => pre - 1);
-                                    }
-                                }}></div>
-                                <div onClick={()=> {
-                                    if(captureNum < (capture.length - 1)){
-                                        setCaptureNum((pre) => pre + 1);
-                                    }
-                                }}></div>
-                            </div> */}
-
-                            {/* <div className={styles.projectPictureSelectTotalDiv}
-                                style={{display : capture.length > 1 ? 'flex' : 'none'}}>
-                                {[...Array(capture.length)].map((_, index) => (
-                                    <div className={styles.projectPictureSelectDiv}
-                                        style={{backgroundColor : index === captureNum ? '#4D4D4D' : '#C6C6C6'}}
-                                        key={index}
-                                        onClick={() => {
-                                            setCaptureNum(index);
-                                        }}>
-                                    </div>
-                                ))}
-                            </div> */}
-
+                                <Image src={mainCapture} alt="captureImg"/>
                             </div>
                         </>
                     }
@@ -201,7 +168,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                             <h1>{name}</h1>
                             <p>{period}</p>
                         </div>
-                        <h6 className={styles.aboutProject}>{aboutProject}</h6>
+                        <h6 className={styles.mainAboutProject}>{mainAboutProject}</h6>
                         <p className={styles.more}
                             onClick={openModal}>More →</p>
                     </div>
