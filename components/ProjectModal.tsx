@@ -65,8 +65,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {imgPage &&
                     <div className={styles.projectPictureDiv}>
                         <Image src={capture[captureNum]} alt="captureImg" />
-                        <p>{aboutCapture[captureNum]}</p>
-
+                        <div className={styles.aboutCaptureDiv}>
+                            <p>{aboutCapture[captureNum]}</p>
+                        </div>
                         <div className={styles.sectionDiv}>
                             {/* left section */}
                             <div onClick={() => {

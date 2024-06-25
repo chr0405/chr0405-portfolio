@@ -67,7 +67,7 @@ export default function Header() {
                     <h2 onClick={() => moveToPageFunc('profile', 0)}
                         style={{'color' : currentPage === 'profile' ? '#4D4D4D' : ''}}>
                     &lt;profile/&gt;</h2>
-                    <h2 onClick={() => moveToPageFunc('skill', 0)}
+                    <h2 onClick={() => moveToPageFunc('skill', 1)}
                         style={{'color' : currentPage === 'skill' ? '#4D4D4D' : ''}}>
                     &lt;skill/&gt;</h2>
                     <h2 onClick={() => moveToPageFunc('project', 1)}

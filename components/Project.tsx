@@ -54,6 +54,7 @@ export default function Project() {
                 { ProjectArray.map((project, index) => (
                     <IndividualProject
                         key={index}
+                        num = {project.num}
                         mainCapture = {project.mainCapture}
                         capture = {project.capture}
                         aboutCapture = {project.aboutCapture}

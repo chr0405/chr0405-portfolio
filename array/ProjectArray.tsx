@@ -43,6 +43,7 @@ import projectModalYouTubeEmbed from "../img/CHRportfolio/projectModalYouTubeEmb
 
 export const ProjectArray = [
     {
+        "num" : 1,
         "mainCapture" : main,
         "capture" : [
             mainCapture,
@@ -136,6 +137,7 @@ Friend는 이러한 문제점을 해결하고자 탄생한 웹 기반 솔루션�
             "GitHub" : "https://github.com/chr0405/FE?tab=readme-ov-file#yarn-build-fails-to-minify",
         },
     }, {
+        "num" : 2,
         "mainCapture" : testImg,
         "capture" : [
             logInTnovel,
@@ -244,6 +246,7 @@ API 응답 세분화를 통한 로그인 오류 메시지 개선
             "GitHub" : "https://github.com/chr0405/Gridge-Test-WEB?tab=readme-ov-file",
         },
     },  {
+        "num" : 3,
         "mainCapture" : portfolioMain,
         "capture" : [
             intro,

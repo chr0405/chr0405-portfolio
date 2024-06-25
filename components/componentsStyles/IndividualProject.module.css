@@ -1,6 +1,6 @@
 .totalDiv {
     width: 34.72vw;
-    height: 50vw;
+    height: 49.33vw;
 
     display: flex;
     flex-direction: column;
@@ -8,6 +8,8 @@
     justify-content: flex-start;
 
     margin: 4vw 4vw;
+
+    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -24,7 +26,7 @@
 
 .projectDiv {
     width: 34.72vw;
-    height: 41.67vw;
+    height: 40.97vw;
 
     background-color: white;
     border-radius: 1.04vw;
@@ -207,7 +209,7 @@
     height: 25.9vw;
     overflow: hidden;
 
-    background-color: #9B9B9B;
+    background-color: #E8E8E8;
 }
 
 @media only screen and (max-width: 768px) {
@@ -221,7 +223,7 @@
 .projectPictureDiv img{
     width: 34.72vw;
     height: 25.9vw;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 @media only screen and (max-width: 768px) {
@@ -318,13 +320,15 @@
 
 .textDiv{
     /* padding: 2.08vw; */
-    margin-top: 1.4vw;
+    margin-top: 1.5vw;
     position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -357,7 +361,7 @@
 .namePeriodDiv p{
     margin-left: 0.69vw;
 
-    font-size: 0.97vw;
+    /* font-size: 0.97vw; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -369,14 +373,16 @@
 }
 
 .mainAboutProject {
-    margin-top: 0.69vw;
+    margin: 0.69vw 0vw 1.38vw 0vw;
     width: 31vw;
-    height: 5.2vw;
-    overflow-y: auto;
+    /* height: 5.2vw; */
+    /* overflow-y: auto; */
 
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
+    /* white-space: pre-wrap; */
+    /* text-overflow: ellipsis; */
     /* background-color: red; */
+
+    font-size: 1.39vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -390,8 +396,7 @@
     }
 }
 
-.aboutProject::-webkit-scrollbar {
-    /* width: 0.35vw; */
+/* .aboutProject::-webkit-scrollbar {
     width: 0.5vw;
 }
 
@@ -408,15 +413,20 @@
 
 .aboutProject::-webkit-scrollbar-track {
     background-color: transparent;
-}
+} */
 
 .more{
-    margin: 0.69vw 0vw 0vw 0vw;
+    /* margin-top: 0.69vw; */
 
     font-weight: 600;
-    text-decoration-line: underline;
+    font-size: 1.39vw;
+    /* text-decoration-line: underline; */
     color: #3998EF;
     cursor: pointer;
+}
+
+.more:hover {
+    color: #1E70BF; /* 변경할 색상 */
 }
 
 @media only screen and (max-width: 768px) {

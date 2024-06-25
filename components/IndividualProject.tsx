@@ -12,6 +12,7 @@ import { usePathname } from 'next/navigation';
 import ProjectModal from "./ProjectModal";
 
 interface IndividualProjectProps {
+    num : number;
     mainCapture : any;
     capture : any[];
     aboutCapture : any[];
@@ -32,7 +33,7 @@ interface IndividualProjectProps {
 }
 
 const IndividualProject : React.FC<IndividualProjectProps> = ({
-        mainCapture, capture, aboutCapture, name, period, mainAboutProject, aboutProject, frontEnd, mainFunction, MyContributions, troubleShooting, webSite,
+        num, mainCapture, capture, aboutCapture, name, period, mainAboutProject, aboutProject, frontEnd, mainFunction, MyContributions, troubleShooting, webSite,
     }) => {
 
     const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -83,14 +84,14 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
     const [modalShow, setModalShow] = useState(false);
 
     useEffect(() => {
-        if (pathname === `/#project/${name}`) {
+        if (pathname === `/#project/${num}`) {
             setModalShow(true);
         }
     }, [pathname]);
 
     const openModal = () => {
         setModalShow(true);
-        window.history.pushState(null, '', `/#project/${name}`);
+        window.history.pushState(null, '', `/#project/${num}`);
     };
 
     const closeModal = () => {
@@ -163,6 +164,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                         ></iframe>
                     }
 
+                    {/* 글 */}
                     <div className={styles.textDiv}>
                         <div className={styles.namePeriodDiv}>
                             <h1>{name}</h1>
@@ -170,7 +172,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                         </div>
                         <h6 className={styles.mainAboutProject}>{mainAboutProject}</h6>
                         <p className={styles.more}
-                            onClick={openModal}>More →</p>
+                            onClick={openModal}>알아보기</p>
                     </div>
                 </div>
 
