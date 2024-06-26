@@ -163,75 +163,70 @@
     }
 }
 
-.textDiv p {
+.introduce {
     font-size: 1.39vw;
-    color: #FFFFFF;
+    /* color: #000000; */
 
     text-align: center;
     line-height: 1.5;
 
     position: absolute;
     top: 14vw;
+
+    color: #FFFFFF;
+}
+
+.clickIntroduce {
+    font-size: 1.39vw;
+    /* color: #000000; */
+
+    text-align: center;
+    line-height: 1.5;
+
+    position: absolute;
+    top: 14vw;
+
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    border-radius: 0.52vw;
+    padding: 0vw 0.8vw;
+
+    color: #000000;
 }
 
 @media only screen and (max-width: 768px) {
-    .textDiv p {
+    .introduce {
+        font-size: 1.8vh;
+        top: 60%;
+    }
+
+    .clickIntroduce {
         font-size: 1.8vh;
         top: 60%;
     }
 }
-  
-.star {
+
+.star, .star2, .star3, .star4 {
+    z-index: 1; /* introduce 요소보다 낮게 설정 */
     border-radius: 50%;
     background-color: white;
     position: absolute;
     overflow: hidden;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-
     border-left: 0.34vw solid transparent;
     border-right: 0.34vw solid transparent;
 }
 
 .star2 {
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    overflow: hidden;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-
-    border-left: 0.34vw solid transparent;
-    border-right: 0.34vw solid transparent;
-
     transform: translate(-0%, -0%) rotate(90deg);
 }
 
 .star3 {
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    overflow: hidden;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-
-    border-left: 0.34vw solid transparent;
-    border-right: 0.34vw solid transparent;
-
     transform: translate(-0%, -0%) rotate(45deg);
 }
 
 .star4 {
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    overflow: hidden;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-
-    border-left: 0.34vw solid transparent;
-    border-right: 0.34vw solid transparent;
-
     transform: translate(-0%, -0%) rotate(135deg);
 }
 
@@ -249,12 +244,28 @@
     height: 0.07vw;
 }
 
+
+@media only screen and (max-width: 768px) {
+    .style1 {
+        width: 1vw;
+        height: 0.2vw;
+    }
+    .style2 {
+        width: 2vw;
+        height: 0.2vw;
+    }
+    .style3 {
+        width: 3vw;
+        height: 0.2vw;
+    }
+}
+
 /* 투명도 */
 .opacity1 {
-    opacity: 1;
+    opacity: 0.8;
 }
 .opacity2 {
-    opacity: 0.5;
+    opacity: 0.4;
 }
 .opacity3 {
     opacity: 0.1;

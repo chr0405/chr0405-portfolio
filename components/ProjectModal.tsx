@@ -11,15 +11,10 @@ interface ProjectModalProps {
     name: string;
     period: string;
     aboutProject: string;
-    mainFunction: string;
-    MyContributions: string;
     frontEnd: string;
-    deployment: string;
-    etc?: {
-        etcName?: string;
-        etcLink?: string;
-        aboutEtc?: string;
-    };
+    mainFunction: string;
+    troubleShooting: string;
+    MyContributions: string;
     webSite: {
         YouTubeEmbed?: string;
     };
@@ -28,7 +23,7 @@ interface ProjectModalProps {
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
-    capture, aboutCapture, name, period, aboutProject, mainFunction, MyContributions, frontEnd, deployment, webSite, etc, show, onClose
+    capture, aboutCapture, name, period, aboutProject, mainFunction, MyContributions, frontEnd, troubleShooting, webSite, show, onClose
 }) => {
     const [captureNum, setCaptureNum] = useState(0);
     const [imgPage, setImgPage] = useState(true);
@@ -70,8 +65,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {imgPage &&
                     <div className={styles.projectPictureDiv}>
                         <Image src={capture[captureNum]} alt="captureImg" />
-                        <p>{aboutCapture[captureNum]}</p>
-
+                        <div className={styles.aboutCaptureDiv}>
+                            <p>{aboutCapture[captureNum]}</p>
+                        </div>
                         <div className={styles.sectionDiv}>
                             {/* left section */}
                             <div onClick={() => {
@@ -162,35 +158,21 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                             <h2>Period</h2>
                             <p>{period}</p>
 
+                            <h2>frontEnd</h2>
+                            <p>{frontEnd}</p>
+
                             <h2>Main Function</h2>
                             <p>{mainFunction}</p>
 
-                            {MyContributions &&
+                            <h2>My Contributions</h2>
+                            <p>{MyContributions}</p>
+
+                            {troubleShooting &&
                                 <>
-                                    <h2>My Contributions</h2>
-                                    <p>{MyContributions}</p>
+                                    <h2>Trouble Shooting</h2>
+                                    <p>{troubleShooting}</p>
                                 </>
                             }
-                            
-
-                            <h2>Front-end</h2>
-                            <p>{frontEnd}</p>
-
-                            <h2>Deployment</h2>
-                            <p>{deployment}</p>
-
-                            {etc && (
-                                <>
-                                    <h2>etc.</h2>
-                                    <div className={styles.ectContentDiv}>
-                                        <div className={styles.ectContentPandADiv}>
-                                            <p>{etc.etcName}</p>
-                                            <a href={etc.etcLink} target="_blank">{etc.etcLink ? 'Click →' : ''}</a>
-                                        </div>
-                                        <p>{etc.aboutEtc}</p>
-                                    </div>
-                                </>
-                            )}
                         </div>
                     </div>
                 </div>

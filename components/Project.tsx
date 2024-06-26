@@ -54,18 +54,19 @@ export default function Project() {
                 { ProjectArray.map((project, index) => (
                     <IndividualProject
                         key={index}
+                        num = {project.num}
                         mainCapture = {project.mainCapture}
                         capture = {project.capture}
                         aboutCapture = {project.aboutCapture}
                         name = {project.name}
                         period = {project.period}
+                        mainAboutProject = {project.mainAboutProject}
                         aboutProject = {project.aboutProject}
+                        frontEnd = {project.frontEnd}
                         mainFunction = {project.mainFunction}
                         MyContributions = {project.MyContributions}
-                        frontEnd = {project.frontEnd}
-                        deployment = {project.deployment}
+                        troubleShooting = {project.troubleShooting}
                         webSite = {project.webSite}
-                        etc= {project.etc}
                     />
                 ))}
             </div>

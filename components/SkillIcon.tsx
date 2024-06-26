@@ -43,10 +43,8 @@ const SkillIcon: React.FC<SkillIconProps> = ({ img, name, backgroundColor, width
     useEffect(() => {
         if(window.innerWidth <= 768) {
             setMobileView(true);
-            console.log(mobileView);
         } else {
             setMobileView(false);
-            console.log(mobileView);
         }
 
     }, []);

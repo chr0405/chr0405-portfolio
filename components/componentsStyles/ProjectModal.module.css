@@ -45,11 +45,17 @@
 }
 
 .projectPictureDiv {
+    position: relative;
     width: 45.14vw;
     height: 34.72vw;
 
     background-color: #E8E8E8;
+    /* background-color: red; */
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -72,12 +78,9 @@
 }
 
 .projectPictureDiv img {
+    position: absolute;
     width: 45.14vw;
-    height: 25.72vw;
-
-    /* object-fit: cover; */
-
-    margin-top: 3.85vw;
+    object-fit: contain;
 }
 
 @media only screen and (max-width: 768px) {
@@ -91,9 +94,21 @@
     }
 }
 
+.aboutCaptureDiv {
+    position: absolute;
+    top: -0vw;
+
+    width: 45.14vw;
+    height: 3.89vw;
+
+    /* background-color: #ffffff; */
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
 .projectPictureDiv p {
-    position: relative;
-    top: -82%;
     font-size: 1.11vw;
     font-weight: 600;
 
@@ -132,8 +147,8 @@
     width: 45.14vw;
     height: 34.72vw;
 
-    position: relative;
-    margin-top: -31.14vw;
+    position: absolute;
+    top: 0vw;
 
     display: flex;
     align-items: center;
@@ -158,7 +173,7 @@
     /* background-color: yellow; */
 
     position: relative;
-    margin-top: 0vw;
+    /* margin-top: 0vw; */
 
     /* border: 2px solid black;  */
 }
@@ -171,14 +186,16 @@
 }
 
 .projectPictureSelectTotalDiv {
-    position: relative;
-    height: 0.69vw;
-
-    margin-top: -7.5vw;
+    position: absolute;
+    top: 30.9vw;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 45.14vw;
+    height: 3.89vw;
+    /* background-color: #ffffff; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -192,7 +209,7 @@
     width: 0.69vw;
     height: 0.69vw;
     border-radius: 50%;
-    margin: 9vw 0.35vw 0vw 0.35vw;
+    margin: 0vw 0.35vw;
 }
 
 @media only screen and (max-width: 768px) {
