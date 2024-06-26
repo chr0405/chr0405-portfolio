@@ -109,8 +109,8 @@
 }
 
 .projectPictureDiv p {
-    font-size: 1.11vw;
-    font-weight: 600;
+    /* font-size: 1.39vw; */
+    /* font-weight: 600; */
 
     display: flex;
     align-items: center;
@@ -222,7 +222,7 @@
 
 .rightDiv{
     /* width: 31.18vw; */
-    /* height: 34.72vw; */
+    height: 34.7vw;
 
     display: flex;
     flex-direction: column;
@@ -244,7 +244,6 @@
     justify-content: center;
 
     position: relative;
-    top: -1.1vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -269,7 +268,6 @@
 @media only screen and (max-width: 768px) {
     .headerDiv h1 {
         font-size: 1.8vh;
-        font-weight: bold;
     }
 }
 
@@ -465,7 +463,7 @@
 .contentDiv {
     /* width: 31.18vw; */
     width: 32.3vw;
-    /* height: 30.83vw; */
+    height: 27vw;
 
     display: flex;
     flex-direction: column;
@@ -473,6 +471,8 @@
     justify-content: center;
 
     overflow: hidden;
+
+    /* background-color: green; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -487,14 +487,13 @@
 }
 
 .contentDiv2 {
-    /* width: 31.5vw; */
     width: 32.3vw;
-    /* 스크롤바 right에 딱 붙이려면 32.3vw */
-    height: 28.75vw;
-
+    height: 27vw;
     overflow-y: auto;
-
     /* background-color: yellow; */
+    position: relative;
+
+    padding: 1.8vw 0vw 0vw 0vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -503,6 +502,38 @@
         /* height: 100.66vw; */
         height: 45vh;
     }
+}
+
+.contentGradationDiv {
+    width: 32.3vw;
+    height: 27vw;
+    overflow-y: auto;
+    /* background-color: blue; */
+    position: absolute;
+}
+
+/* 상단 그라데이션 */
+.contentGradationDiv:before {
+    content: "";
+    position: absolute;
+    top: 0vw;
+    width: 31.85vw;
+    height: 2vw;
+    background: linear-gradient(to bottom, white, transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 하단 그라데이션 */
+.contentGradationDiv:after {
+    content: "";
+    position: absolute;
+    bottom: 0vw;
+    width: 31.85vw;
+    height: 2vw;
+    background: linear-gradient(to top, white, transparent);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .contentDiv2::-webkit-scrollbar {
@@ -527,11 +558,11 @@
 
 .contentDiv2 h2 {
     font-weight: 600;
+    font-size: 1.25vw;
 
     margin-bottom: 0.69vw;
     margin-left: 2.69vw;
 
-    /* font-size: 1.11vw; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -543,7 +574,7 @@
 }
 
 .contentDiv2 p {
-    /* font-size: 1.11vw; */
+    font-size: 1.25vw;
 
     margin: 0vw 2.69vw 1.39vw 2.69vw;
 
@@ -559,32 +590,60 @@
     }
 }
 
-.ectContentDiv {
-    display: flex;
-    flex-direction: column;
-}
+.pageDiv {
+    position: relative;
+    /* top: 38.2vw; */
 
-.ectContentPandADiv {
+    width: 32.3vw;
+    height: 3.89vw;
+
     display: flex;
     align-items: center;
-    /* background-color: yellow; */
+    justify-content: center;
+
+    /* background-color: red; */
 }
 
-.ectContentPandADiv p {
-    margin-bottom: 0.35vw;
+.pageIconLeft {
+    width: 2.5vw;
+    height: 2.5vw;
+
+    border-radius: 50%;
+
+    background-color: #E6E6E6;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    left : 3vw;
 }
 
-.ectContentPandADiv a {
-    margin-bottom: 0.35vw;
-    margin-left: -2vw;
+.pageIconRight {
+    width: 2.5vw;
+    height: 2.5vw;
 
-    font-weight: bold;
-    color: #4D4D4D;
+    border-radius: 50%;
+
+    background-color: #E6E6E6;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    right: 3vw;
 }
 
-@media only screen and (max-width: 768px) {
-    .ectContentPandADiv a {
-        margin-left: 0vw;
-        font-size: 1.6vh;
-    }
+.pageIconLeft:hover {
+    background-color: #C6C6C6;
+}
+
+.pageIconRight:hover {
+    background-color: #C6C6C6;
+}
+
+.pageText {
+    position: absolute;
 }

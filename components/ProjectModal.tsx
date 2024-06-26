@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./componentsStyles/ProjectModal.module.css"
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/navigation';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 interface ProjectModalProps {
     capture: any[];
@@ -30,6 +31,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     const [leftSwitch, setLeftSwitch] = useState(false);
     const [rightSwitch, setRightSwitch] = useState(false);
     const router = useRouter();
+    
+    const [pageNum, setPageNum] = useState(1);
 
     useEffect(() => {
         if (show) {
@@ -52,6 +55,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 setImgPage(true);
                 setLeftSwitch(false);
                 setRightSwitch(false);
+                setPageNum(1);
 
                 scrollAutoFunc();
                 onClose();
@@ -140,6 +144,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                                 setImgPage(true);
                                 setLeftSwitch(false);
                                 setRightSwitch(false);
+                                setPageNum(1);
                 
                                 scrollAutoFunc();
                                 onClose();
@@ -151,29 +156,49 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     </div>
                     {/* content */}
                     <div className={styles.contentDiv}>
-                        <div className={styles.contentDiv2}>
-                            <h2>About Project</h2>
-                            <p>{aboutProject}</p>
+                        <div className={styles.contentGradationDiv}></div>
+                            {pageNum == 1 &&
+                                <div className={styles.contentDiv2}>
+                                    <h2>About Project</h2>
+                                    <p>{aboutProject}</p>
 
-                            <h2>Period</h2>
-                            <p>{period}</p>
+                                    <h2>Period</h2>
+                                    <p>{period}</p>
 
-                            <h2>frontEnd</h2>
-                            <p>{frontEnd}</p>
+                                    <h2>frontEnd</h2>
+                                    <p>{frontEnd}</p>
+                                </div>
+                            }
 
-                            <h2>Main Function</h2>
-                            <p>{mainFunction}</p>
+                            {pageNum == 2 &&
+                                <div className={styles.contentDiv2}>
+                                    <h2>Main Function</h2>
+                                    <p>{mainFunction}</p>
+        
+                                    <h2>My Contributions</h2>
+                                    <p>{MyContributions}</p>
+                                </div>
+                            }
 
-                            <h2>My Contributions</h2>
-                            <p>{MyContributions}</p>
-
-                            {troubleShooting &&
-                                <>
+                            {pageNum == 3 &&
+                                <div className={styles.contentDiv2}>
                                     <h2>Trouble Shooting</h2>
                                     <p>{troubleShooting}</p>
-                                </>
+                                </div>
                             }
-                        </div>
+                    </div>
+                    <div className={styles.pageDiv}>
+                        {pageNum > 1 &&
+                            <div
+                            className={styles.pageIconLeft}
+                            onClick={() => {setPageNum(pre => pre - 1)}}><AiOutlineLeft size={24} color="#4D4D4D"/></div>
+                        }
+                        <div className={styles.pageText}>{pageNum} / 3 page</div>
+                        {pageNum < 3 &&
+                        <div
+                            className={styles.pageIconRight}
+                            onClick={() => {setPageNum(pre => pre + 1)}}><AiOutlineRight size={24} color="#4D4D4D"/></div>
+                        }
                     </div>
                 </div>
             </div>
