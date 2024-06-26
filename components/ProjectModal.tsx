@@ -159,30 +159,30 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                         <div className={styles.contentGradationDiv}></div>
                             {pageNum == 1 &&
                                 <div className={styles.contentDiv2}>
-                                    <h2>About Project</h2>
+                                    <h2>⭐ 이 프로젝트는</h2>
                                     <p>{aboutProject}</p>
 
-                                    <h2>Period</h2>
+                                    <h2>⭐ 기간</h2>
                                     <p>{period}</p>
 
-                                    <h2>frontEnd</h2>
+                                    <h2>⭐ 기술 스택</h2>
                                     <p>{frontEnd}</p>
                                 </div>
                             }
 
                             {pageNum == 2 &&
                                 <div className={styles.contentDiv2}>
-                                    <h2>Main Function</h2>
+                                    <h2>⭐ 주요 기능</h2>
                                     <p>{mainFunction}</p>
         
-                                    <h2>My Contributions</h2>
+                                    <h2>⭐ 개발 사항</h2>
                                     <p>{MyContributions}</p>
                                 </div>
                             }
 
                             {pageNum == 3 &&
                                 <div className={styles.contentDiv2}>
-                                    <h2>Trouble Shooting</h2>
+                                    <h2>💫 트러블 슈팅</h2>
                                     <p>{troubleShooting}</p>
                                 </div>
                             }
