@@ -11,8 +11,8 @@
 
 @media only screen and (max-width: 768px) {
     .totalDiv {
-        height: 10vh;
-        justify-content: flex-start;
+        height: 25vw;
+        flex-direction: row;
     }
 }
 
@@ -28,8 +28,6 @@
     .centerDiv {
         position: relative;
         width: 50%;
-
-        left: 2%;
     }
 }
 
@@ -43,7 +41,7 @@
 
 @media only screen and (max-width: 768px) {
     .centerDetailDiv {
-        margin: 0vw 0vw;
+        margin: 1vw 0vw;
     }
 }
 
@@ -56,7 +54,8 @@
 @media only screen and (max-width: 768px) {
     .centerDetailDiv img {
         width: 6vw;
-        height: 40%;
+        height: 6vw;
+        margin-left: 1vw;
     }
 }
 
@@ -66,9 +65,13 @@
 
 @media only screen and (max-width: 768px) {
     .centerDetailDiv h2 {
-        font-size: 1.4vh;
+        font-size: 3vw;
 
         width: 32vw;
+        margin-left: 1vw;
+        
+        color: #4D4D4D;
+        text-decoration: none;
     }
 }
 
@@ -79,7 +82,11 @@
 
 @media only screen and (max-width: 768px) {
     .rightDiv {
-        left: 6%;
+        width: 50%;
+        left: 0%;
+
+        display: flex;
+        justify-content: end;
     }
 }
 
@@ -90,6 +97,7 @@
 
 @media only screen and (max-width: 768px) {
     .rightDiv h3 {
-        font-size: 1.4vh;
+        font-size: 3vw;
+        margin-right: 1vw;
     }
 }

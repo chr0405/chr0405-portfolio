@@ -204,7 +204,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                                         <Image style={{
                                             "width" : mobileView? "8.34vw" : "2.78vw",
                                             "height" : mobileView? "8.34vw" :  "2.78vw",
-                                            "marginBottom" : "0.05vw",
+                                            "marginBottom" : "0.5vw",
                                         }}
                                             src={YouTubeImg} alt="YouTubeImg"/>
                                         YouTube

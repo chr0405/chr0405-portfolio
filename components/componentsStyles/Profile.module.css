@@ -3,6 +3,7 @@
     height: 71.11vw;
 
     background: linear-gradient(to bottom, #1B4669, #668DAE);
+    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -43,16 +44,15 @@
 @media only screen and (max-width: 768px) {
     .boxDiv {
         width: 83.33vw;
-        height: 75vh;
+        height: 160vw;
 
-        border-radius: 1vh;
+        border-radius: 2vw;
 
         flex-direction: column;
         
         margin-bottom: 0vw;
 
         position: relative;
-        top: 5vh;
     }
 }
 
@@ -91,6 +91,7 @@
 .pictureDiv img {
     max-width: 100%;
     max-height: 100%;
+    object-fit: fill;
 }
 
 .centerLine {
@@ -103,7 +104,7 @@
 @media only screen and (max-width: 768px) {
     .centerLine {
         width: 100%;
-        height: 0.1vh;
+        height: 0.2vw;
 
         display: flex;
         flex-direction: row;
@@ -121,11 +122,8 @@
 @media only screen and (max-width: 768px) {
     .centerLine div {
         position: relative;
-        margin-top: 0.6vh;
         width: 100%;
-        border-top: 1vh dashed #9B9B9B;
-
-        height: 0.01vh;
+        border-top: 1vw dashed #9B9B9B;
     }
 }
 
@@ -164,11 +162,11 @@
 @media only screen and (max-width: 768px) {
     .individualDiv {
         width: 60vw;
-        height: 3vh;
+        height: 6.5vw;
 
         top: 2%;
 
-        margin: 1vh 0vh;
+        margin: 2vw 0vw;
     }
 }
 
@@ -190,8 +188,6 @@
 @media only screen and (max-width: 768px) {
     .individualDiv2 {
         width: 44vw;
-
-        margin: 0.5vh 0vw;
     }
 }
 
@@ -267,27 +263,23 @@
 @media only screen and (max-width: 768px) {
     .switchDiv {
         width: 35vw;
-        height: 5vh;
+        height: 10.5vw;
 
-        top: 7vh;
+        top: 10.4vw;
 
-        border-radius: 2.78vh;
+        border-radius: 10.5vw;
     }
 }
 
 .switchTextDiv{
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
 
     width: 50%;
-
-    /* background-color: red; */
 }
 
 .switchP {
-    /* font-size: 1.39vw; */
     font-size: 1.385vw;
     
     z-index: 1;
@@ -298,8 +290,7 @@
 
 @media only screen and (max-width: 768px) {
     .switchP {
-        /* margin: 0vw 0.5vh; */
-        font-size: 1.4vh;
+        font-size: 3vw;
     }
 }
 
@@ -316,10 +307,10 @@
 
 @media only screen and (max-width: 768px) {
     .switchBtn {
-        width: 18vw;
+        width: 50%;
         height: 100%;
 
-        border-radius: 2.78vh;
+        border-radius: 20vw;
     }
 }
 

@@ -15,8 +15,7 @@
 @media only screen and (max-width: 768px) {
     .totalDiv {
         width: 83.33vw;
-        /* height: 120vw; */
-        height: 54.2vh;
+        height: 118vw;
     
         margin: 10vw 0vw 10vw 0vw;
     
@@ -41,10 +40,10 @@
 @media only screen and (max-width: 768px) {
     .projectDiv {
         width: 83.33vw;
-        /* height: 100vw; */
-        height: 45.5vh;
+        height: 95vw;
+        /* height: 45.5vh; */
     
-        border-radius: 1vh;
+        border-radius: 2vw;
     }
 }
 
@@ -64,10 +63,9 @@
 @media only screen and (max-width: 768px) {
     .projectNameDiv {
         width: 83.33vw;
-        /* height: 8.66vw; */
-        height: 4vh;
+        height: 9vw;
     
-        font-size: 1.8vh;
+        font-size: 4vw;
     }
 }
 
@@ -95,11 +93,10 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv {
-        width: 25vw;
-        /* height: 6.72vw; */
-        height: 3vh;
+        width: 24vw;
+        height: 6.72vw;
         
-        border-radius: 2vh;
+        border-radius: 4vw;
         margin-left: -56vw;
     }
 }
@@ -115,7 +112,7 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv p{
-        font-size: 1.2vh;
+        font-size: 2.5vw;
     }
 }
 
@@ -153,9 +150,9 @@
 @media only screen and (max-width: 768px) {
     .switchBtn {
         width: 12vw;
-        height: 3vh;
+        height: 6.72vw;
         
-        border-radius: 2vh;
+        border-radius: 4vw;
     }
 }
 
@@ -178,7 +175,7 @@
 
 @media only screen and (max-width: 768px) {
     .goToYouTube {
-        width: 13.8vw;
+        width: 13.2vw;
     }
 }
 
@@ -215,8 +212,7 @@
 @media only screen and (max-width: 768px) {
     .projectPictureDiv {
         width: 83.33vw;
-        /* height: 62.16vw; */
-        height: 28.05vh;
+        height: 62.16vw;
     }
 }
 
@@ -229,8 +225,7 @@
 @media only screen and (max-width: 768px) {
     .projectPictureDiv img {
         width: 83.33vw;
-        /* height: 62.16vw; */
-        height: 28.05vh;
+        height: 62.16vw;
     }
 }
 
@@ -242,79 +237,7 @@
 @media only screen and (max-width: 768px) {
     .projectYouTubeIframe {
         width: 83.33vw;
-        /* height: 62.16vw; */
-        height: 28.05vh;
-    }
-}
-
-.sectionDiv {
-    width: 34.72vw;
-    height: 25.9vw;
-
-    position: relative;
-    top: -26.1vw;
-
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-
-    /* background-color: red; */
-}
-
-@media only screen and (max-width: 768px) {
-    .sectionDiv {
-        width: 83.33vw;
-        /* height: 62.16vw; */
-        height: 28.05vh;
-
-        top: -62.16vw;
-    }
-}
-
-.sectionDiv div{
-    width: 11.57vw;
-    height: 25.9vw;
-}
-
-@media only screen and (max-width: 768px) {
-    .sectionDiv div {
-        width: 50%;
-        height: 100%;
-
-        /* background-color: yellow; */
-    }
-}
-
-.projectPictureSelectTotalDiv {
-    position: relative;
-    height: 0.69vw;
-    
-    top: -28vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media only screen and (max-width: 768px) {
-    .projectPictureSelectTotalDiv {
-        /* top: -66vw; */
-        top: -30vh;
-    }
-}
-
-.projectPictureSelectDiv {
-    width: 0.69vw;
-    height: 0.69vw;
-    border-radius: 50%;
-    margin: 0vw 0.35vw;
-}
-
-@media only screen and (max-width: 768px) {
-    .projectPictureSelectDiv {
-        width: 1.8vw;
-        /* height: 1.8vw; */
-        height: 0.85vh;
-        margin: 0vw 0.8vw;
+        height: 62.16vw;
     }
 }
 
@@ -333,8 +256,8 @@
 
 @media only screen and (max-width: 768px) {
     .textDiv {
-        left: 4.5vw;
-        margin-top: 2vw;
+        margin-top: 0vw;
+        height: 24vw;
     }
 }
 
@@ -354,7 +277,8 @@
 
 @media only screen and (max-width: 768px) {
     .namePeriodDiv h1 {
-        font-size: 1.8vh;
+        font-size: 4vw;
+        margin-left: 4vw;
     }
 }
 
@@ -366,9 +290,9 @@
 
 @media only screen and (max-width: 768px) {
     .namePeriodDiv p {
-        margin-left: 2.07vw;
+        margin-left: 2vw;
 
-        font-size: 1.2vh;
+        font-size: 3vw;
     }
 }
 
@@ -386,34 +310,17 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .aboutProject {
+    .mainAboutProject {
         width: 90%;
-        height: 6.5vh;
+        /* height: 6.5vh; */
 
-        margin: 0.8vh 0vw;
+        margin: 2vw 0vw 2vw 4vw;
 
-        font-size: 1.4vh;
+        font-size: 3.5vw;
+
+        /* background-color: yellow; */
     }
 }
-
-/* .aboutProject::-webkit-scrollbar {
-    width: 0.5vw;
-}
-
-@media only screen and (max-width: 768px) {
-    .aboutProject::-webkit-scrollbar {
-        width: 1.5vw;
-    }
-}
-
-.aboutProject::-webkit-scrollbar-thumb {
-    background-color: #C6C6C6;
-    border-radius: 2vw;
-}
-
-.aboutProject::-webkit-scrollbar-track {
-    background-color: transparent;
-} */
 
 .more{
     /* margin-top: 0.69vw; */
@@ -426,13 +333,17 @@
 }
 
 .more:hover {
-    color: #1E70BF; /* 변경할 색상 */
+    color: #1E70BF;
 }
 
 @media only screen and (max-width: 768px) {
     .more {
-        font-size: 1.4vh;
-        margin-top: 0vw;
+        margin-left: 4vw;
+        font-size: 3.5vw;
+    }
+
+    .more:hover {
+        color: #3998EF;
     }
 }
 
@@ -453,12 +364,11 @@
 @media only screen and (max-width: 768px) {
     .webSiteDiv {
         width: 83.33vw;
-        /* height: 16.66vw; */
-        height: 7.5vh;
+        height: 16vw;
 
         margin-top: 0vw;
 
-        border-radius: 1vh;
+        border-radius: 2vw;
     }
 }
 
@@ -488,6 +398,8 @@
         height: 15vw;
 
         margin: 0vw 3vw;
+
+        animation-duration: 0s;
     }
 }
 
@@ -525,6 +437,8 @@
     .onMouseEnterDiv2 {
         width: 11.25vw;
         height: 11.25vw;
+
+        animation-duration: 0s;
     }
 }
 
@@ -559,6 +473,8 @@
     .onMouseEnterDiv3 {
         width: 7.5vw;
         height: 7.5vw;
+        
+        background-color: white;
     }
 }
 
@@ -596,7 +512,7 @@
 
 @media only screen and (max-width: 768px) {
     .webSite {
-        font-size: 1.4vh;
+        font-size: 3vw;
     }
 }
 
@@ -611,8 +527,7 @@
 @media only screen and (max-width: 768px) {
     .webSite img{
         width: 7.29vw;
-        /* height: 7.29vw; */
-        height: 3.29vh;
+        height: 7.29vw;
     
         margin-bottom: 1vw;
     }

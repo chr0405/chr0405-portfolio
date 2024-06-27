@@ -30,7 +30,7 @@
     .textDiv {
         top: 55%;
         width: 95vw;
-        height: 40vh;
+        height: 88vw;
     }
 }
 
@@ -50,7 +50,7 @@
 
 @media only screen and (max-width: 768px) {
     .textDiv h1 {
-        font-size: 3vh;
+        font-size: 6.5vw;
         font-weight: bold;
     }
 }
@@ -97,9 +97,9 @@
 @media only screen and (max-width: 768px) {
     .textDiv div {
         width: 20vw;
-        height: 10vh;
+        height: 20vw;
     
-        top: 30%;
+        top: 28%;
     }
 }
 
@@ -120,8 +120,8 @@
 
 @media only screen and (max-width: 768px) {
     .imgMovingSetting {
-        width: 8vw;
-        height: 8vw;
+        width: 10vw;
+        height: 10vw;
 
         animation-name: imgMovingMobile;
     }
@@ -147,25 +147,24 @@
 
 @keyframes imgMovingMobile {
     0% {
-        width: 8vw;
-        height:8vw;
+        width: 10vw;
+        height:10vw;
         text-shadow: 0.14vw 0.14vw 0.69vw rgba(255, 255, 255, 0.5);
     }
 
     50% {
-        width: 10vw;
-        height: 10vw;
+        width: 12vw;
+        height: 12vw;
     }
 
     100% {
-        width:8vw;
-        height:8vw;
+        width:10vw;
+        height:10vw;
     }
 }
 
 .introduce {
     font-size: 1.39vw;
-    /* color: #000000; */
 
     text-align: center;
     line-height: 1.5;
@@ -178,7 +177,6 @@
 
 .clickIntroduce {
     font-size: 1.39vw;
-    /* color: #000000; */
 
     text-align: center;
     line-height: 1.5;
@@ -196,18 +194,19 @@
 
 @media only screen and (max-width: 768px) {
     .introduce {
-        font-size: 1.8vh;
+        font-size: 4vw;
         top: 60%;
     }
 
     .clickIntroduce {
-        font-size: 1.8vh;
+        font-size: 4vw;
         top: 60%;
+        border-radius: 2vw;
     }
 }
 
 .star, .star2, .star3, .star4 {
-    z-index: 1; /* introduce 요소보다 낮게 설정 */
+    z-index: 1;
     border-radius: 50%;
     background-color: white;
     position: absolute;
@@ -248,15 +247,15 @@
 @media only screen and (max-width: 768px) {
     .style1 {
         width: 1vw;
-        height: 0.2vw;
+        height: 0.1vw;
     }
     .style2 {
         width: 2vw;
-        height: 0.2vw;
+        height: 0.1vw;
     }
     .style3 {
         width: 3vw;
-        height: 0.2vw;
+        height: 0.1vw;
     }
 }
 
@@ -300,5 +299,21 @@
 
     100% {
         box-shadow: 0 0 0.69vw 0vw rgb(255, 255, 255, 0.1);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    @keyframes twinkling {
+        0% {
+            box-shadow: 0 0 2vw 0vw rgb(255, 255, 255, 0.1);
+        }
+    
+        50% {
+            box-shadow: 0 0 2vw 0.14vw rgb(255, 255, 255, 0.5);
+        }
+    
+        100% {
+            box-shadow: 0 0 2vw 0vw rgb(255, 255, 255, 0.1);
+        }
     }
 }

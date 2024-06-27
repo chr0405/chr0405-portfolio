@@ -3,6 +3,7 @@
     height: 71.11vw;
 
     background: linear-gradient(to bottom, #668DAE, #B9CEE3);
+    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -34,11 +35,11 @@
 @media only screen and (max-width: 768px) {
     .centerDiv {
         width: 83.33vw;
-        height: 80vh;
+        height: 170vw;
 
-        border-radius: 1vh;
+        border-radius: 2vw;
 
-        top: 50vh;
+        top: 105vw;
     }
 }
 
@@ -71,7 +72,7 @@
 
 @media only screen and (max-width: 768px) {
     .tilteDiv {
-        font-size: 1.8vh;
+        font-size: 4vw;
     }
 }
 
@@ -81,7 +82,7 @@
 
 @media only screen and (max-width: 768px) {
     .fontEndBoxDiv h1 {
-        margin-bottom: 2vh;
+        margin-bottom: 4vw;
     }
 }
 
@@ -91,7 +92,7 @@
 
 @media only screen and (max-width: 768px) {
     .restTitle {
-        margin: 1vh 0vw;
+        margin: 2vw 0vw;
     }
 }
 
@@ -103,7 +104,7 @@
 
 @media only screen and (max-width: 768px) {
     .frontEndLineDiv {
-        margin-bottom: 2vh;
+        margin-bottom: 4vw;
         justify-content: center;
     }
 }
@@ -162,9 +163,12 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .horizontalDividingLine {
+        height: 0.2vw;
+    }
+    
     .horizontalDividingLine div {
-        border-top: 0.6vh dashed #9B9B9B;
-        border-bottom: 0.6vh dashed #9B9B9B;
+        border-top: 1vw dashed #9B9B9B;
     }
 }
 
@@ -203,8 +207,9 @@
 
 @media only screen and (max-width: 768px) {
     .verticalDividingLine {
+        /* 눈으로 안 보임 */
         width: 100%;
-        height: 0.1vh;
+        height: 0.2vw;
 
         display: flex;
         flex-direction: row;
@@ -222,7 +227,7 @@
 @media only screen and (max-width: 768px) {
     .verticalDividingLine div {
         position: relative;
-        margin-top: 0.6vh;
+        /* margin-top: 0.6vh; */
         width: 100%;
 
         /* 주석 제거하면 가로 분할 선 */

@@ -7,20 +7,13 @@
 
 @media only screen and (max-width: 768px) {
     .iconDiv {
-        border-radius: 3vh;
+        border-radius: 5vw;
     }
 }
 
 .iconImg {
     width: 60%;
     height: 60%;
-}
-
-@media only screen and (max-width: 768px) {
-    .iconImg {
-        width: 60%;
-        height: 60%;
-    }
 }
 
 .iconName {
@@ -30,7 +23,7 @@
 
 @media only screen and (max-width: 768px) {
     .iconName {
-        font-size: 1.4vh;
-        margin-top: 0.3vh;
+        font-size: 3vw;
+        margin-top: 0.6vw;
     }
 }

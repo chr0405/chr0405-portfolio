@@ -21,6 +21,7 @@
     height: 34.72vw;
 
     background-color: white;
+    /* background-color: red; */
 
     display: flex;
     justify-content: center;
@@ -33,10 +34,9 @@
 @media only screen and (max-width: 768px) {
     .modalDiv {
         width: 83.33vw;
-        /* height: 180vw; */
-        height: 80.8vh;
+        height: 182vw;
 
-        border-radius: 1vh;
+        border-radius: 2vw;
     
         flex-direction: column;
         justify-content: flex-start;
@@ -61,19 +61,11 @@
 @media only screen and (max-width: 768px) {
     .projectPictureDiv {
         width: 83.33vw;
-        /* height: 62.16vw; */
-        height: 28vh;
+        height: 62.16vw;
 
         position: relative;
         
-        /* margin-top: -1.6vw; */
-        margin-top: -0.7vh;
-        /* top: 8.4vw; */
-        top: 4.4vh;
-
-        /* display: flex;
-        align-items: center;
-        justify-content: center; */
+        top: 9vw;
     }
 }
 
@@ -86,11 +78,7 @@
 @media only screen and (max-width: 768px) {
     .projectPictureDiv img {
         width: 83.33vw;
-        /* height: 62.16vw; */
-        height: 20vh;
-
-        position: relative;
-        top: 4.6vw;
+        height: 62.16vw;
     }
 }
 
@@ -101,28 +89,38 @@
     width: 45.14vw;
     height: 3.89vw;
 
-    /* background-color: #ffffff; */
-
     display: flex;
     align-items: center;
     justify-content:center;
 }
 
-.projectPictureDiv p {
-    /* font-size: 1.39vw; */
-    /* font-weight: 600; */
-
-    display: flex;
-    align-items: center;
-    justify-content:center;
-
+.aboutCaptureDiv p {
     font-size: 1.25vw;
 }
 
 @media only screen and (max-width: 768px) {
-    .projectPictureDiv p {
-        font-size: 1.6vh;
-        top: -21vh;
+    .aboutCaptureDiv {
+        position: absolute;
+        top: 2vw;
+    
+        width: 80vw;
+        height: auto;
+    
+        display: flex;
+        align-items: center;
+        justify-content:center;
+
+        text-align: center;
+    }
+    
+    .aboutCaptureDiv p {
+        font-size: 3vw;
+
+        color: black;
+        background-color: #FFFFFF;
+        opacity: 0.7;
+        padding: 0vw 0.8vw;
+        border-radius: 1vw;
     }
 }
 
@@ -134,14 +132,10 @@
 @media only screen and (max-width: 768px) {
     .projectYouTubeIframe {
         width: 83.33vw;
-        /* height: 62.16vw; */
-        height: 28vh;
+        height: 62.16vw;
 
         position: relative;
-        /* top: 8.6vw; */
-        top: 3.6vh;
-
-        margin: 0vw 0vw;
+        top: 9vw;
     }
 }
 
@@ -162,9 +156,11 @@
 @media only screen and (max-width: 768px) {
     .sectionDiv {
         width: 83.33vw;
-        height: 100%;
+        height: 62.16vw;
 
-        margin-top: -23.7vh;
+        position: relative;
+
+        /* background-color: red; */
     }
 }
 
@@ -175,9 +171,6 @@
     /* background-color: yellow; */
 
     position: relative;
-    /* margin-top: 0vw; */
-
-    /* border: 2px solid black;  */
 }
 
 @media only screen and (max-width: 768px) {
@@ -202,8 +195,15 @@
 
 @media only screen and (max-width: 768px) {
     .projectPictureSelectTotalDiv {
-        /* top: -66vw; */
-        margin-top: -2vh;
+        top: 58vw;
+
+        width: auto;
+        height: 2vw;
+
+        background-color: #FFFFFF;
+        opacity: 0.7;
+        padding: 0vw 0.8vw;
+        border-radius: 1vw;
     }
 }
 
@@ -216,8 +216,8 @@
 
 @media only screen and (max-width: 768px) {
     .projectPictureSelectDiv {
-        width: 1.8vw;
-        height: 280%;
+        width: 2vw;
+        height: 2vw;
         margin: 0vw 0.8vw;
     }
 }
@@ -232,6 +232,16 @@
     align-items: flex-start;
 
     /* background-color: blue; */
+}
+
+@media only screen and (max-width: 768px) {
+    .rightDiv {
+        width: 83.33vw;
+        height: 110.8vw;
+
+        position: relative;
+        top: 9vw;
+    }
 }
 
 .headerDiv {
@@ -250,13 +260,11 @@
 
 @media only screen and (max-width: 768px) {
     .headerDiv {
-        position: relative;
-        /* top: -61vw; */
-        top: -27.4vh;
+        position: absolute;
+        top: -71.5vw;
 
         width: 83.33vw;
-        /* height: 9vw; */
-        height: 3.8vh;
+        height: 9.5vw;
     }
 }
 
@@ -269,7 +277,7 @@
 
 @media only screen and (max-width: 768px) {
     .headerDiv h1 {
-        font-size: 1.8vh;
+        font-size: 4vw;
     }
 }
 
@@ -294,14 +302,12 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv {
-        width: 25vw;
-        /* height: 6.72vw; */
-        height: 3vh;
+        width: 24vw;
+        height: 6.72vw;
         
-        border-radius: 2vh;
+        border-radius: 4vw;
 
         position: relative;
-        margin-right: 0vw;
         left: -28vw;
     }
 }
@@ -317,7 +323,7 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv p{
-        font-size: 1.2vh;
+        font-size: 2.5vw;
     }
 }
 
@@ -337,7 +343,7 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv p:last-of-type {
-        margin-right: 1vw;
+        margin-right: 1.5vw;
     }
 }
 
@@ -355,10 +361,9 @@
 @media only screen and (max-width: 768px) {
     .switchBtn {
         width: 12vw;
-        /* height: 6.72vw; */
-        height: 3vh;
+        height: 6.72vw;
         
-        border-radius: 2vh;
+        border-radius: 4vw;
     }
 }
 
@@ -381,7 +386,7 @@
 
 @media only screen and (max-width: 768px) {
     .goToYouTube {
-        width: 13.8vw;
+        width: 13.2vw;
     }
 }
 
@@ -426,8 +431,7 @@
 @media only screen and (max-width: 768px) {
     .closeIconDiv {
         width: 5.76vw;
-        /* height: 5.76vw; */
-        height: 65%;
+        height: 5.76vw;
 
         position: absolute;
         right: 2vw;
@@ -480,11 +484,10 @@
 @media only screen and (max-width: 768px) {
     .contentDiv {
         width: 83.33vw;
-        /* height: 110.66vw; */
-        height: 49.7vh;
+        height: 101.6vw;
 
-        /* position: relative; */
-        top: 50vw;
+        position: relative;
+        top: 0vw;
     }
 }
 
@@ -495,14 +498,18 @@
     /* background-color: yellow; */
     position: relative;
 
-    padding: 1.8vw 0vw 0vw 0vw;
+    padding-top: 1.8vw;
 }
 
 @media only screen and (max-width: 768px) {
     .contentDiv2 {
         width: 83.33vw;
-        /* height: 100.66vw; */
-        height: 45vh;
+        height: 101.6vw;
+
+        position: relative;
+        top: 0vw;
+
+        padding-top: 5vw;
     }
 }
 
@@ -538,6 +545,25 @@
     z-index: 1;
 }
 
+@media only screen and (max-width: 768px) {
+    .contentGradationDiv {
+        width: 83.33vw;
+        height: 102vw;
+    }
+
+    /* 상단 그라데이션 */
+    .contentGradationDiv:before {
+        width: 81.5vw;
+        height: 10vw;
+    }
+
+    /* 하단 그라데이션 */
+    .contentGradationDiv:after {
+        width: 81.5vw;
+        height: 10vw;
+    }
+}
+
 .contentDiv2::-webkit-scrollbar {
     /* width: 0.35vw; */
     width: 0.5vw;
@@ -569,9 +595,8 @@
 
 @media only screen and (max-width: 768px) {
     .contentDiv2 h2 {
-        font-size: 1.6vh;
-        /* margin-bottom: 3vw; */
-        margin-bottom: 1.4vh;
+        font-size: 3.5vw;
+        margin-bottom: 3vw;
     }
 }
 
@@ -591,9 +616,11 @@
 
 @media only screen and (max-width: 768px) {
     .contentDiv2 p {
-        font-size: 1.6vh;
-        /* margin-bottom: 4vw; */
-        margin-bottom: 1.8vh;
+        font-size: 3.5vw;
+        border-radius: 2vw;
+
+        margin-bottom: 4vw;
+        padding: 2vw 2vw;
     }
 }
 
@@ -609,6 +636,17 @@
     justify-content: center;
 
     /* background-color: red; */
+}
+
+@media only screen and (max-width: 768px) {
+    .pageDiv {
+        width: 83.33vw;
+        height: 9.5vw;
+
+        top: 0vw;
+
+        background-color: white;
+    }
 }
 
 .pageIconLeft {
@@ -627,6 +665,13 @@
     left : 3vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .pageIconLeft {
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
 .pageIconRight {
     width: 2.5vw;
     height: 2.5vw;
@@ -643,6 +688,13 @@
     right: 3vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .pageIconRight {
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
 .pageIconLeft:hover {
     background-color: #C6C6C6;
 }
@@ -651,6 +703,24 @@
     background-color: #C6C6C6;
 }
 
+@media only screen and (max-width: 768px) {
+    .pageIconLeft:hover {
+        background-color: #E6E6E6;
+    }
+    
+    .pageIconRight:hover {
+        background-color: #E6E6E6;
+    }
+    
+}
+
 .pageText {
     position: absolute;
+    font-size: 1.25vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .pageText {
+        font-size: 3vw;
+    }
 }

@@ -27,7 +27,7 @@
 
 @media only screen and (max-width: 768px) {
     .titleCss {
-        font-size: 1.8vh;
+        font-size: 3.5vw;
     }
 }
 
@@ -37,7 +37,7 @@
 
 @media only screen and (max-width: 768px) {
     .titleAboutUsCss {
-        margin-left: 1.39vh;
+        margin-left: 3vw;
     }
 }
 
@@ -47,7 +47,7 @@
 
 @media only screen and (max-width: 768px) {
     .titleTechloreCss {
-        margin-left: 1.39vh;
+        margin-left: 3vw;
     }
 }
 
@@ -67,8 +67,7 @@
 
 @media only screen and (max-width: 768px) {
     .infoCss {
-        font-size: 1.6vh;
-        left: 7vh;
+        font-size: 3.5vw;
     }
 }
 
@@ -85,11 +84,9 @@
 
 @media only screen and (max-width: 768px) {
     .aCss {
-        font-size: 1.8vh;
-        /* position: absolute; */
+        font-size: 3.5vw;
         margin-left: 2vw;
-
-        /* width: 12vw; */
+        color: #4D4D4D;
     }
 }
 
