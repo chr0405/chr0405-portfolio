@@ -48,6 +48,7 @@
 @media only screen and (max-width: 768px) {
     .titleTechloreCss {
         margin-left: 3vw;
+        /* background-color: red; */
     }
 }
 

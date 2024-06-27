@@ -34,7 +34,7 @@
 @media only screen and (max-width: 768px) {
     .modalDiv {
         width: 83.33vw;
-        height: 182vw;
+        height: 162vw;
 
         border-radius: 2vw;
     
@@ -237,7 +237,7 @@
 @media only screen and (max-width: 768px) {
     .rightDiv {
         width: 83.33vw;
-        height: 110.8vw;
+        height: 90.8vw;
 
         position: relative;
         top: 9vw;
@@ -484,7 +484,7 @@
 @media only screen and (max-width: 768px) {
     .contentDiv {
         width: 83.33vw;
-        height: 101.6vw;
+        height: 90.6vw;
 
         position: relative;
         top: 0vw;
@@ -504,12 +504,12 @@
 @media only screen and (max-width: 768px) {
     .contentDiv2 {
         width: 83.33vw;
-        height: 101.6vw;
+        height: 90.6vw;
 
         position: relative;
         top: 0vw;
 
-        padding-top: 5vw;
+        padding: 5vw 0vw;
     }
 }
 
@@ -548,19 +548,19 @@
 @media only screen and (max-width: 768px) {
     .contentGradationDiv {
         width: 83.33vw;
-        height: 102vw;
+        height: 82.2vw;
     }
 
     /* 상단 그라데이션 */
     .contentGradationDiv:before {
         width: 81.5vw;
-        height: 10vw;
+        height: 5vw;
     }
 
     /* 하단 그라데이션 */
     .contentGradationDiv:after {
         width: 81.5vw;
-        height: 10vw;
+        height: 5vw;
     }
 }
 
@@ -645,7 +645,7 @@
 
         top: 0vw;
 
-        background-color: white;
+        /* background-color: white; */
     }
 }
 

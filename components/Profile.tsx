@@ -43,6 +43,7 @@ export default function Profile() {
                                     web={aboutMe.web ? aboutMe.web : null}/>
                             </div>
                         ))}
+                        
                         { ! page1 && TechloreArray.map((aboutMe, index) => (
                             <div className={styles.individualDiv2} key={index}>
                                 <Techlore

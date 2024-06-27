@@ -187,7 +187,8 @@
 
 @media only screen and (max-width: 768px) {
     .individualDiv2 {
-        width: 44vw;
+        width: 62vw;
+        /* background-color: yellow; */
     }
 }
 

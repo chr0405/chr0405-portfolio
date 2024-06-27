@@ -55,12 +55,49 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
+
+    const [mobileView, setMobileView] = useState(false);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+        console.log(window.innerWidth);
+
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
+            console.log(mobileView);
+        } else {
+            setMobileView(false);
+            console.log(mobileView);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
+    }, []);
+
+    useEffect(() => {
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
+        } else {
+            setMobileView(false);
+        }
+
+    }, []);
+
     return (
         <div className={styles.totalDiv}>
             <div className={styles.headerDiv}>
                 <div className={styles.logoDiv}>
                     <h1>CHR portfolio</h1>
-                    <Image src={star} alt='hearder logo'/>
+                    { !mobileView &&
+                        <Image src={star} alt='hearder logo'/>
+                    }
                 </div>
                 
                 <div className={styles.menuDiv}>
