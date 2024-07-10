@@ -41,6 +41,12 @@ import projectYouTubeEmbed from "../img/CHRportfolio/projectYouTubeEmbed.png";
 import projectModal from "../img/CHRportfolio/projectModal.png";
 import projectModalYouTubeEmbed from "../img/CHRportfolio/projectModalYouTubeEmbed.png";
 
+import dailyControlMain from "../img/DailyControl/dailyControlMain.png";
+import start from "../img/DailyControl/start.jpg";
+import weatherNow from "../img/DailyControl/weatherNow.jpg";
+import dayCounter from "../img/DailyControl/dayCounter.jpg";
+import dayCounter2 from "../img/DailyControl/dayCounter2.jpg";
+
 export const ProjectArray = [
     {
         "num" : 1,
@@ -296,6 +302,77 @@ API에서 페이지네이션된 결과만 제공되어 전체 페이지 수를 �
 • 인프라 : Vercel`,
         "mainFunction" : `• 자기소개
 • 내 프로필 (개인 정보와 이력 사항 포함)
+• 기술 스택 소개
+• 참여한 프로젝트 내역 소개
+• 프로젝트 세부 내용 확인을 위한 모달 창`,
+        "MyContributions": `• 디자인 기획 및 구현
+• 휴대폰 반응형 디자인 적용
+• 자기소개 (섹션에 애니메이션 효과 적용)
+• 프로필, 기술 스택, 프로젝트 내역 섹션 개발
+• 프로젝트 세부 내용 확인을 위한 모달 창 구현`,
+        "troubleShooting" : `✔️ 휴대폰용 반응형 디자인 적용의 어려움 극복 사례
+
+• 문제 상황 💡:
+휴대폰용 반응형 디자인을 구현하는 과정에서 다양한 해상도와 디바이스에 대응하는 반응형 디자인 적용에 어려움을 겪었습니다.
+
+주요 문제점은 다음과 같았습니다:
+레이아웃 깨짐
+요소 간 겹침
+디바이스별 최적화 부족
+
+• 해결 과정 💡:
+
+⇒ vw, vh 단위 활용 :
+화면 크기에 따라 동적으로 조절되는 vw, vh 단위 적용
+다양한 해상도에서 반복 테스트하며 세부 조정
+
+⇒ 반응형 레이아웃 최적화 :
+여러 디바이스와 브라우저에서 지속적인 테스트 진행
+뷰포트 크기 변경에 따른 레이아웃 조정 확인 및 수정
+
+• 결과 💡:
+다양한 디바이스에서 최적화된 사용자 경험을 제공했습니다.
+반응형 디자인 구현 기술에 대한 깊이 있는 이해를 했습니다.
+이 경험을 통해 휴대폰 환경에서의 웹 디자인 최적화 중요성을 재확인하고, 관련 기술을 실전에서 적용하는 능력을 키웠습니다.`,
+    "webSite" : {
+            "Demo" : "/",
+            "YouTube" : "https://youtu.be/fh2z5ffxiVk",
+            "YouTubeEmbed" : "https://www.youtube.com/embed/fh2z5ffxiVk",
+            "GitHub" : "https://github.com/chr0405/chr0405-portfolio.git",
+        },
+    },  {
+        "num" : 4,
+        "mainCapture" : dailyControlMain,
+        "capture" : [
+            start,
+            dayCounter,
+            dayCounter2,
+            weatherNow,
+        ],
+        "aboutCapture" : [
+            "시작 화면",
+            "DayCounter & CounterLog 1 (기념일 선택)",
+            "DayCounter & CounterLog 2 (날짜 직접 입력)",
+            "WeatherNow (지역 별 오늘 날씨)",
+        ],
+        "name" : "DailyControl",
+        "period" : "2023.06, 2024.07",
+        "mainAboutProject" : `DailyControl은 지역별 날씨 정보와 D-day 계산 기능을 제공하는 웹 사이트입니다.`,
+        "aboutProject" : `DailyControl은 지역별 날씨 정보와 D-day 계산 기능을 제공하는 웹 사이트입니다.
+프론트엔드 개발자를 목표로 공부를 시작하며 처음 만들었던 D-day 계산기 웹 사이트를 수정, 보완했습니다.
+
+주요 목표는 실무에 가까운 웹 개발 경험을 쌓는 것과 함께, 기존 D-day 웹 사이트들의 사용자 경험을 개선하는 것이었습니다.
+날짜 수와 D-day를 명확히 구분하고, 간결하면서도 직관적인 디자인을 적용해 정보의 가독성을 높였습니다.
+이를 통해 사용자의 혼란을 줄이고 더 나은 경험을 제공하고자 했습니다.
+
+프로젝트를 수정하고 보완하는 과정에서 D-day 계산 로직을 더욱 정확하고 효율적으로 개선했습니다.
+또한 사용자의 검색 기록을 관리하는 시스템을 구현하여 편의성을 향상시키고, 지역별 실시간 날씨 정보를 제공하는 기능을 새롭게 추가하여 서비스의 가치를 높였습니다.`,
+        "frontEnd" : `• 언어 : JavaScript
+• 마크업 : HTML5
+• 스타일링 : CSS3
+• 인프라 : Vercel`,
+        "mainFunction" : `• 
+• 
 • 기술 스택 소개
 • 참여한 프로젝트 내역 소개
 • 프로젝트 세부 내용 확인을 위한 모달 창`,
