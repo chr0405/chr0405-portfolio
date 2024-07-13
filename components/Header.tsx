@@ -4,8 +4,11 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import star from '../img/star.png';
 import styles from './componentsStyles/Header.module.css';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
+
+    const router = useRouter();
 
     // 메뉴를 누르면 스크롤 이동
     const moveToPageFunc = (pageName: string, offset: number) => {
@@ -94,7 +97,7 @@ export default function Header() {
         <div className={styles.totalDiv}>
             <div className={styles.headerDiv}>
                 <div className={styles.logoDiv}>
-                    <h1>CHR portfolio</h1>
+                    <h1 onClick={() => router.push('/')}>CHR portfolio</h1>
                     { !mobileView &&
                         <Image src={star} alt='hearder logo'/>
                     }
