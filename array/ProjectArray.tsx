@@ -30,16 +30,18 @@ import feedC from "../img/Tnovel/feedC.jpg";
 import feedUD from "../img/Tnovel/feedUD.jpg";
 import comment from "../img/Tnovel/comment.jpg";
 import comment1 from "../img/Tnovel/comment1.jpg";
-import mobileView from "../img/Tnovel/mobileView.jpg";
 
 import portfolioMain from "../img/CHRportfolio/portfolioMain.png";
 import intro from "../img/CHRportfolio/intro.png";
+import introAnimation from "../img/CHRportfolio/introAnimation.png";
 import portfolioProfile from "../img/CHRportfolio/profile.png";
 import skill from "../img/CHRportfolio/skill.png";
-import project from "../img/CHRportfolio/project.png";
-import projectYouTubeEmbed from "../img/CHRportfolio/projectYouTubeEmbed.png";
-import projectModal from "../img/CHRportfolio/projectModal.png";
-import projectModalYouTubeEmbed from "../img/CHRportfolio/projectModalYouTubeEmbed.png";
+import project from "../img/CHRportfolio/project.jpg";
+import projectYouTubeEmbed from "../img/CHRportfolio/projectYouTubeEmbed.jpg";
+import projectModal1 from "../img/CHRportfolio/projectModal1.jpg";
+import projectModal2 from "../img/CHRportfolio/projectModal2.jpg";
+import projectModal3 from "../img/CHRportfolio/projectModal3.jpg";
+import projectModalYouTubeEmbed from "../img/CHRportfolio/projectModalYouTubeEmbed.jpg";
 
 import dailyControlMain from "../img/DailyControl/dailyControlMain.png";
 import start from "../img/DailyControl/start.jpg";
@@ -272,20 +274,26 @@ API에서 페이지네이션된 결과만 제공되어 전체 페이지 수를 �
         "mainCapture" : portfolioMain,
         "capture" : [
             intro,
+            introAnimation,
             portfolioProfile,
             skill,
             project,
             projectYouTubeEmbed,
-            projectModal,
+            projectModal1,
+            projectModal2,
+            projectModal3,
             projectModalYouTubeEmbed,
         ],
         "aboutCapture" : [
             "자기소개",
+            "자기소개 애니메이션",
             "내 프로필",
             "기술 스택",
             "참여한 프로젝트 내역",
             "참여한 프로젝트 내역 (유튜브 임베디드)",
-            "프로젝트 세부 내용 모달",
+            "프로젝트 세부 내용 모달 1",
+            "프로젝트 세부 내용 모달 2",
+            "프로젝트 세부 내용 모달 3",
             "프로젝트 세부 내용 모달 (유튜브 임베디드)",
         ],
         "name" : "CHR portfolio",
@@ -363,8 +371,8 @@ CSS로 'object-fit: contain' 속성을 사용하여 이미지 사이즈 문제 �
 이 경험을 통해 휴대폰 환경에서의 웹 디자인 최적화 중요성을 재확인하고, 관련 기술을 실전에서 적용하는 능력을 키웠습니다.`,
     "webSite" : {
             "Demo" : "/",
-            "YouTube" : "https://youtu.be/fh2z5ffxiVk",
-            "YouTubeEmbed" : "https://www.youtube.com/embed/fh2z5ffxiVk",
+            "YouTube" : "https://www.youtube.com/watch?v=DI688JuqPYI",
+            "YouTubeEmbed" : "https://www.youtube.com/embed/DI688JuqPYI",
             "GitHub" : "https://github.com/chr0405/chr0405-portfolio.git",
         },
     },  {

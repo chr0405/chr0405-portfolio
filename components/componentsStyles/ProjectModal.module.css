@@ -212,6 +212,8 @@
     height: 0.69vw;
     border-radius: 50%;
     margin: 0vw 0.35vw;
+
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
