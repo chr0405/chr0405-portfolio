@@ -89,8 +89,8 @@ export const SkillArray = {
                 "img" : Axios,
                 "name" : "Axios",
                 "backgroundColor" : "#E1E1E1",
-                "width" : 6.03,
-                "height" : 1.53
+                "width" : 8,
+                "height" : 3.08
             }
         ]
     },
