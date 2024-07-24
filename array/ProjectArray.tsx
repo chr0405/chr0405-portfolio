@@ -437,7 +437,7 @@ JavaScript의 Date 객체와 시간대 처리에 대한 이해가 깊어졌습�
 특히 웹 사이트에서 시간대 관리의 중요성을 실감했고, UTC와 로컬 시간의 차이, 그리고 이를 다루는 Date 객체의 다양한 메서드 활용법을 익혔습니다.
 또한, 일관된 시간대 처리가 코드의 가독성과 유지보수성 향상에 미치는 영향을 체감했습니다.`,
     "webSite" : {
-            "Demo" : "daily-control.vercel.app",
+            "Demo" : "https://daily-control.vercel.app",
             "YouTube" : "https://www.youtube.com/watch?v=5FmfYGDka5I",
             "YouTubeEmbed" : "https://www.youtube.com/embed/5FmfYGDka5I",
             "GitHub" : "https://github.com/chr0405/DailyControl.git",
