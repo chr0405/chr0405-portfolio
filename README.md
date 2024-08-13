@@ -21,3 +21,10 @@ youtube : [시연 연상](https://youtu.be/fh2z5ffxiVk)
  <img src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=for-the-badge"/>
  <img src="https://img.shields.io/badge/cssmodules-ffffff?logo=cssmodules&logoColor=000000&style=for-the-badge"/>
 </p>
+
+## 🔑주요 기능
+🔸 자기소개
+🔸 내 프로필 (개인 정보와 이력 사항 포함)
+🔸 기술 스택 소개
+🔸 참여한 프로젝트 내역 소개
+🔸 프로젝트 세부 내용 확인을 위한 모달 창
