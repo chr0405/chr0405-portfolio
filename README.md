@@ -19,5 +19,5 @@ youtube : [시연 연상](https://youtu.be/fh2z5ffxiVk)
 <p>
  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
  <img src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=for-the-badge"/>
- <img src="https://img.shields.io/badge/cssmodules-000?logo=cssmodules&logoColor=000000&style=for-the-badge"/>
+ <img src="https://img.shields.io/badge/cssmodules-ffffff?logo=cssmodules&logoColor=000000&style=for-the-badge"/>
 </p>
