@@ -28,3 +28,53 @@ youtube : [시연 연상](https://youtu.be/fh2z5ffxiVk)
 🔸 기술 스택 소개\
 🔸 참여한 프로젝트 내역 소개\
 🔸 프로젝트 세부 내용 확인을 위한 모달 창
+
+## 📙파일 구조
+```
+📁app
+  ├── 📁(home)
+  │   ├── loading.tsx
+  │   │   └── page.tsx
+  ├── layout.tsx
+  └── not-found.tsx
+📁array
+  ├── AboutMeAndTechlore.module.css  # profile 페이지 - About me 데이터
+  ├── ProjectArray.css  # project 페이지 데이터
+  ├── SkillArray.css  # skill 페이지 데이터
+  └── TechloreArray.css  # profile 페이지 - Techlore 데이터
+📁components
+  ├── 📁componentsStyles # components css 파일
+  │   ├── AboutMeAndTechlore.module.css  # profile - About me, Techlore css
+  │   ├── Footer.module.css  # Footer css
+  │   ├── Header.module.css  # Header css
+  │   ├── icon.module.css  # skill 페이지 icon css
+  │   ├── IndividualProject.module.css  # project 페이지 project css
+  │   ├── Intro.module.css  # intro 페이지 css
+  │   ├── Profile.module.css  # profile 페이지 css
+  │   ├── Project.module.css  # project 페이지 css
+  │   ├── ProjectModal.module.css  # project modal css
+  │   └── Skill.module.css  # skill 페이지 css
+  ├── AboutMe.tsx  # profile 페이지 - About me
+  ├── Footer.tsx  # Footer
+  ├── Header.tsx  # Header
+  ├── IndividualProject.tsx  # project 페이지 projec
+  ├── Intro.tsx  # intro 페이지
+  ├── Profile.tsx  # profile 페이지
+  ├── Project.tsx  # project 페이지
+  ├── ProjectModal.tsx  # project modal
+  ├── Skill.tsx  # skill 페이지
+  ├── SkillIcon.tsx  # skill 페이지 icon
+  └── Techlore.tsx  # profile 페이지 - Techlore
+📁contexts
+  └── PageContext.tsx
+📁img  # 이미지 파일 저장 디렉토리
+  ├── 📁CHRportfolio  # CHRportfolio 데모 이미지 파일 저장 디렉토리
+  ├── 📁DailyControl  # DailyControl 데모 이미지 파일 저장 디렉토리
+  ├── 📁Friend  # Friend 데모 이미지 파일 저장 디렉토리
+  ├── 📁skillIcon  # skillIcon 데모 이미지 파일 저장 디렉토리
+  └── 📁Tnovel  # Tnovel 데모 이미지 파일 저장 디렉토리
+📁public
+  └── star_favicon.png # 파비콘
+📁styles
+  └── global.css # 전체 css setting
+```
