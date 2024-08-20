@@ -10,12 +10,12 @@ export const TechloreArray = [
     },
     {
         "img" : license,
-        "title" : "License",
-        "info" : "정보처리기사 2023 . 06"
+        "title" : "Certifications",
+        "info" : "정보처리기사 2023 . 06\nOpic 영어 IM2 2023 . 08"
     },
     {
         "img" : activity,
-        "title" : "international activity",
-        "info" : "University MakeUs Challenge 5기\n부경대학교 Web 파트장\n2023 . 09 ~ 2024 . 02"
+        "title" : "International Activity",
+        "info" : "University MakeUs Challenge (UMC) 5기\n부경대학교 Web 파트장\n2023 . 09 ~ 2024 . 02"
     }
 ];

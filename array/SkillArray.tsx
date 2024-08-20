@@ -97,7 +97,7 @@ export const SkillArray = {
     "VersionControl" : [
         {
             "img" : git,
-            "name" : "git",
+            "name" : "Git",
             "backgroundColor" : "#E1E1E1",
             "width" : 2.92,
             "height" : 2.92
