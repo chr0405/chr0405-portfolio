@@ -2,7 +2,7 @@
 
 import styles from "./componentsStyles/Profile.module.css";
 import Image from "next/image";
-import idPicture from "../img/idPicture.png";
+import idPicture from "../img/idPicture1.jpg";
 
 import { AboutMeArray } from "../array/AboutMeArray";
 import AboutMe from "./AboutMe";
