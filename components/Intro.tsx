@@ -12,7 +12,6 @@ interface Star {
 
 export default function Intro() {
 
-    const [click, setClick] = useState(false);
     const [stars, setStars] = useState<Star[]>([]);
 
     const backgroundFunction = () => {
@@ -59,32 +58,74 @@ export default function Intro() {
 
     useEffect(() => {
         backgroundFunction();
-    }, [click]);
+    }, []);
+
+    const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
+
+    const [mobileView, setMobileView] = useState(false);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+        console.log(window.innerWidth);
+
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
+            console.log(mobileView);
+        } else {
+            setMobileView(false);
+            console.log(mobileView);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
+    }, []);
+
+    useEffect(() => {
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
+        } else {
+            setMobileView(false);
+        }
+
+    }, []);
 
     return (
         <>
             <div className={styles.totalDiv}>
                 <div className={styles.textDiv}>
-                    <h1 className={click? '' : styles.h1TwinklingSetting}
-                        onClick={() => setClick(prev => !prev)}>
+                    <h1 className={styles.h1TwinklingSetting}>
                         안녕하세요.<br/>Front-end 개발자 조하림입니다.
                     </h1>
-                    <div style={{ display : click? 'none' : 'flex' }}>
-                        <CiDesktopMouse1 
-                        className={click? '' : styles.imgMovingSetting}
-                        onClick={() => setClick(prev => !prev)}
-                        style={click ? {} : { filter: 'drop-shadow(0.14vw 0.14vw 0.14vw rgba(255, 255, 255, 1))' }}
-                        />
-                    </div>
-                    <p className={click? styles.clickIntroduce : styles.introduce}>
-                        도전과 변화를 좋아하는 Front-end 개발자입니다.<br/>
-                        성취감과 업데이트되는 목표를 통해 성장하고 있습니다.<br/>
-                        협업 과정에서 소통을 중시하며,<br/>변화에 대처하는 과정을 즐깁니다.<br/>
-                        적절한 기술 적용과 유연한 대처로<br/>회사의 효율성을 향상시키는 개발자로 일하고 싶습니다.<br/>
+                    <p className={styles.introduce}>
+                        {mobileView ? (
+                            <>
+                            도전과 변화를 좋아하며<br />성취감과 업데이트되는 목표를 통해 성장하고 있습니다.
+                            <br />
+                            협업 과정에서 소통을 중시하며<br />변화에 대처하는 과정을 즐깁니다.
+                            <br />
+                            적절한 기술 적용과 유연한 대처로<br />회사의 효율성을 향상시키는 개발자로 일하고 싶습니다.
+                            <br />
+                            </>
+                        ) : (
+                            <>
+                            도전과 변화를 좋아하며 성취감과 업데이트되는 목표를 통해 성장하고 있습니다.
+                            <br />
+                            협업 과정에서 소통을 중시하며 변화에 대처하는 과정을 즐깁니다.
+                            <br />
+                            적절한 기술 적용과 유연한 대처로 회사의 효율성을 향상시키는 개발자로 일하고 싶습니다.
+                            <br />
+                            </>
+                        )}
                     </p>
                 </div>
             </div>
-            {click && stars.map((star, index) => (
+            {stars.map((star, index) => (
                 <div key={index}>
                     <div className={`${styles.star} ${star.className}`} style={{top: star.y, left: star.x }}></div>
                     <div className={`${styles.star2} ${star.className}`} style={{top: star.y, left: star.x }}></div>

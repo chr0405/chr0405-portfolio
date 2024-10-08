@@ -33,13 +33,7 @@
     font-weight: bold;
     color: #FFFFFF;
     text-align: center;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
 
-    position: absolute;
-    top: 0vw;
-
-    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -50,8 +44,37 @@
 }
 
 .h1TwinklingSetting {
-    animation-duration: 1s;
-    animation-name: h1Twinkling;
+    animation-duration: 2s;
+    animation-name: slideDown;
+
+    position: relative;
+    top: -4vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .h1TwinklingSetting {
+        animation-name: slideDownMobile;
+
+        top: -30vw;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        top: 20vw;
+    }
+    to {
+        top: -4vw;
+    }
+}
+
+@keyframes slideDownMobile {
+    from {
+        top: 70vw;
+    }
+    to {
+        top: -30vw;
+    }
 }
 
 @keyframes h1Twinkling {
@@ -86,6 +109,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -158,15 +182,40 @@
 }
 
 .introduce {
-    font-size: 1.39vw;
+    font-size: 1.3vw;
 
     text-align: center;
     line-height: 1.5;
 
     position: absolute;
-    top: 14vw;
+    top: 18vw;
 
     color: #FFFFFF;
+
+    animation-duration: 4s;
+    animation-name: showAnime;
+}
+
+@keyframes showAnime {
+    0% {
+        color: rgba(255, 255, 255, 0);
+    }
+
+    25% {
+        color: rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    75% {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    100% {
+        color: rgb(255, 255, 255);
+    }
 }
 
 .clickIntroduce {
@@ -188,7 +237,7 @@
 
 @media only screen and (max-width: 768px) {
     .introduce {
-        font-size: 4vw;
+        font-size: 3.5vw;
         top: 60%;
     }
 
