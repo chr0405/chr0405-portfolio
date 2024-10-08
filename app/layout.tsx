@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "CHR portfolio",
     default: "CHR portfolio",
   },
-  icons: {
+  icons: { 
     icon: faviconUrl,
   },
 }
