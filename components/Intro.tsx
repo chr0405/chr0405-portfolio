@@ -19,13 +19,17 @@ export default function Intro() {
         const windowHeight = window.innerHeight;
         
         let numStars: number;
-        if (windowWidth <= 480) {
-            numStars = 100;
-        } else if (windowWidth <= 768) {
-            numStars = 125;
-        } else {
-            numStars = 150;
-        }
+
+        // 별 개수 조정
+        // if (windowWidth <= 480) {
+        //     numStars = 100;
+        // } else if (windowWidth <= 768) {
+        //     numStars = 100;
+        // } else {
+        //     numStars = 100;
+        // }
+
+        numStars = 100;
     
         function getRandomValue(max: number) {
             return Math.floor(Math.random() * max);

@@ -116,9 +116,9 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className={styles.circleDiv}>
+            {/* <div className={styles.circleDiv}>
                 {divArray}
-            </div>
+            </div> */}
         </div>
     )
 }

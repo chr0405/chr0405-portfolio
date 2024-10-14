@@ -3,7 +3,6 @@
     height: 71.11vw;
 
     background: linear-gradient(to bottom, #1B4669, #668DAE);
-    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -73,9 +72,9 @@
 
 .pictureDiv {
     background-color: white;
-    border-radius: 2vw;
+    border-radius: 1vw;
 
-    width: 22.92vw;
+    /* width: 22.92vw; */
     height: 28.82vw;
 
     overflow: hidden;
@@ -95,8 +94,8 @@
 }
 
 .centerLine {
-    width: 0.05vw;
-    height: 100%;
+    width: 0.08vw;
+    height: 70%;
 
     overflow: hidden;
 }
@@ -115,15 +114,15 @@
 
 .centerLine div {
     height: 100%;
-    border-left: 0.6vw dashed #9B9B9B;
-    border-right: 0.6vw dashed #9B9B9B;
+    border-left: 0.8vw solid #C6C6C6;
+    border-right: 0.8vw solid #C6C6C6;
 }
 
 @media only screen and (max-width: 768px) {
     .centerLine div {
         position: relative;
         width: 100%;
-        border-top: 1vw dashed #9B9B9B;
+        border-top: 1vw solid #C6C6C6;
     }
 }
 
@@ -188,7 +187,6 @@
 @media only screen and (max-width: 768px) {
     .individualDiv2 {
         width: 62vw;
-        /* background-color: yellow; */
     }
 }
 
