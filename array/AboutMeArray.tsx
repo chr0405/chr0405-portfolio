@@ -4,6 +4,7 @@ import phone from "../img/phone.png";
 import message from "../img/message.png";
 import gitHub from "../img/gitHub.png";
 import tistory from "../img/tistory.png";
+import notion from "../img/notion.png";
 
 export const AboutMeArray = [
     {
@@ -35,7 +36,13 @@ export const AboutMeArray = [
     {
         "img" : tistory,
         "title" : "Tistory",
-        "info" : "08x0040x",
+        "info" : "ime_coding",
         "web" : "https://08x0040x.tistory.com"
+    },
+    {
+        "img" : notion,
+        "title" : "Notion",
+        "info" : "노션 이력서",
+        "web" : "https://bottlenose-barberry-5ba.notion.site/1px-viewport-11fde24041a380b290f2cf68659a2d6b?pvs=4"
     }
 ];

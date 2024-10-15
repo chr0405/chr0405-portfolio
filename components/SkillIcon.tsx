@@ -54,8 +54,8 @@ const SkillIcon: React.FC<SkillIconProps> = ({ img, name, backgroundColor, width
             <div
                 style={{
                     backgroundColor: backgroundColor,
-                    width: mobileView? `${width + 8}vw` : `${width + 1.53}vw`,
-                    height: mobileView? `${height + 8}vw` : `${height + 1.53}vw`
+                    width: mobileView? `${width + 8}vw` : `${width + 1}vw`,
+                    height: mobileView? `${height + 8}vw` : `${height + 1}vw`
                 }}
                 className={styles.iconDiv}
             >
