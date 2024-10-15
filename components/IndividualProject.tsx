@@ -172,7 +172,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                         </div>
                         <h6 className={styles.mainAboutProject}>{mainAboutProject}</h6>
                         <p className={styles.more}
-                            onClick={openModal}>알아보기</p>
+                            onClick={openModal}>자세히 보기</p>
                     </div>
                 </div>
 
@@ -180,52 +180,40 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
                 <div className={styles.webSiteDiv}>
                     {webSite && webSite.Demo && (
                         <div
-                            className={isMouseOverDemo ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv1}` : `${styles.onMouseLeaveDiv}`}
+                            className={isMouseOverDemo ? `${styles.onMouseEnter}` : `${styles.onMouseLeaveDiv}`}
                             onMouseEnter={() => setIsMouseOverDemo(true)}
                             onMouseLeave={() => setIsMouseOverDemo(false)}>
-                            <div className={isMouseOverDemo ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv2}` : ''}>
-                                <div className={isMouseOverDemo ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv3}` : ''}>
-                                    <a className={styles.webSite} href={webSite.Demo} target="_blank">
-                                    <Image src={DemoImg} alt="DemoImg" />
-                                    Demo
-                                    </a>
-                                </div>
-                            </div>
+                                <a className={styles.webSite} href={webSite.Demo} target="_blank">
+                                <Image src={DemoImg} alt="DemoImg" />
+                                Live Demo
+                                </a>
                         </div>
                     )}
                     {webSite && webSite.YouTube && (
                         <div
-                            className={isMouseOverYouTube ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv1}` : `${styles.onMouseLeaveDiv}`}
+                            className={isMouseOverYouTube ? `${styles.onMouseEnter}` : `${styles.onMouseLeaveDiv}`}
                             onMouseEnter={() => setIsMouseOverYouTube(true)}
                             onMouseLeave={() => setIsMouseOverYouTube(false)}>
-                            <div className={isMouseOverYouTube ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv2}` : ''}>
-                                <div className={isMouseOverYouTube ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv3}` : ''}>
-                                    <a className={styles.webSite} href={webSite.YouTube} target="_blank">
-                                        <Image style={{
-                                            "width" : mobileView? "8.34vw" : "2.78vw",
-                                            "height" : mobileView? "8.34vw" :  "2.78vw",
-                                            "marginBottom" : "0.5vw",
-                                        }}
-                                            src={YouTubeImg} alt="YouTubeImg"/>
-                                        YouTube
-                                    </a>
-                                </div>
-                            </div>
+                            <a className={styles.webSite} href={webSite.YouTube} target="_blank">
+                                <Image style={{
+                                    "width" : mobileView? "8.34vw" : "2.78vw",
+                                    "height" : mobileView? "8.34vw" :  "2.78vw",
+                                    "marginBottom" : "0.2vw",
+                                }}
+                                    src={YouTubeImg} alt="YouTubeImg"/>
+                                Demo Video
+                            </a>
                         </div>
                     )}
                     {webSite && webSite.GitHub && (
                         <div
-                            className={isMouseOverGitHub ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv1}` : `${styles.onMouseLeaveDiv}`}
+                            className={isMouseOverGitHub ? `${styles.onMouseEnter}` : `${styles.onMouseLeaveDiv}`}
                             onMouseEnter={() => setIsMouseOverGitHub(true)}
                             onMouseLeave={() => setIsMouseOverGitHub(false)}>
-                            <div className={isMouseOverGitHub ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv2}` : ''}>
-                                <div className={isMouseOverGitHub ? `${styles.onMouseEnter} ${styles.onMouseEnterDiv3}` : ''}>
-                                    <a className={styles.webSite} href={webSite.GitHub} target="_blank">
-                                        <Image src={GitHub} alt="GitHub"/>
-                                        GitHub
-                                    </a>
-                                </div>
-                            </div>
+                            <a className={styles.webSite} href={webSite.GitHub} target="_blank">
+                                <Image src={GitHub} alt="GitHub"/>
+                                GitHub
+                            </a>
                         </div>
                     )}
                 </div>

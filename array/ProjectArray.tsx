@@ -360,72 +360,73 @@ CSS로 'object-fit: contain' 속성을 사용하여 이미지 사이즈 문제 �
             "YouTubeEmbed" : "https://www.youtube.com/embed/DI688JuqPYI",
             "GitHub" : "https://github.com/chr0405/chr0405-portfolio.git",
         },
-    },  {
-        "num" : 4,
-        "mainCapture" : dailyControlMain,
-        "capture" : [
-            start,
-            dayCounter,
-            dayCounter2,
-            weatherNow,
-        ],
-        "aboutCapture" : [
-            "시작 화면",
-            "DayCounter & CounterLog 1 (기념일 선택)",
-            "DayCounter & CounterLog 2 (날짜 직접 입력)",
-            "WeatherNow (지역별 오늘 날씨)",
-        ],
-        "name" : "DailyControl",
-        "period" : "2023.06, 2024.07",
-        "mainAboutProject" : `DailyControl은 D-day 계산 기능과 지역별 날씨 정보를 제공하는 웹 사이트입니다.`,
-        "aboutProject" : `DailyControl은 D-day 계산 기능과 지역별 날씨 정보를 제공하는 웹 사이트입니다.
-프론트엔드 개발자를 목표로 공부를 시작하며 처음 만들었던 D-day 계산기 웹 사이트를 수정, 보완했습니다.
-
-주요 목표는 실무에 가까운 웹 개발 경험을 쌓는 것과 함께, 기존 D-day 웹 사이트들의 사용자 경험을 개선하는 것이었습니다.
-날짜 수와 D-day를 명확히 구분하고, 간결하면서도 직관적인 디자인을 적용해 정보의 가독성을 높였습니다.
-이를 통해 사용자의 혼란을 줄이고 더 나은 경험을 제공하고자 했습니다.
-
-프로젝트를 수정하고 보완하는 과정에서 D-day 계산 로직을 더욱 정확하고 효율적으로 개선했습니다.
-또한 사용자의 검색 기록을 관리하는 시스템을 구현하여 편의성을 향상시키고, 지역별 실시간 날씨 정보를 제공하는 기능을 새롭게 추가하여 서비스의 가치를 높였습니다.`,
-        "frontEnd" : `• 언어 : JavaScript
-• 마크업 : HTML5
-• 스타일링 : CSS3
-• 인프라 : Vercel`,
-        "mainFunction" : `• 지역별 날씨 정보 제공 (WeatherNow)
-• 선택한 날짜의 남은 / 지난 날짜 수 및 D-day 계산 (DayCounter)
-• 사용자의 웹 사이트 이용 기록 시각화 (CounterLog)`,
-        "MyContributions": `• OpenWeather API를 이용한 대한민국 지역별 기온, 날씨 정보 제공
-• 주요 기념일 버튼 클릭, 특정 날짜 선택 시 남은 / 지난 날짜 수 및 D-day 계산
-• Local storage를 이용한 DayCounter 이용 기록 시각화`,
-        "troubleShooting" : `✔️ 잘못된 D-day 계산 로직 수정
-
-• 문제 상황 💡:
-
-날짜 비교 과정에서 오류가 발생했습니다.
-예를 들어, N월 1일에 사용자가 N월 2일을 선택했음에도 D-Day가 "Today"로 표시되었고, 이용 기록에는 N월 1일 선택으로 잘못 저장되었습니다.
-
-• 문제 원인 💡:
-
-JavaScript의 Date 객체와 시간대 처리 방식으로 인해 문제가 발생했습니다.
-현재 날짜(currentKoreaTime)는 한국 시간(UTC+9)으로 설정된 반면, 사용자가 선택한 날짜(selectedDate)는 HTML input 요소를 통해 UTC 기준으로 해석되었습니다.
-이로 인해 두 날짜가 서로 다른 시간대를 기준으로 비교되어 정확한 계산이 이루어지지 않았습니다.
-
-• 해결 과정 💡:
-
-문제 해결을 위해 날짜 비교 기준을 일원화했습니다.
-현재 날짜와 사용자 선택 날짜를 모두 UTC 기준으로 변환하여 비교하도록 함수를 수정했습니다.
-그 후 Date 객체의 getUTCFullYear(), getUTCMonth(), getUTCDate() 메서드를 활용하여 정확한 날짜 비교가 가능하도록 했습니다.
-
-• 결과 & 느낀점 💡:
-
-JavaScript의 Date 객체와 시간대 처리에 대한 이해가 깊어졌습니다.
-특히 웹 사이트에서 시간대 관리의 중요성을 실감했고, UTC와 로컬 시간의 차이, 그리고 이를 다루는 Date 객체의 다양한 메서드 활용법을 익혔습니다.
-또한, 일관된 시간대 처리가 코드의 가독성과 유지보수성 향상에 미치는 영향을 체감했습니다.`,
-    "webSite" : {
-            "Demo" : "https://daily-control.vercel.app",
-            "YouTube" : "https://www.youtube.com/watch?v=5FmfYGDka5I",
-            "YouTubeEmbed" : "https://www.youtube.com/embed/5FmfYGDka5I",
-            "GitHub" : "https://github.com/chr0405/DailyControl.git",
-        },
     },
+//     {
+//         "num" : 4,
+//         "mainCapture" : dailyControlMain,
+//         "capture" : [
+//             start,
+//             dayCounter,
+//             dayCounter2,
+//             weatherNow,
+//         ],
+//         "aboutCapture" : [
+//             "시작 화면",
+//             "DayCounter & CounterLog 1 (기념일 선택)",
+//             "DayCounter & CounterLog 2 (날짜 직접 입력)",
+//             "WeatherNow (지역별 오늘 날씨)",
+//         ],
+//         "name" : "DailyControl",
+//         "period" : "2023.06, 2024.07",
+//         "mainAboutProject" : `DailyControl은 D-day 계산 기능과 지역별 날씨 정보를 제공하는 웹 사이트입니다.`,
+//         "aboutProject" : `DailyControl은 D-day 계산 기능과 지역별 날씨 정보를 제공하는 웹 사이트입니다.
+// 프론트엔드 개발자를 목표로 공부를 시작하며 처음 만들었던 D-day 계산기 웹 사이트를 수정, 보완했습니다.
+
+// 주요 목표는 실무에 가까운 웹 개발 경험을 쌓는 것과 함께, 기존 D-day 웹 사이트들의 사용자 경험을 개선하는 것이었습니다.
+// 날짜 수와 D-day를 명확히 구분하고, 간결하면서도 직관적인 디자인을 적용해 정보의 가독성을 높였습니다.
+// 이를 통해 사용자의 혼란을 줄이고 더 나은 경험을 제공하고자 했습니다.
+
+// 프로젝트를 수정하고 보완하는 과정에서 D-day 계산 로직을 더욱 정확하고 효율적으로 개선했습니다.
+// 또한 사용자의 검색 기록을 관리하는 시스템을 구현하여 편의성을 향상시키고, 지역별 실시간 날씨 정보를 제공하는 기능을 새롭게 추가하여 서비스의 가치를 높였습니다.`,
+//         "frontEnd" : `• 언어 : JavaScript
+// • 마크업 : HTML5
+// • 스타일링 : CSS3
+// • 인프라 : Vercel`,
+//         "mainFunction" : `• 지역별 날씨 정보 제공 (WeatherNow)
+// • 선택한 날짜의 남은 / 지난 날짜 수 및 D-day 계산 (DayCounter)
+// • 사용자의 웹 사이트 이용 기록 시각화 (CounterLog)`,
+//         "MyContributions": `• OpenWeather API를 이용한 대한민국 지역별 기온, 날씨 정보 제공
+// • 주요 기념일 버튼 클릭, 특정 날짜 선택 시 남은 / 지난 날짜 수 및 D-day 계산
+// • Local storage를 이용한 DayCounter 이용 기록 시각화`,
+//         "troubleShooting" : `✔️ 잘못된 D-day 계산 로직 수정
+
+// • 문제 상황 💡:
+
+// 날짜 비교 과정에서 오류가 발생했습니다.
+// 예를 들어, N월 1일에 사용자가 N월 2일을 선택했음에도 D-Day가 "Today"로 표시되었고, 이용 기록에는 N월 1일 선택으로 잘못 저장되었습니다.
+
+// • 문제 원인 💡:
+
+// JavaScript의 Date 객체와 시간대 처리 방식으로 인해 문제가 발생했습니다.
+// 현재 날짜(currentKoreaTime)는 한국 시간(UTC+9)으로 설정된 반면, 사용자가 선택한 날짜(selectedDate)는 HTML input 요소를 통해 UTC 기준으로 해석되었습니다.
+// 이로 인해 두 날짜가 서로 다른 시간대를 기준으로 비교되어 정확한 계산이 이루어지지 않았습니다.
+
+// • 해결 과정 💡:
+
+// 문제 해결을 위해 날짜 비교 기준을 일원화했습니다.
+// 현재 날짜와 사용자 선택 날짜를 모두 UTC 기준으로 변환하여 비교하도록 함수를 수정했습니다.
+// 그 후 Date 객체의 getUTCFullYear(), getUTCMonth(), getUTCDate() 메서드를 활용하여 정확한 날짜 비교가 가능하도록 했습니다.
+
+// • 결과 & 느낀점 💡:
+
+// JavaScript의 Date 객체와 시간대 처리에 대한 이해가 깊어졌습니다.
+// 특히 웹 사이트에서 시간대 관리의 중요성을 실감했고, UTC와 로컬 시간의 차이, 그리고 이를 다루는 Date 객체의 다양한 메서드 활용법을 익혔습니다.
+// 또한, 일관된 시간대 처리가 코드의 가독성과 유지보수성 향상에 미치는 영향을 체감했습니다.`,
+//     "webSite" : {
+//             "Demo" : "https://daily-control.vercel.app",
+//             "YouTube" : "https://www.youtube.com/watch?v=5FmfYGDka5I",
+//             "YouTubeEmbed" : "https://www.youtube.com/embed/5FmfYGDka5I",
+//             "GitHub" : "https://github.com/chr0405/DailyControl.git",
+//         },
+//     },
 ];
