@@ -8,8 +8,6 @@
     justify-content: flex-start;
 
     margin: 4vw 4vw;
-
-    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -28,7 +26,7 @@
     height: 40.97vw;
 
     background-color: white;
-    border-radius: 1.04vw;
+    border-radius: 1vw;
     overflow: hidden;
 
     display: flex;
@@ -55,7 +53,7 @@
     align-items: center;
     justify-content: center;
 
-    font-size: 1.39vw;
+    font-size: 1.3vw;
 
     font-weight: bold;
 }
@@ -77,7 +75,7 @@
     width: 9vw;
     height: 2.8vw;
     border-radius: 2.78vw;
-    background-color: #E1E1E1;
+    background-color: #E8E8E8;
 
     position: relative;
     margin-left: -25vw;
@@ -87,8 +85,6 @@
     align-items: center;
 
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
-
-    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -242,7 +238,6 @@
 }
 
 .textDiv{
-    /* padding: 2.08vw; */
     margin-top: 1.5vw;
     position: relative;
 
@@ -250,8 +245,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
-    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -270,7 +263,7 @@
 }
 
 .namePeriodDiv h1{
-    font-size: 1.39vw;
+    font-size: 1.3vw;
     /* 20px */
     font-weight: bold;
 }
@@ -299,14 +292,8 @@
 .mainAboutProject {
     margin: 0.69vw 0vw 1.38vw 0vw;
     width: 31vw;
-    /* height: 5.2vw; */
-    /* overflow-y: auto; */
 
-    /* white-space: pre-wrap; */
-    /* text-overflow: ellipsis; */
-    /* background-color: red; */
-
-    font-size: 1.39vw;
+    font-size: 1.3vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -318,17 +305,13 @@
 
         font-size: 3.5vw;
 
-        /* background-color: yellow; */
     }
 }
 
 .more{
-    /* margin-top: 0.69vw; */
-
     font-weight: 600;
-    font-size: 1.39vw;
-    /* text-decoration-line: underline; */
-    color: #3998EF;
+    font-size: 1.3vw;
+    color: #1DA1F2;
     cursor: pointer;
 }
 
@@ -343,7 +326,7 @@
     }
 
     .more:hover {
-        color: #3998EF;
+        color: #1DA1F2;
     }
 }
 
@@ -353,7 +336,7 @@
     margin-top: 1.38vw;
 
     background-color: white;
-    border-radius: 1.04vw;
+    border-radius: 1vw;
     overflow: hidden;
 
     display: flex;
@@ -373,123 +356,27 @@
 }
 
 .onMouseEnter{
-    border-radius: 50%;
+    background-color: #E8E8E8;
+    width: 6.5vw;
+    height: 4.5vw;
+
+    margin: 0vw 1.5vw;
+    border-radius: 1vw;
     
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.onMouseEnterDiv1 {
-    width: 6vw;
-    height: 6vw;
-
-    margin: 0vw 2.5vw;
-
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-duration: 1.2s;
-    animation-name: DivTwinkling1;
-}
-
-@media only screen and (max-width: 768px) {
-    .onMouseEnterDiv1 {
-        width: 15vw;
-        height: 15vw;
-
-        margin: 0vw 3vw;
-
-        animation-duration: 0s;
-    }
-}
-
-@keyframes DivTwinkling1 {
-    0% {
-        background-color: rgba(255, 255, 255, 0);
-    }
-    25% {
-        background-color: rgba(255, 255, 255, 0);
-    }
-    50% {
-        background-color: rgba(133, 133, 133, 0.2);
-    }
-    75% {
-        background-color: rgba(255, 255, 255, 0);
-    }
-    100% {
-        background-color: rgba(255, 255, 255, 0);
-    }
-}
-
-.onMouseEnterDiv2 {
-    width: 4.5vw;
-    height: 4.5vw;
-
-    position: absolute;
-
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-duration: 1.2s;
-    animation-name: DivTwinkling2;
-}
-
-@media only screen and (max-width: 768px) {
-    .onMouseEnterDiv2 {
-        width: 11.25vw;
-        height: 11.25vw;
-
-        animation-duration: 0s;
-    }
-}
-
-@keyframes DivTwinkling2 {
-    0% {
-        background-color: rgba(255, 255, 255, 0);
-    }
-    25% {
-        background-color: rgba(133, 133, 133, 0.2);
-    }
-    50% {
-        background-color: rgba(133, 133, 133, 0.2);
-    }
-    75% {
-        background-color: rgba(133, 133, 133, 0.2);
-    }
-    100% {
-        background-color: rgba(255, 255, 255, 0);
-    }
-}
-
-.onMouseEnterDiv3 {
-    background-color: rgba(133, 133, 133, 0.2);
-
-    width: 3vw;
-    height: 3vw;
-
-    position: absolute;
-}
-
-@media only screen and (max-width: 768px) {
-    .onMouseEnterDiv3 {
-        width: 7.5vw;
-        height: 7.5vw;
-        
-        background-color: white;
-    }
 }
 
 .onMouseLeaveDiv {
-    border-radius: 50%;
-    
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: white;
-    width: 6vw;
-    height: 6vw;
+    width: 6.5vw;
+    height: 4.5vw;
 
-    margin: 0vw 2.5vw;
+    margin: 0vw 1.5vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -506,6 +393,7 @@
 
     text-decoration: none;
     color: #595959;
+    z-index: 1;
 
     /* margin: 0vw 3.47vw; */
 }

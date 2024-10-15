@@ -69,9 +69,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {imgPage &&
                     <div className={styles.projectPictureDiv}>
                         <Image src={capture[captureNum]} alt="captureImg" />
-                        <div className={styles.aboutCaptureDiv}>
-                            <p>{aboutCapture[captureNum]}</p>
-                        </div>
                         <div className={styles.sectionDiv}>
                             {/* left section */}
                             <div onClick={() => {
@@ -86,18 +83,26 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                                 }
                             }}></div>
                         </div>
-
-                        <div className={styles.projectPictureSelectTotalDiv}
-                            style={{ display: capture.length > 1 ? 'flex' : 'none' }}>
-                            {[...Array(capture.length)].map((_, index) => (
-                                <div className={styles.projectPictureSelectDiv}
-                                    style={{ backgroundColor: index === captureNum ? '#4D4D4D' : '#C6C6C6' }}
-                                    key={index}
-                                    onClick={() => {
-                                        setCaptureNum(index);
-                                    }}>
-                                </div>
-                            ))}
+                        <div>
+                            {/* 사진 설명 */}
+                            <div className={styles.aboutCaptureDiv}>
+                                <p>{aboutCapture[captureNum]}</p>
+                            </div>
+                            {/* 사진 선택 */}
+                            <div className={styles.projectPictureSelectTotalDiv}
+                                style={{ display: capture.length > 1 ? 'flex' : 'none' }}>
+                                {[...Array(capture.length)].map((_, index) => (
+                                        <div  className={styles.projectPictureSelectDiv}
+                                        key={index}
+                                        onClick={() => {
+                                            setCaptureNum(index);
+                                        }}>
+                                        <div className={styles.projectPictureSelectDiv1}
+                                            style={{ backgroundColor: index === captureNum ? '#4D4D4D' : '#C6C6C6' }}>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 }
@@ -157,47 +162,47 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     {/* content */}
                     <div className={styles.contentDiv}>
                         <div className={styles.contentGradationDiv}></div>
-                            {pageNum == 1 &&
-                                <div className={styles.contentDiv2}>
-                                    <h2>⭐ 이 프로젝트는</h2>
-                                    <p>{aboutProject}</p>
+                        {pageNum == 1 &&
+                            <div className={styles.contentDiv2}>
+                                <h2>프로젝트 설명</h2>
+                                <p>{aboutProject}</p>
 
-                                    <h2>⭐ 기간</h2>
-                                    <p>{period}</p>
+                                <h2>작업 기간</h2>
+                                <p>{period}</p>
 
-                                    <h2>⭐ 기술 스택</h2>
-                                    <p>{frontEnd}</p>
-                                </div>
-                            }
+                                <h2>기술 스택</h2>
+                                <p>{frontEnd}</p>
+                            </div>
+                        }
 
-                            {pageNum == 2 &&
-                                <div className={styles.contentDiv2}>
-                                    <h2>⭐ 주요 기능</h2>
-                                    <p>{mainFunction}</p>
-        
-                                    <h2>⭐ 개발 사항</h2>
-                                    <p>{MyContributions}</p>
-                                </div>
-                            }
+                        {pageNum == 2 &&
+                            <div className={styles.contentDiv2}>
+                                <h2>주요 업무</h2>
+                                <p>{mainFunction}</p>
+    
+                                <h2>개발 사항</h2>
+                                <p>{MyContributions}</p>
+                            </div>
+                        }
 
-                            {pageNum == 3 &&
-                                <div className={styles.contentDiv2}>
-                                    <h2>💫 트러블 슈팅</h2>
-                                    <p>{troubleShooting}</p>
-                                </div>
-                            }
+                        {pageNum == 3 &&
+                            <div className={styles.contentDiv2}>
+                                <h2>트러블 슈팅</h2>
+                                <p>{troubleShooting}</p>
+                            </div>
+                        }
                     </div>
                     <div className={styles.pageDiv}>
                         {pageNum > 1 &&
                             <div
                             className={styles.pageIconLeft}
-                            onClick={() => {setPageNum(pre => pre - 1)}}><AiOutlineLeft size={24} color="#4D4D4D"/></div>
+                            onClick={() => {setPageNum(pre => pre - 1)}}><AiOutlineLeft size={20} color="#4D4D4D"/></div>
                         }
-                        <div className={styles.pageText}>{pageNum} / 3 page</div>
+                        <div className={styles.pageText}>{pageNum} / 3</div>
                         {pageNum < 3 &&
                         <div
                             className={styles.pageIconRight}
-                            onClick={() => {setPageNum(pre => pre + 1)}}><AiOutlineRight size={24} color="#4D4D4D"/></div>
+                            onClick={() => {setPageNum(pre => pre + 1)}}><AiOutlineRight size={20} color="#4D4D4D"/></div>
                         }
                     </div>
                 </div>

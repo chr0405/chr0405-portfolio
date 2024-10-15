@@ -24,7 +24,7 @@
     justify-content: flex-start;
     
     background-color: white;
-    border-radius: 1.04vw;
+    border-radius: 1.5vw;
 
     width: 55.56vw;
     height: 55.56vw;
@@ -150,16 +150,16 @@
 }
 
 .horizontalDividingLine {
-    width: 100%;
-    height: 0.05vw;
+    width: 65%;
+    height: 0.08vw;
 
     overflow: hidden;
 }
 
 .horizontalDividingLine div {
     height: 100%;
-    border-top: 0.6vw dashed #9B9B9B;
-    border-bottom: 0.6vw dashed #9B9B9B;
+    border-top: 0.8vw solid #C6C6C6;
+    border-bottom: 0.8vw solid #C6C6C6;
 }
 
 @media only screen and (max-width: 768px) {
@@ -168,7 +168,7 @@
     }
     
     .horizontalDividingLine div {
-        border-top: 1vw dashed #9B9B9B;
+        border-top: 1vw solid #C6C6C6;
     }
 }
 
@@ -199,10 +199,11 @@
 } */
 
 .verticalDividingLine {
-    width: 0.05vw;
-    height: 100%;
+    width: 0.08vw;
+    height: 65%;
 
     overflow: hidden;
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -220,8 +221,8 @@
 
 .verticalDividingLine div {
     height: 100%;
-    border-left: 0.6vw dashed #9B9B9B;
-    border-right: 0.6vw dashed #9B9B9B;
+    border-left: 0.8vw solid #C6C6C6;
+    border-right: 0.8vw solid #C6C6C6;
 }
 
 @media only screen and (max-width: 768px) {
@@ -231,8 +232,8 @@
         width: 100%;
 
         /* 주석 제거하면 가로 분할 선 */
-        /* border-top: 0.6vh dashed #9B9B9B; */
-        /* border-bottom: 0.6vh dashed #9B9B9B; */
+        /* border-top: 0.6vh solid #C6C6C6; */
+        /* border-bottom: 0.6vh solid #C6C6C6; */
 
         height: 0.01vh;
     }
@@ -251,8 +252,6 @@
     .bottomDetailDiv {
         width: 100%;
         height: 33.3%;
-
-        /* background-color: green; */
     }
 }
 

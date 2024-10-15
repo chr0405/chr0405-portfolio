@@ -28,19 +28,19 @@ export const SkillArray = {
             {
                 "img" : HTML5,
                 "name" : "HTML5",
-                "backgroundColor" : "#E1E1E1",
+                "backgroundColor" : "rgba(225, 225, 225, 0.8)",
                 "width" : 2.92,
                 "height" : 2.92
             },{
                 "img" : CSS3,
                 "name" : "CSS3",
-                "backgroundColor" : "#E1E1E1",
+                "backgroundColor" : "rgba(225, 225, 225, 0.8)",
                 "width" : 2.92,
                 "height" : 2.92
             },{
                 "img" : JavaScript,
                 "name" : "JavaScript",
-                "backgroundColor" : "#E1E1E1",
+                "backgroundColor" : "rgba(225, 225, 225, 0.8)",
                 "width" : 2.92,
                 "height" : 2.92
             }
@@ -49,25 +49,25 @@ export const SkillArray = {
             {
                 "img" : React,
                 "name" : "React",
-                "backgroundColor" : "#E1E1E1",
+                "backgroundColor" : "rgba(225, 225, 225, 0.8)",
                 "width" : 2.92,
                 "height" : 2.54
             },{
                 "img" : TypeScript,
                 "name" : "TypeScript",
-                "backgroundColor" : "#E1E1E1",
+                "backgroundColor" : "rgba(225, 225, 225, 0.8)",
                 "width" : 2.92,
                 "height" : 2.92
             },{
                 "img" : NextJs,
                 "name" : "NextJs",
-                "backgroundColor" : "#E1E1E1",
+                "backgroundColor" : "rgba(225, 225, 225, 0.8)",
                 "width" : 4.84,
                 "height" : 2.92
             },{
                 "img" : styledComponents,
                 "name" : "styled-components",
-                "backgroundColor" : "#9D9D9D",
+                "backgroundColor" : "rgba(162, 162, 162, 0.8)",
                 "width" : 3.58,
                 "height" : 2.92
             }
@@ -76,19 +76,19 @@ export const SkillArray = {
             {
                 "img" : Redux,
                 "name" : "Redux",
-                "backgroundColor" : "#E1E1E1",
+                "backgroundColor" : "rgba(225, 225, 225, 0.8)",
                 "width" : 2.92,
                 "height" : 2.78
             },{
                 "img" : Recoil,
                 "name" : "Recoil",
-                "backgroundColor" : "#E1E1E1",
+                "backgroundColor" : "rgba(225, 225, 225, 0.8)",
                 "width" : 2.92,
                 "height" : 3.08
             },{
                 "img" : Axios,
                 "name" : "Axios",
-                "backgroundColor" : "#E1E1E1",
+                "backgroundColor" : "rgba(225, 225, 225, 0.8)",
                 "width" : 8,
                 "height" : 3.08
             }
@@ -98,13 +98,13 @@ export const SkillArray = {
         {
             "img" : git,
             "name" : "Git",
-            "backgroundColor" : "#E1E1E1",
+            "backgroundColor" : "rgba(225, 225, 225, 0.8)",
             "width" : 2.92,
             "height" : 2.92
         }, {
             "img" : GitHub,
             "name" : "GitHub",
-            "backgroundColor" : "#E1E1E1",
+            "backgroundColor" : "rgba(225, 225, 225, 0.8)",
             "width" : 2.92,
             "height" : 2.92
         }
@@ -113,19 +113,19 @@ export const SkillArray = {
         {
             "img" : netlify,
             "name" : "netlify",
-            "backgroundColor" : "#E1E1E1",
+            "backgroundColor" : "rgba(225, 225, 225, 0.8)",
             "width" : 2.92,
             "height" : 2.99
         }, {
             "img" : Vercel,
             "name" : "Vercel",
-            "backgroundColor" : "#E1E1E1",
+            "backgroundColor" : "rgba(225, 225, 225, 0.8)",
             "width" : 2.92,
             "height" : 2.55
         }, {
             "img" : aws,
             "name" : "aws",
-            "backgroundColor" : "#E1E1E1",
+            "backgroundColor" : "rgba(225, 225, 225, 0.8)",
             "width" : 2.92,
             "height" : 2.92
         }
@@ -134,13 +134,13 @@ export const SkillArray = {
         {
             "img" : Notion,
             "name" : "Notion",
-            "backgroundColor" : "#E1E1E1",
+            "backgroundColor" : "rgba(225, 225, 225, 0.8)",
             "width" : 2.92,
             "height" : 2.92
         }, {
             "img" : Figma,
             "name" : "Figma",
-            "backgroundColor" : "#E1E1E1",
+            "backgroundColor" : "rgba(225, 225, 225, 0.8)",
             "width" : 1.99,
             "height" : 2.99
         }

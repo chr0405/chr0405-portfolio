@@ -17,17 +17,16 @@
 }
 
 .modalDiv{
-    width: 77.39vw;
-    height: 34.72vw;
+    width: 80vw;
+    height: 40vw;
 
     background-color: white;
-    /* background-color: red; */
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 
-    border-radius: 1.04vw;
+    border-radius: 1vw;
     overflow: hidden;
 }
 
@@ -46,14 +45,14 @@
 
 .projectPictureDiv {
     position: relative;
-    width: 45.14vw;
-    height: 34.72vw;
+    width: 117vw;
+    height: 40vw;
 
-    background-color: #E8E8E8;
-    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -70,9 +69,13 @@
 }
 
 .projectPictureDiv img {
-    position: absolute;
-    width: 45.14vw;
-    object-fit: contain;
+    width: 46vw;
+    height: calc(46vw * 9 / 16);
+    object-fit: fill;
+
+    margin-bottom: 1vw;
+
+    border-radius: 1vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -83,19 +86,19 @@
 }
 
 .aboutCaptureDiv {
-    position: absolute;
-    top: -0vw;
-
-    width: 45.14vw;
-    height: 3.89vw;
+    width: 100%;
+    height: 2vw;
 
     display: flex;
     align-items: center;
     justify-content:center;
+
+    position: relative;
+    top: 4vw;
 }
 
 .aboutCaptureDiv p {
-    font-size: 1.25vw;
+    color: #E8E8E8;
 }
 
 @media only screen and (max-width: 768px) {
@@ -125,8 +128,8 @@
 }
 
 .projectYouTubeIframe {
-    width: 45.14vw;
-    height: 34.72vw;
+    width: 117vw;
+    height: 40vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -149,8 +152,6 @@
     display: flex;
     align-items: center;
     justify-content:space-between;
-
-    /* background-color: red; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -159,17 +160,12 @@
         height: 62.16vw;
 
         position: relative;
-
-        /* background-color: red; */
     }
 }
 
 .sectionDiv div{
     width: 22.57vw;
     height: 34.72vw;
-
-    /* background-color: yellow; */
-
     position: relative;
 }
 
@@ -181,16 +177,20 @@
 }
 
 .projectPictureSelectTotalDiv {
-    position: absolute;
-    top: 30.9vw;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 45.14vw;
-    height: 3.89vw;
-    /* background-color: #ffffff; */
+    width: 100%;
+    height: 2vw;
+
+    margin-bottom: 1vw;
+
+    /* background-color: red; */
+
+    
+    position: relative;
+    top: 4vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -208,16 +208,23 @@
 }
 
 .projectPictureSelectDiv {
-    width: 0.69vw;
-    height: 0.69vw;
-    border-radius: 50%;
+    width: 1vw;
+    height: 1vw;
     margin: 0vw 0.35vw;
 
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+.projectPictureSelectDiv1 {
+    width: 1vw;
+    height: 0.2vw;
 }
 
 @media only screen and (max-width: 768px) {
-    .projectPictureSelectDiv {
+    .projectPictureSelectDiv1 {
         width: 2vw;
         height: 2vw;
         margin: 0vw 0.8vw;
@@ -225,15 +232,14 @@
 }
 
 .rightDiv{
-    /* width: 31.18vw; */
-    height: 34.7vw;
+    width: 100%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
-    /* background-color: blue; */
+    background-color: #C6C6C6;
 }
 
 @media only screen and (max-width: 768px) {
@@ -247,12 +253,11 @@
 }
 
 .headerDiv {
-    width: 32.3vw;
-    height: 3.89vw;
+    width: 100%;
+    height: 10%;
 
-    background-color: #C6C6C6;
-    /* background-color: #B3B3B3; */
-
+    background: linear-gradient(to bottom, #C6C6C6 0%, #E0E0E0 25%, #ffffff 50%, #E0E0E0 75%, #C6C6C6 100%);
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,7 +278,7 @@
 .headerDiv h1 {
     position: absolute;
 
-    font-size: 1.39vw;
+    font-size: 1.3vw;
     font-weight: bold;
 }
 
@@ -285,12 +290,9 @@
 
 .switchDiv {
     width: 9vw;
-    height: 2.8vw;
+    height: 3vw;
     border-radius: 2.78vw;
     background-color: #F0F0F0;
-
-    /* position: relative;
-    margin-right: 16vw; */
 
     position: absolute;
     left: 2vw;
@@ -299,7 +301,7 @@
     justify-content: space-between;
     align-items: center;
 
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.6);
 }
 
 @media only screen and (max-width: 768px) {
@@ -357,7 +359,7 @@
 
     position: absolute;
 
-    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (max-width: 768px) {
@@ -417,7 +419,7 @@
 .closeIconDiv {
     width: 2.4vw;
     height: 2.4vw;
-    border-radius: 50%;
+    border-radius: 0.8vw;
 
     position: absolute;
     right: 1vw;
@@ -442,6 +444,7 @@
 
 .closeIconDiv:hover {
     background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .closeIconDiv div {
@@ -470,8 +473,8 @@
 
 .contentDiv {
     /* width: 31.18vw; */
-    width: 32.3vw;
-    height: 27vw;
+    width: 100%;
+    height: 80%;
 
     display: flex;
     flex-direction: column;
@@ -480,7 +483,7 @@
 
     overflow: hidden;
 
-    /* background-color: green; */
+    background-color: white;
 }
 
 @media only screen and (max-width: 768px) {
@@ -494,13 +497,13 @@
 }
 
 .contentDiv2 {
-    width: 32.3vw;
-    height: 27vw;
+    width: 100%;
+    height: 100%;
     overflow-y: auto;
-    /* background-color: yellow; */
+    /* background-color: gray; */
     position: relative;
 
-    padding-top: 1.8vw;
+    padding-top: 2vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -516,10 +519,9 @@
 }
 
 .contentGradationDiv {
-    width: 32.3vw;
-    height: 27vw;
+    width: 30vw;
+    height: 32vw;
     overflow-y: auto;
-    /* background-color: blue; */
     position: absolute;
 }
 
@@ -528,7 +530,7 @@
     content: "";
     position: absolute;
     top: 0vw;
-    width: 31.85vw;
+    width: 100%;
     height: 2vw;
     background: linear-gradient(to bottom, white, transparent);
     pointer-events: none;
@@ -540,7 +542,7 @@
     content: "";
     position: absolute;
     bottom: 0vw;
-    width: 31.85vw;
+    width: 100%;
     height: 2vw;
     background: linear-gradient(to top, white, transparent);
     pointer-events: none;
@@ -588,10 +590,10 @@
 
 .contentDiv2 h2 {
     font-weight: 600;
-    font-size: 1.25vw;
+    font-size: 1.3vw;
 
-    margin-bottom: 0.69vw;
-    margin-left: 2.69vw;
+    margin-bottom: 2%;
+    margin-left: 5%;
 
 }
 
@@ -603,16 +605,14 @@
 }
 
 .contentDiv2 p {
-    font-size: 1.25vw;
-
-    margin: 0vw 2.69vw 1.39vw 2.69vw;
-
+    margin: 0vw 5% 2vw 5%;
+    /* font-size: 1.2vw; */
     white-space: pre-wrap;
     text-overflow: ellipsis;
 
     background-color: #E8E8E8;
     padding: 0.8vw 0.8vw;
-    border-radius: 1.04vw;
+    border-radius: 1vw;
     line-height: 1.5;
 }
 
@@ -630,14 +630,16 @@
     position: relative;
     /* top: 38.2vw; */
 
-    width: 32.3vw;
-    height: 3.89vw;
+    width: 100%;
+    height: 10%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    /* background-color: red; */
+    /* background-color: #C6C6C6; */
+    background: linear-gradient(to bottom, #C6C6C6 0%, #E0E0E0 25%, #ffffff 50%, #E0E0E0 75%, #C6C6C6 100%);
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -655,16 +657,15 @@
     width: 2.5vw;
     height: 2.5vw;
 
-    border-radius: 50%;
+    border-radius: 0.8vw;
 
-    background-color: #E6E6E6;
     
     display: flex;
     align-items: center;
     justify-content: center;
 
     position: absolute;
-    left : 3vw;
+    left : 3.5vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -678,16 +679,14 @@
     width: 2.5vw;
     height: 2.5vw;
 
-    border-radius: 50%;
-
-    background-color: #E6E6E6;
+    border-radius: 0.8vw;
     
     display: flex;
     align-items: center;
     justify-content: center;
 
     position: absolute;
-    right: 3vw;
+    right: 3.5vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -698,11 +697,13 @@
 }
 
 .pageIconLeft:hover {
-    background-color: #C6C6C6;
+    background-color: #E8E8E8;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 .pageIconRight:hover {
-    background-color: #C6C6C6;
+    background-color: #E8E8E8;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (max-width: 768px) {
