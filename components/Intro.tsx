@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import styles from "./componentsStyles/Intro.module.css";
-import { CiDesktopMouse1 } from "react-icons/ci";
+import { useRouter } from 'next/navigation';
 
 interface Star {
     className: string;
@@ -11,7 +11,7 @@ interface Star {
 }
 
 export default function Intro() {
-
+    
     const [stars, setStars] = useState<Star[]>([]);
 
     const backgroundFunction = () => {
@@ -21,16 +21,14 @@ export default function Intro() {
         let numStars: number;
 
         // 별 개수 조정
-        // if (windowWidth <= 480) {
-        //     numStars = 100;
-        // } else if (windowWidth <= 768) {
-        //     numStars = 100;
-        // } else {
-        //     numStars = 100;
-        // }
+        if (windowWidth <= 480) {
+            numStars = 50;
+        } else if (windowWidth <= 768) {
+            numStars = 80;
+        } else {
+            numStars = 100;
+        }
 
-        numStars = 100;
-    
         function getRandomValue(max: number) {
             return Math.floor(Math.random() * max);
         }
