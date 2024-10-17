@@ -34,6 +34,33 @@ export default function Profile() {
                     </div>
                     {/* 세로 분할 2 */}
                     <div className={styles.rightDiv}>
+
+                        <div className={styles.switchDiv}>
+                            { (!leftSwitch && !rightSwitch) &&
+                                <div className={styles.switchBtn}></div>
+                            } {rightSwitch &&
+                                <div className={`${styles.switchBtn} ${styles.goToTechlore}`}></div>
+                            } {leftSwitch &&
+                                <div className={`${styles.switchBtn} ${styles.goToAboutMe}`}></div>
+                            }
+                            <div className={styles.switchTextDiv}>
+                                <p className={styles.switchP}
+                                onClick={() => {
+                                setPage1(true);
+                                setLeftSwitch(true);
+                                setRightSwitch(false);
+                                }}>About me</p>
+                            </div>
+                            <div className={styles.switchTextDiv}>
+                                <p className={styles.switchP}
+                                onClick={() => {
+                                setPage1(false);
+                                setLeftSwitch(false);
+                                setRightSwitch(true);
+                                }}>Techlore</p>
+                            </div>
+                        </div>
+
                         { page1 && AboutMeArray.map((aboutMe, index) => (
                             <div className={styles.individualDiv} key={index}>
                                 <AboutMe
@@ -58,32 +85,6 @@ export default function Profile() {
                     <div className={`${styles.screw} ${styles.screwLocation2}`}></div>
                     <div className={`${styles.screw} ${styles.screwLocation3}`}></div>
                     <div className={`${styles.screw} ${styles.screwLocation4}`}></div>
-                </div>
-
-                <div className={styles.switchDiv}>
-                    { (!leftSwitch && !rightSwitch) &&
-                        <div className={styles.switchBtn}></div>
-                    } {rightSwitch &&
-                        <div className={`${styles.switchBtn} ${styles.goToTechlore}`}></div>
-                    } {leftSwitch &&
-                        <div className={`${styles.switchBtn} ${styles.goToAboutMe}`}></div>
-                    }
-                    <div className={styles.switchTextDiv}>
-                        <p className={styles.switchP}
-                        onClick={() => {
-                        setPage1(true);
-                        setLeftSwitch(true);
-                        setRightSwitch(false);
-                        }}>About me</p>
-                    </div>
-                    <div className={styles.switchTextDiv}>
-                        <p className={styles.switchP}
-                        onClick={() => {
-                        setPage1(false);
-                        setLeftSwitch(false);
-                        setRightSwitch(true);
-                        }}>Techlore</p>
-                    </div>
                 </div>
             </div>
         </div>
