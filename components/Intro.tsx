@@ -21,13 +21,7 @@ export default function Intro() {
         let numStars: number;
 
         // 별 개수 조정
-        if (windowWidth <= 480) {
-            numStars = 50;
-        } else if (windowWidth <= 768) {
-            numStars = 80;
-        } else {
-            numStars = 100;
-        }
+        numStars = 50;
 
         function getRandomValue(max: number) {
             return Math.floor(Math.random() * max);
