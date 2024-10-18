@@ -5,9 +5,11 @@ import Image from 'next/image';
 import star from '../img/star.png';
 import styles from './componentsStyles/Header.module.css';
 import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
     const router = useRouter();
+    const pathname = usePathname();
 
     // 현재 페이지 상태 및 스크롤 위치 저장
     const [currentPage, setCurrentPage] = useState('');
@@ -47,8 +49,7 @@ export default function Header() {
             const nextPage = {
                 intro: 'profile',
                 profile: 'skill',
-                // skill: 'project',
-                // project는 다음 페이지가 없음
+                skill: 'project',
             }[currentPage];
 
             if (nextPage) {
@@ -63,10 +64,35 @@ export default function Header() {
         setLastScrollY(currentScrollY);
     };
 
+    const scrollToTopIfOutOfView = (): void => {
+        const intro = document.getElementById('intro');
+        const profile = document.getElementById('profile');
+        const skill = document.getElementById('skill');
+        const project = document.getElementById('project');
+        
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const currentScrollY = window.scrollY;
+    
+        if (currentScrollY < lastScrollY) {
+            if (profile && intro && scrollTop < profile.offsetTop && scrollTop >= intro.offsetTop) {
+                window.scrollTo({ top: intro.offsetTop, behavior: 'smooth' });
+            }
+            else if (skill && profile && scrollTop < skill.offsetTop && scrollTop >= profile.offsetTop) {
+                window.scrollTo({ top: profile.offsetTop, behavior: 'smooth' });
+            }
+            else if (project && skill && scrollTop < project.offsetTop && scrollTop >= skill.offsetTop) {
+                window.scrollTo({ top: skill.offsetTop, behavior: 'smooth' });
+            }
+        }
+    
+        setLastScrollY(currentScrollY);
+    };
+
     useEffect(() => {
         const onScroll = () => {
             handleScroll();
             pageChange();
+            scrollToTopIfOutOfView();
         };
 
         window.addEventListener('scroll', onScroll);
