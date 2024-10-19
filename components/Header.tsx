@@ -4,110 +4,49 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import star from '../img/star.png';
 import styles from './componentsStyles/Header.module.css';
-import { useRouter } from 'next/navigation';
-import { usePathname } from 'next/navigation';
+import {AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 
 export default function Header() {
-    const router = useRouter();
-    const pathname = usePathname();
 
-    // 현재 페이지 상태 및 스크롤 위치 저장
-    const [currentPage, setCurrentPage] = useState('');
-    const [lastScrollY, setLastScrollY] = useState(0); 
+    const [pageNum, setPageNum] = useState(1);
 
     // 메뉴를 누르면 스크롤 이동
     const moveToPageFunc = (pageName: string) => {
         const targetPage = document.getElementById(pageName);
         if (targetPage) {
-            // 페이지를 즉시 이동
-            router.push(`/#${pageName}`)
-            setCurrentPage(pageName);
+            const offsetTop = targetPage.offsetTop;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
         }
     };
 
-    // 스크롤 감지해서 현재 페이지를 설정
-    const handleScroll = () => {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const pages = ['intro', 'profile', 'skill', 'project'];
-
-        pages.forEach((page, index) => {
-            const pageElement = document.getElementById(page);
-            if (pageElement && scrollTop >= pageElement.offsetTop) {
-                if (index === pages.length - 1 || scrollTop < (document.getElementById(pages[index + 1])?.offsetTop || Infinity)) {
-                    setCurrentPage(page);
-                }
-            }
-        });
-    };
-
-    // 스크롤 감지해서 페이지 이동
-    const pageChange = () => {
-        const currentScrollY = window.scrollY;
-
-        // 스크롤이 아래로 이동할 때만 실행
-        if (currentScrollY > lastScrollY) {
-            const nextPage = {
-                intro: 'profile',
-                profile: 'skill',
-                skill: 'project',
-            }[currentPage];
-
-            if (nextPage) {
-                const targetPage = document.getElementById(nextPage);
-                if (targetPage) {
-                    window.scrollTo({ top: targetPage.offsetTop, behavior: 'smooth' });
-                }
-            }
+    // 화살표 버튼 누르면 스크롤 이동
+    const moveToScrollFunc = (pageName: string) => {
+        if (pageName == 'up') {
+            const currentScrollPosition = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            window.scrollTo({ top: currentScrollPosition - viewportHeight, behavior: 'smooth' });
+        }else if (pageName == 'down') {
+            const currentScrollPosition = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            window.scrollTo({ top: currentScrollPosition + viewportHeight, behavior: 'smooth' });
         }
-
-        // 이전 스크롤 위치를 업데이트
-        setLastScrollY(currentScrollY);
     };
-
-    const scrollToTopIfOutOfView = (): void => {
-        const intro = document.getElementById('intro');
-        const profile = document.getElementById('profile');
-        const skill = document.getElementById('skill');
-        const project = document.getElementById('project');
-        
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const currentScrollY = window.scrollY;
-    
-        if (currentScrollY < lastScrollY) {
-            if (profile && intro && scrollTop < profile.offsetTop && scrollTop >= intro.offsetTop) {
-                window.scrollTo({ top: intro.offsetTop, behavior: 'smooth' });
-            }
-            else if (skill && profile && scrollTop < skill.offsetTop && scrollTop >= profile.offsetTop) {
-                window.scrollTo({ top: profile.offsetTop, behavior: 'smooth' });
-            }
-            else if (project && skill && scrollTop < project.offsetTop && scrollTop >= skill.offsetTop) {
-                window.scrollTo({ top: skill.offsetTop, behavior: 'smooth' });
-            }
-        }
-    
-        setLastScrollY(currentScrollY);
-    };
-
-    useEffect(() => {
-        const onScroll = () => {
-            handleScroll();
-            pageChange();
-            scrollToTopIfOutOfView();
-        };
-
-        window.addEventListener('scroll', onScroll);
-
-        return () => {
-            window.removeEventListener('scroll', onScroll);
-        };
-    }, [lastScrollY, currentPage]);
 
     const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
+
     const [mobileView, setMobileView] = useState(false);
 
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
-        setMobileView(window.innerWidth <= 768);
+        console.log(window.innerWidth);
+
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
+            console.log(mobileView);
+        } else {
+            setMobileView(false);
+            console.log(mobileView);
+        }
     };
 
     useEffect(() => {
@@ -116,31 +55,58 @@ export default function Header() {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
+
     }, []);
 
     useEffect(() => {
-        setMobileView(window.innerWidth <= 768);
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
+        } else {
+            setMobileView(false);
+        }
+
     }, []);
 
     return (
-        <div className={styles.totalDiv}>
-            <div className={styles.headerDiv}>
-                <div className={styles.logoDiv}>
-                    <h1 onClick={() => router.push('/')}>CHR portfolio</h1>
-                    { !mobileView &&
-                        <Image src={star} alt='hearder logo'/>
-                    }
-                </div>
-                
-                <div className={styles.menuDiv}>
-                    <h2 onClick={() => moveToPageFunc('profile')}>
-                    &lt;profile/&gt;</h2>
-                    <h2 onClick={() => moveToPageFunc('skill')}>
-                    &lt;skill/&gt;</h2>
-                    <h2 onClick={() => moveToPageFunc('project')}>
-                    &lt;project/&gt;</h2>
+        <>
+            <div className={styles.totalDiv}>
+                <div className={styles.headerDiv}>
+                    <div className={styles.logoDiv}>
+                        <h1 onClick={() => {moveToPageFunc('intro')
+                            setPageNum(1)}}>CHR portfolio</h1>
+                        { !mobileView &&
+                            <Image src={star} alt='hearder logo'/>
+                        }
+                    </div>
+                    
+                    <div className={styles.menuDiv}>
+                        <h2
+                            onClick={() => {
+                                moveToPageFunc('profile');
+                                setPageNum(2);
+                            }}
+                            className={`${pageNum === 2 ? styles.menuClick : ''}`}>
+                            &lt;profile/&gt;
+                        </h2>
+                        <h2 onClick={() => {
+                                moveToPageFunc('skill'),
+                                setPageNum(3)}}
+                            className={`${pageNum === 3 ? styles.menuClick : ''}`}>
+                        &lt;skill/&gt;</h2>
+                        <h2 onClick={() => {
+                                moveToPageFunc('project'),
+                                setPageNum(4)}}
+                            className={`${pageNum === 4 ? styles.menuClick : ''}`}>
+                        &lt;project/&gt;</h2>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <div className={styles.rightTotal}>
+                <div onClick={() => moveToScrollFunc('up')}><AiOutlineUp size={45} color="#4D4D4D"/></div>
+                <div onClick={() => moveToScrollFunc('down')}><AiOutlineDown size={45} color="#4D4D4D"/></div>
+            </div>
+        </>
+        
     )
 }

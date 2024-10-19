@@ -63,9 +63,7 @@ export default function Skill() {
                 </div>
 
                 {/* 가로 분할 선 */}
-                <div className={styles.horizontalDividingLine}>
-                    <div></div>
-                </div>
+                <div className={styles.horizontalDividingLine}></div>
 
                 {/* 가로 분할 2 */}
                 <div className={styles.bottomDiv}>
@@ -92,9 +90,7 @@ export default function Skill() {
                     </div>
 
                     {/* 세로 분할 선 1 */}
-                    <div className={styles.verticalDividingLine}>
-                        <div></div>
-                    </div>
+                    <div className={styles.verticalDividingLine}></div>
 
                     {/* 세로 분할 2 */}
                     <div className={styles.bottomDetailDiv}>
@@ -118,9 +114,7 @@ export default function Skill() {
                     </div>
 
                     {/* 세로 분할 선 2 */}
-                    <div className={styles.verticalDividingLine}>
-                        <div></div>
-                    </div>
+                    <div className={styles.verticalDividingLine}></div>
 
                     {/* 세로 분할 3 */}
                     <div className={styles.bottomDetailDiv}>

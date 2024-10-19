@@ -196,13 +196,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                         {pageNum > 1 &&
                             <div
                             className={styles.pageIconLeft}
-                            onClick={() => {setPageNum(pre => pre - 1)}}><AiOutlineLeft size={20} color="#4D4D4D"/></div>
+                            onClick={() => {setPageNum(pre => pre - 1)}}><AiOutlineLeft size={20} color="#C6C6C6"/></div>
                         }
                         <div className={styles.pageText}>{pageNum} / 3</div>
                         {pageNum < 3 &&
                         <div
                             className={styles.pageIconRight}
-                            onClick={() => {setPageNum(pre => pre + 1)}}><AiOutlineRight size={20} color="#4D4D4D"/></div>
+                            onClick={() => {setPageNum(pre => pre + 1)}}><AiOutlineRight size={20} color="#C6C6C6"/></div>
                         }
                     </div>
                 </div>

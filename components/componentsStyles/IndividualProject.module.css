@@ -1,13 +1,14 @@
 .totalDiv {
-    width: 34.72vw;
-    height: 49.33vw;
+    width: 30%;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
 
-    margin: 4vw 4vw;
+    justify-content: center;
+
+    margin: 0% 4vw 0% 4vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -22,8 +23,8 @@
 }
 
 .projectDiv {
-    width: 34.72vw;
-    height: 40.97vw;
+    width: 100%;
+    height: 68%;
 
     background-color: white;
     border-radius: 1vw;
@@ -33,6 +34,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+
+    position: relative;
+    top: 3%;
+
+}
+
+.projectDiv1 {
+    font-size: 1.3vw;
+    font-weight: bold;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 11%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -45,40 +63,18 @@
     }
 }
 
-.projectNameDiv {
-    width: 34.72vw;
-    height: 3.61vw;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 1.3vw;
-
-    font-weight: bold;
-}
-
-@media only screen and (max-width: 768px) {
-    .projectNameDiv {
-        width: 83.33vw;
-        height: 9vw;
-    
-        font-size: 4vw;
-    }
-}
-
 .projectName {
     position: absolute;
 }
 
 .switchDiv {
     width: 9vw;
-    height: 2.8vw;
+    height: 2.5vw;
     border-radius: 2vw;
     background-color: #E8E8E8;
 
     position: relative;
-    margin-left: -25vw;
+    margin-left: -65%;
 
     display: flex;
     justify-content: space-between;
@@ -134,7 +130,7 @@
 
 .switchBtn {
     width: 4.5vw;
-    height: 2.8vw;
+    height: 2.5vw;
     border-radius: 2.78vw;
     background-color: #F0F0F0;
 
@@ -198,8 +194,8 @@
 }
 
 .projectPictureDiv {
-    width: 34.72vw;
-    height: 25.9vw;
+    width: 100%;
+    height: 70%;
     overflow: hidden;
 
     background-color: #E8E8E8;
@@ -213,9 +209,10 @@
 }
 
 .projectPictureDiv img{
-    width: 34.72vw;
-    height: 25.9vw;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+
+    object-fit:contain;
 }
 
 @media only screen and (max-width: 768px) {
@@ -226,8 +223,8 @@
 }
 
 .projectYouTubeIframe {
-    width: 34.72vw;
-    height: 25.9vw;
+    width: 100%;
+    height: 70%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -238,8 +235,12 @@
 }
 
 .textDiv{
-    margin-top: 1.5vw;
     position: relative;
+
+    width: 100%;
+    height: 29%;
+
+    padding-left: 10%;
 
     display: flex;
     flex-direction: column;
@@ -258,8 +259,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    
-    /* margin-top: 1.38vw; */
 }
 
 .namePeriodDiv h1{
@@ -290,8 +289,11 @@
 }
 
 .mainAboutProject {
-    margin: 0.69vw 0vw 1.38vw 0vw;
-    width: 31vw;
+    margin: 0.5vw 0vw 0.5vw 0vw;
+    width: 90%;
+    height: 35%;
+
+    /* background-color: red; */
 
     font-size: 1.3vw;
 }
@@ -331,9 +333,8 @@
 }
 
 .webSiteDiv {
-    width: 34.72vw;
-    height: 6.94vw;
-    margin-top: 1.38vw;
+    width: 100%;
+    height: 12%;
 
     background-color: white;
     border-radius: 1vw;
@@ -342,6 +343,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    position: relative;
+    top: 6%;
 }
 
 @media only screen and (max-width: 768px) {

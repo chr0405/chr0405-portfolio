@@ -2,8 +2,7 @@
     width: 100vw;
     height: 100vh;
 
-    background: linear-gradient(to bottom, #668DAE, #B9CEE3);
-    /* background-color: red; */
+    /* background: linear-gradient(to bottom, #668DAE, #B9CEE3); */
 }
 
 @media only screen and (max-width: 768px) {
@@ -14,20 +13,19 @@
 
 .centerDiv {
     position: relative; 
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     
     background-color: white;
     border-radius: 1.5vw;
 
-    width: 55.56vw;
-    height: 55.56vw;
+    width: 75%;
+    height: 36vw;
 
     overflow: hidden;
 }
@@ -44,8 +42,8 @@
 }
 
 .topDiv {
-    width: 55.56vw;
-    height: 27.78vw;
+    width: 45%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +64,7 @@
 }
 
 .tilteDiv {
-    font-size: 1.39vw;
+    font-size: 1.3vw;
     font-weight: bold;
 }
 
@@ -87,7 +85,7 @@
 }
 
 .restTitle{
-    margin-bottom: 2.78vw;
+    margin-bottom: 1vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -99,7 +97,7 @@
 .frontEndLineDiv {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -116,7 +114,6 @@
     justify-content: center;
 
     flex-wrap: wrap;
-    width: 16vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -150,16 +147,14 @@
 }
 
 .horizontalDividingLine {
-    width: 65%;
-    height: 0.08vw;
+    width: 0.05%;
+    height: 65%;
 
     overflow: hidden;
-}
 
-.horizontalDividingLine div {
-    height: 100%;
-    border-top: 0.8vw solid #C6C6C6;
-    border-bottom: 0.8vw solid #C6C6C6;
+    position: relative;
+    background-color: #C6C6C6;
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -173,9 +168,10 @@
 }
 
 .bottomDiv {
-    width: 55.56vw;
-    height: 27.78vw;
+    width: 45%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -199,11 +195,13 @@
 } */
 
 .verticalDividingLine {
-    width: 0.08vw;
-    height: 65%;
+    width: 50%;
+    height: 0.08vw;
 
     overflow: hidden;
+    position: relative;
 
+    background-color: #C6C6C6;
 }
 
 @media only screen and (max-width: 768px) {
@@ -219,29 +217,9 @@
     }
 }
 
-.verticalDividingLine div {
-    height: 100%;
-    border-left: 0.8vw solid #C6C6C6;
-    border-right: 0.8vw solid #C6C6C6;
-}
-
-@media only screen and (max-width: 768px) {
-    .verticalDividingLine div {
-        position: relative;
-        /* margin-top: 0.6vh; */
-        width: 100%;
-
-        /* 주석 제거하면 가로 분할 선 */
-        /* border-top: 0.6vh solid #C6C6C6; */
-        /* border-bottom: 0.6vh solid #C6C6C6; */
-
-        height: 0.01vh;
-    }
-}
-
 .bottomDetailDiv {
-    width: 33.3%;
-    height: 27.78vw;
+    width: 100%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -272,20 +250,20 @@
 }
 
 .screwLocation {
-    top : 1.8vw;
-    margin-right: 51.5vw;
+    top : 4%;
+    margin-right: 95%;
 }
 .screwLocation2 {
-    top : 1.8vw;
-    margin-left: 51.5vw;
+    top : 4%;
+    margin-left: 95%;
 }
 .screwLocation3 {
-    bottom : 1.8vw;
-    margin-right: 51.5vw;
+    bottom : 4%;
+    margin-right: 95%;
 }
 .screwLocation4 {
-    bottom : 1.8vw;
-    margin-left: 51.5vw;
+    bottom : 4%;
+    margin-left: 95%;
 }
 
 @media only screen and (max-width: 768px) {
