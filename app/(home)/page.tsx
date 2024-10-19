@@ -5,14 +5,19 @@ import Skill from "../../components/Skill";
 
 export default function Home() {
     return (
-        <>
+        <div>
+            <div
+            style={{
+                position: "fixed",
+                width: "100vw",
+                height: "100vh",
+                background: "linear-gradient(to bottom, #3F5D7D 20%, #213447 50%, #3F5D7D 100%)",
+                zIndex: -1,
+            }}></div>
             <div id="intro"><Intro/></div>
-            <div style={{ backgroundColor: '#1B4669', color: 'transparent', height : '5vw'}}>가벽</div>
             <div id="profile"><Profile/></div>
-            <div style={{ backgroundColor: '#668DAE', color: 'transparent', height : '5vw'}}>가벽</div>
             <div id="skill"><Skill/></div>
-            <div style={{ backgroundColor: '#B9CEE3', color: 'transparent', height : '5vw'}}>가벽</div>
             <div id="project"><Project/></div>
-        </>
+        </div>
     )
 }

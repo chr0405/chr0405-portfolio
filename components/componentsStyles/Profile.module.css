@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
 
-    background: linear-gradient(to bottom, #1B4669, #668DAE);
+    /* background: linear-gradient(to bottom, #1B4669, #668DAE); */
 }
 
 @media only screen and (max-width: 768px) {
@@ -13,7 +13,7 @@
 
 .centerDiv {
     position: relative; 
-    top: 56%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -24,7 +24,7 @@
 }
 
 .boxDiv {
-    background-color: white;
+    background-color: #F5F5F5;
     border-radius: 1vw;
 
     width: 70%;

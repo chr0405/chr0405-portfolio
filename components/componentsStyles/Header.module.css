@@ -1,11 +1,10 @@
 .totalDiv {
     position: fixed;
     width: 100%;
-    height: 6vw;
+    height: 10%;
     /* height: 9.5vw; */
 
     z-index: 2;
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -16,7 +15,7 @@
 
 .headerDiv {
     width: 100%;
-    height: 5vw;
+    height: 100%;
 
     background-color: rgba(255, 255, 255, 0.8);
     /* background: linear-gradient(
@@ -106,4 +105,42 @@
     /* background-color: #E8E8E8; */
     box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.2);
     border-radius: 1vw;
+}
+
+.menuClick {
+    font-size: 1.7vw;
+    font-weight: bold;
+    color: #4D4D4D;
+
+    margin: 0vw 1vw;
+    padding: 0.5vw 0.5vw;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+}
+
+.rightTotal {
+    position: fixed;
+    width: 6%;
+    height: 88%;
+    z-index: 2;
+
+    right: 3%;
+    top: 12%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+
+    /* background-color: red; */
+}
+
+.rightTotal div {
+    padding: 0.5vw 0.5vw;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40%;
+}
+
+.rightTotal div:hover {
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.4);
 }

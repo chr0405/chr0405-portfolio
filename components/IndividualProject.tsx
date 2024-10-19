@@ -122,7 +122,7 @@ const IndividualProject : React.FC<IndividualProjectProps> = ({
             <div className={styles.totalDiv}>
                 {/* 프로젝트 */}
                 <div className={styles.projectDiv}>
-                    <div className={styles.projectNameDiv}>
+                    <div className={styles.projectDiv1}>
                         <div  className={styles.projectName}>{name}</div>
                         {webSite.YouTubeEmbed &&
                             <div className={styles.switchDiv}>
