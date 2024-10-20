@@ -3,7 +3,6 @@
 import Image from "next/image";
 import styles from "./componentsStyles/ProjectModal.module.css"
 import { useState, useEffect } from "react";
-import { useRouter } from 'next/navigation';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 interface ProjectModalProps {
@@ -30,7 +29,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     const [imgPage, setImgPage] = useState(true);
     const [leftSwitch, setLeftSwitch] = useState(false);
     const [rightSwitch, setRightSwitch] = useState(false);
-    const router = useRouter();
     
     const [pageNum, setPageNum] = useState(1);
 
@@ -38,7 +36,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         if (show) {
             document.body.style.overflow = 'hidden';
         } else {
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = 'hidden';
         }
     }, [show]);
 
@@ -196,13 +194,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                         {pageNum > 1 &&
                             <div
                             className={styles.pageIconLeft}
-                            onClick={() => {setPageNum(pre => pre - 1)}}><AiOutlineLeft size={20} color="#C6C6C6"/></div>
+                            onClick={() => {setPageNum(pre => pre - 1)}}><AiOutlineLeft size={20} color="#646464"/></div>
                         }
                         <div className={styles.pageText}>{pageNum} / 3</div>
                         {pageNum < 3 &&
                         <div
                             className={styles.pageIconRight}
-                            onClick={() => {setPageNum(pre => pre + 1)}}><AiOutlineRight size={20} color="#C6C6C6"/></div>
+                            onClick={() => {setPageNum(pre => pre + 1)}}><AiOutlineRight size={20} color="#646464"/></div>
                         }
                     </div>
                 </div>
