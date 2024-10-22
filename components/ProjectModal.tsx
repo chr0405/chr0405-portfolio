@@ -32,12 +32,54 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     
     const [pageNum, setPageNum] = useState(1);
 
-    useEffect(() => {
-        if (show) {
-            document.body.style.overflow = 'hidden';
+    // 모바일뷰일 경우 start //
+    const [mobileView, setMobileView] = useState(false);
+
+    const handleResize = () => {
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
         } else {
-            document.body.style.overflow = 'hidden';
+            setMobileView(false);
         }
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
+    }, []);
+
+    useEffect(() => {
+        if(window.innerWidth <= 768) {
+            setMobileView(true);
+        } else {
+            setMobileView(false);
+        }
+    }, []);
+
+    // 모바일뷰일 경우 end //
+
+    useEffect(() => {
+
+        // 모달이 열렸을 때
+        if (show) { 
+            document.body.style.overflow = 'hidden';
+            console.log('hidden 2');
+        }
+        // 모달이 닫혔고, 데스크톱뷰인 경우
+        else if (!show && (window.innerWidth > 768)){ 
+            document.body.style.overflow = 'hidden';
+            console.log('hidden 3');
+        }
+        // 모달이 닫혔고 모바일뷰인 경우
+        else if (!show && (window.innerWidth <= 768)){
+            document.body.style.overflow = 'auto';
+            console.log('시작이거나 모달이 닫혔고 모바일뷰인 경우');
+        }
+        
     }, [show]);
 
     const scrollAutoFunc = () => {

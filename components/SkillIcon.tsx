@@ -14,12 +14,10 @@ interface SkillIconProps {
 
 const SkillIcon: React.FC<SkillIconProps> = ({ img, name, backgroundColor, width, height }) => {
 
-    const [windowWidth, setWindowWidth] = useState<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
-
+    // 모바일뷰일 경우 start //
     const [mobileView, setMobileView] = useState(false);
 
     const handleResize = () => {
-        setWindowWidth(window.innerWidth);
         console.log(window.innerWidth);
 
         if(window.innerWidth <= 768) {
@@ -48,6 +46,7 @@ const SkillIcon: React.FC<SkillIconProps> = ({ img, name, backgroundColor, width
         }
 
     }, []);
+    // 모바일뷰일 경우 end //
 
     return (
         <>

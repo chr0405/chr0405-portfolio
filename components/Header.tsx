@@ -140,12 +140,14 @@ export default function Header() {
             <div className={styles.totalDiv}>
                 <div className={styles.headerDiv}>
                     <div className={styles.logoDiv}>
-                        <h1 onClick={() => {moveToPageFunc('intro');
-                            setShowNow(true);
-                            setPageNum(1)}}>CHR portfolio</h1>
                         { !mobileView &&
-                            <Image src={star} alt='hearder logo'/>
+                            <h1 onClick={() => {moveToPageFunc('intro');
+                                setShowNow(true);
+                                setPageNum(1)}}>CHR portfolio</h1>
                         }
+                        <Image src={star} alt='hearder logo' onClick={() => {moveToPageFunc('intro');
+                                setShowNow(true);
+                                setPageNum(1)}}/>
                     </div>
                     
                     <div className={styles.menuDiv}>
@@ -154,57 +156,59 @@ export default function Header() {
                                 moveToPageFunc('profile');
                                 setPageNum(2);
                             }}
-                            className={`${pageNum === 2 ? styles.menuClick : ''}`}>
+                            className={`${pageNum === 2 && !mobileView ? styles.menuClick : ''}`}>
                             &lt;profile/&gt;
                         </h2>
                         <h2 onClick={() => {
                                 moveToPageFunc('skill'),
                                 setPageNum(3)}}
-                            className={`${pageNum === 3 ? styles.menuClick : ''}`}>
+                            className={`${pageNum === 3 && !mobileView ? styles.menuClick : ''}`}>
                         &lt;skill/&gt;</h2>
                         <h2 onClick={() => {
                                 moveToPageFunc('project'),
                                 setShowNow(true);
                                 setPageNum(4)}}
-                            className={`${pageNum === 4 || pageNum === 5 ? styles.menuClick : ''}`}>
+                            className={`${(pageNum === 4 || pageNum === 5) && !mobileView ? styles.menuClick : ''}`}>
                         &lt;project/&gt;</h2>
                     </div>
                 </div>
             </div>
 
-            <div className={styles.rightTotal}>
-                <div onClick={() => moveToScrollFunc('up')}
-                    onMouseEnter={() => setIsMouseOverUp(true)}
-                    onMouseLeave={() => setIsMouseOverUp(false)}
-                    className={
-                        pageNum === 1
-                          ? `${styles.mouseEnterDirect} ${styles.directDisable}`
-                          : isMouseOverUp
-                          ? `${styles.mouseEnterDirect} ${styles.mouseLeaveDirect}`
-                          : styles.mouseEnterDirect
-                      }>
-                    <AiOutlineUp size={45} color="#4D4D4D"/>
+            { !mobileView && 
+                <div className={styles.rightTotal}>
+                    <div onClick={() => moveToScrollFunc('up')}
+                        onMouseEnter={() => setIsMouseOverUp(true)}
+                        onMouseLeave={() => setIsMouseOverUp(false)}
+                        className={
+                            pageNum === 1
+                            ? `${styles.mouseEnterDirect} ${styles.directDisable}`
+                            : isMouseOverUp
+                            ? `${styles.mouseEnterDirect} ${styles.mouseLeaveDirect}`
+                            : styles.mouseEnterDirect
+                        }>
+                        <AiOutlineUp size={45} color="#4D4D4D"/>
+                    </div>
+                    
+                    {showInfo && (
+                        <div className={styles.infoDiv}>{pageNum === 1 ? "아래 버튼을 눌러 내용을 넘겨보세요."
+                            : "아래 버튼을 눌러 다른 프로젝트도 확인해 보세요."}</div>
+                    )}
+                    
+                    <div onClick={() => moveToScrollFunc('down')}
+                        onMouseEnter={() => setIsMouseOverDown(true)}
+                        onMouseLeave={() => setIsMouseOverDown(false)}
+                        className={
+                            pageNum === 5
+                            ? `${styles.mouseEnterDirect} ${styles.directDisable}`
+                            : isMouseOverDown
+                            ? `${styles.mouseEnterDirect} ${styles.mouseLeaveDirect}`
+                            : styles.mouseEnterDirect
+                        }>
+                        <AiOutlineDown size={45} color="#4D4D4D"/>
+                    </div>
                 </div>
-                
-                {showInfo && (
-                    <div className={styles.infoDiv}>{pageNum === 1 ? "아래 버튼을 눌러 내용을 넘겨보세요."
-                        : "아래 버튼을 눌러 다른 프로젝트도 확인해 보세요."}</div>
-                )}
-                
-                <div onClick={() => moveToScrollFunc('down')}
-                    onMouseEnter={() => setIsMouseOverDown(true)}
-                    onMouseLeave={() => setIsMouseOverDown(false)}
-                    className={
-                        pageNum === 5
-                        ? `${styles.mouseEnterDirect} ${styles.directDisable}`
-                        : isMouseOverDown
-                        ? `${styles.mouseEnterDirect} ${styles.mouseLeaveDirect}`
-                        : styles.mouseEnterDirect
-                    }>
-                    <AiOutlineDown size={45} color="#4D4D4D"/>
-                </div>
+            }
             
-            </div>
         </>
         
     )
