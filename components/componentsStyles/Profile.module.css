@@ -39,17 +39,19 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .centerDiv {
+        position: relative; 
+        top: 54%;
+        height: 80%;
+    }
+
     .boxDiv {
         width: 80%;
-        height: 160vw;
-
+        height: 150vw;
         border-radius: 2vw;
 
         flex-direction: column;
-        
-        margin-bottom: 0vw;
-
-        position: relative;
+        /* background-color: rebeccapurple; */
     }
 }
 
@@ -64,7 +66,7 @@
 @media only screen and (max-width: 768px) {
     .leftDiv {
         width: 100%;
-        height: 50%;
+        height: 40%;
     }
 }
 
@@ -76,14 +78,12 @@
     height: calc(21vw * 4 / 3);
 
     overflow: hidden;
-
-    background-color: red;
 }
 
 @media only screen and (max-width: 768px) {
     .pictureDiv {
-        width: 45vw;
-        height: 60vw;
+        width: 35vw;
+        height: calc(35vw * 4 / 3);
     }
 }
 
@@ -102,7 +102,7 @@
 
 @media only screen and (max-width: 768px) {
     .centerLine {
-        width: 100%;
+        width: 65%;
         height: 0.2vw;
 
         display: flex;
@@ -122,7 +122,7 @@
     .centerLine div {
         position: relative;
         width: 100%;
-        border-top: 1vw solid #C6C6C6;
+        border-top: 0.8vw solid #C6C6C6;
     }
 }
 
@@ -138,7 +138,9 @@
 @media only screen and (max-width: 768px) {
     .rightDiv {
         width: 100%;
-        height: 50%;
+        height: 60%;
+
+        /* background-color: red; */
     }
 }
 
@@ -155,12 +157,11 @@
 
 @media only screen and (max-width: 768px) {
     .individualDiv {
-        width: 60vw;
-        height: 6.5vw;
+        width: 100%;
+        margin: 5vw 0vw 0vw 25vw;
 
-        top: 2%;
-
-        margin: 2vw 0vw;
+        position: relative;
+        top: -2vw;
     }
 }
 
@@ -177,7 +178,11 @@
 
 @media only screen and (max-width: 768px) {
     .individualDiv2 {
-        width: 62vw;
+        width: 100%;
+        margin: 5vw 0vw 0vw 25vw;
+
+        position: relative;
+        top: -3vw;
     }
 }
 
@@ -192,8 +197,10 @@
 
 @media only screen and (max-width: 768px) {
     .screw {
-        width: 2.08vw;
-        height: 2.08vw;
+        width: 2vw;
+        height: 2vw;
+
+        position: relative;
     }
 }
 
@@ -216,20 +223,20 @@
 
 @media only screen and (max-width: 768px) {
     .screwLocation {
-        top : 2.8vw;
-        margin-right: 75vw;
+        top : -93%;
+        margin-right: 90%;
     }
     .screwLocation2 {
-        top : 2.8vw;
-        margin-left: 75vw;
+        top : -94%;
+        margin-left: 90%;
     }
     .screwLocation3 {
-        bottom : 2.8vw;
-        margin-right: 75vw;
+        bottom : 1%;
+        margin-right: 90%;
     }
     .screwLocation4 {
-        bottom : 2.8vw;
-        margin-left: 75vw;
+        bottom : 2%;
+        margin-left: 90%;
     }
 }
 
@@ -252,12 +259,10 @@
 
 @media only screen and (max-width: 768px) {
     .switchDiv {
-        width: 35vw;
-        height: 10.5vw;
+        width: 30vw;
+        height: 8vw;
 
-        top: 10.4vw;
-
-        border-radius: 10.5vw;
+        border-radius: 10vw;
     }
 }
 
@@ -316,11 +321,17 @@
     animation-direction: normal;
     animation-duration: 0.3s;
     animation-name: switchChange;
+
 }
 
 @media only screen and (max-width: 768px) {
+    .goToAboutMe {
+        animation-name: switchChangeMobile;
+    }
+
     .goToTechlore {
         left: 50%;
+        animation-name: switchChangeMobile;
     }
 }
 
@@ -343,5 +354,27 @@
 
     100% {
         left: 5vw;
+    }
+}
+
+@keyframes switchChangeMobile {
+    0% {
+        left: 0%;
+    }
+
+    25% {
+        left: 12%;
+    }
+
+    50% {
+        left: 25%;
+    }
+
+    75% {
+        left: 38%;
+    }
+
+    100% {
+        left: 50%;
     }
 }
