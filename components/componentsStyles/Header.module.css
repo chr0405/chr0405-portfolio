@@ -8,7 +8,7 @@
 
 @media only screen and (max-width: 768px) {
     .totalDiv {
-        height: 6%;
+        height: 8%;
     }
 }
 
@@ -79,7 +79,7 @@
         justify-content: space-between;
         width: 55%;
 
-        margin-right: 5%;
+        margin-right: 8%;
     }
 
     .menuDiv h2 {
@@ -110,7 +110,7 @@
 .rightTotal {
     position: fixed;
     /* width: 6%; */
-    width: 27%;
+    /* width: 27%; */
     height: 80%;
     z-index: 2;
 
@@ -139,19 +139,22 @@
 }
 
 .infoDiv {
-    background-color: rgba(255, 255, 255, 1);
-
-    border-radius: 1vw;
-
-    font-size: 1.3vw;
-
-    display: flex;
-    align-items: center;
-
-    padding: 4% 4%;
-
     position: absolute;
     top: 56%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
+    width: 28vw;
+}
+
+.infoP {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 1vw;
+    font-size: 1.3vw;
+    height: 100%;
+
+    padding: 4% 4%;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);
 }

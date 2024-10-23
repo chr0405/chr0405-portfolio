@@ -190,8 +190,10 @@ export default function Header() {
                     </div>
                     
                     {showInfo && (
-                        <div className={styles.infoDiv}>{pageNum === 1 ? "아래 버튼을 눌러 내용을 넘겨보세요."
-                            : "아래 버튼을 눌러 다른 프로젝트도 확인해 보세요."}</div>
+                        <div className={styles.infoDiv}>
+                            <p className={styles.infoP}>{pageNum === 1 ? "아래 버튼을 눌러 내용을 넘겨보세요."
+                                : "아래 버튼을 눌러 다른 프로젝트도 확인해 보세요."}</p>
+                        </div>
                     )}
                     
                     <div onClick={() => moveToScrollFunc('down')}
