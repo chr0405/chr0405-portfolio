@@ -123,27 +123,29 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                                 }
                             }}></div>
                         </div>
-                        <div>
-                            {/* 사진 설명 */}
-                            <div className={styles.aboutCaptureDiv}>
-                                <p>{aboutCapture[captureNum]}</p>
-                            </div>
-                            {/* 사진 선택 */}
-                            <div className={styles.projectPictureSelectTotalDiv}
-                                style={{ display: capture.length > 1 ? 'flex' : 'none' }}>
-                                {[...Array(capture.length)].map((_, index) => (
-                                        <div  className={styles.projectPictureSelectDiv}
-                                        key={index}
-                                        onClick={() => {
-                                            setCaptureNum(index);
-                                        }}>
-                                        <div className={styles.projectPictureSelectDiv1}
-                                            style={{ backgroundColor: index === captureNum ? '#4D4D4D' : '#C6C6C6' }}>
+                        {!mobileView && (
+                            <div>
+                                {/* 사진 설명 */}
+                                <div className={styles.aboutCaptureDiv}>
+                                    <p>{aboutCapture[captureNum]}</p>
+                                </div>
+                                {/* 사진 선택 */}
+                                <div className={styles.projectPictureSelectTotalDiv}
+                                    style={{ display: capture.length > 1 ? 'flex' : 'none' }}>
+                                    {[...Array(capture.length)].map((_, index) => (
+                                        <div className={styles.projectPictureSelectDiv}
+                                            key={index}
+                                            onClick={() => {
+                                                setCaptureNum(index);
+                                            }}>
+                                            <div className={styles.projectPictureSelectDiv1}
+                                                style={{ backgroundColor: index === captureNum ? '#4D4D4D' : '#C6C6C6' }}>
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        )}
                     </div>
                 }
 

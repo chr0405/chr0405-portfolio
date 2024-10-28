@@ -24,7 +24,6 @@
 
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 
     border-radius: 1vw;
     overflow: hidden;
@@ -32,14 +31,13 @@
 
 @media only screen and (max-width: 768px) {
     .modalDiv {
-        width: 83.33vw;
-        height: 162vw;
+        width: 80%;
+        height: 150vw;
 
         border-radius: 2vw;
     
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
     }
 }
 
@@ -59,12 +57,15 @@
 
 @media only screen and (max-width: 768px) {
     .projectPictureDiv {
-        width: 83.33vw;
-        height: 62.16vw;
+        width: 100%;
+        height: 45%;
 
         position: relative;
-        
-        top: 9vw;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -75,13 +76,16 @@
 
     margin-bottom: 1vw;
 
-    border-radius: 1vw;
+    border-radius: 0.5vw;
 }
 
 @media only screen and (max-width: 768px) {
     .projectPictureDiv img {
-        width: 83.33vw;
-        height: 62.16vw;
+        width: 100%;
+        height: 80%;
+
+        border-radius: 0vw;
+        margin-bottom: 0vw;
     }
 }
 
@@ -101,32 +105,6 @@
     color: #E8E8E8;
 }
 
-@media only screen and (max-width: 768px) {
-    .aboutCaptureDiv {
-        position: absolute;
-        top: 2vw;
-    
-        width: 80vw;
-        height: auto;
-    
-        display: flex;
-        align-items: center;
-        justify-content:center;
-
-        text-align: center;
-    }
-    
-    .aboutCaptureDiv p {
-        font-size: 3vw;
-
-        color: black;
-        background-color: #FFFFFF;
-        opacity: 0.7;
-        padding: 0vw 0.8vw;
-        border-radius: 1vw;
-    }
-}
-
 .projectYouTubeIframe {
     width: 117vw;
     height: 40vw;
@@ -134,11 +112,10 @@
 
 @media only screen and (max-width: 768px) {
     .projectYouTubeIframe {
-        width: 83.33vw;
-        height: 62.16vw;
+        width: 100%;
+        height: 45%;
 
         position: relative;
-        top: 9vw;
     }
 }
 
@@ -156,10 +133,10 @@
 
 @media only screen and (max-width: 768px) {
     .sectionDiv {
-        width: 83.33vw;
-        height: 62.16vw;
+        width: 100%;
+        height: 100%;
 
-        position: relative;
+        position: absolute;
     }
 }
 
@@ -244,11 +221,10 @@
 
 @media only screen and (max-width: 768px) {
     .rightDiv {
-        width: 83.33vw;
-        height: 90.8vw;
+        width: 100%;
+        height: 45%;
 
         position: relative;
-        top: 9vw;
     }
 }
 
@@ -268,10 +244,10 @@
 @media only screen and (max-width: 768px) {
     .headerDiv {
         position: absolute;
-        top: -71.5vw;
+        top: -111%;
 
-        width: 83.33vw;
-        height: 9.5vw;
+        width: 100%;
+        height: 11%;
     }
 }
 
@@ -284,7 +260,7 @@
 
 @media only screen and (max-width: 768px) {
     .headerDiv h1 {
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 }
 
@@ -307,12 +283,11 @@
 @media only screen and (max-width: 768px) {
     .switchDiv {
         width: 24vw;
-        height: 6.72vw;
+        height: 80%;
         
         border-radius: 4vw;
 
-        position: relative;
-        left: -28vw;
+        left: 3vw;
     }
 }
 
@@ -365,7 +340,7 @@
 @media only screen and (max-width: 768px) {
     .switchBtn {
         width: 12vw;
-        height: 6.72vw;
+        height: 100%;
         
         border-radius: 4vw;
     }
@@ -438,7 +413,7 @@
         height: 5.76vw;
 
         position: absolute;
-        right: 2vw;
+        right: 3vw;
     }
 }
 
@@ -472,7 +447,6 @@
 }
 
 .contentDiv {
-    /* width: 31.18vw; */
     width: 100%;
     height: 80%;
 
@@ -488,8 +462,8 @@
 
 @media only screen and (max-width: 768px) {
     .contentDiv {
-        width: 83.33vw;
-        height: 90.6vw;
+        width: 100%;
+        height: 100%;
 
         position: relative;
         top: 0vw;
@@ -508,13 +482,13 @@
 
 @media only screen and (max-width: 768px) {
     .contentDiv2 {
-        width: 83.33vw;
-        height: 90.6vw;
+        width: 100%;
+        height: 100%;
 
         position: relative;
         top: 0vw;
 
-        padding: 5vw 0vw;
+        padding: 4vw 0vw 2vw 0vw;
     }
 }
 
@@ -551,19 +525,19 @@
 
 @media only screen and (max-width: 768px) {
     .contentGradationDiv {
-        width: 83.33vw;
-        height: 82.2vw;
+        width: 100%;
+        height: 100%;
     }
 
     /* 상단 그라데이션 */
     .contentGradationDiv:before {
-        width: 81.5vw;
+        width: 100%;
         height: 5vw;
     }
 
     /* 하단 그라데이션 */
     .contentGradationDiv:after {
-        width: 81.5vw;
+        width: 100%;
         height: 5vw;
     }
 }
@@ -575,7 +549,7 @@
 
 @media only screen and (max-width: 768px) {
     .contentDiv2::-webkit-scrollbar {
-        width: 1.5vw;
+        width: 1.2vw;
     }
 }
 
@@ -612,14 +586,14 @@
 
     background-color: #E8E8E8;
     padding: 0.8vw 0.8vw;
-    border-radius: 1vw;
+    border-radius: 0.5vw;
     line-height: 1.5;
 }
 
 @media only screen and (max-width: 768px) {
     .contentDiv2 p {
         font-size: 3.5vw;
-        border-radius: 2vw;
+        border-radius: 1vw;
 
         margin-bottom: 4vw;
         padding: 2vw 2vw;
@@ -628,7 +602,6 @@
 
 .pageDiv {
     position: relative;
-    /* top: 38.2vw; */
 
     width: 100%;
     height: 10%;
@@ -637,17 +610,17 @@
     align-items: center;
     justify-content: center;
 
-    /* background-color: #C6C6C6; */
     background: linear-gradient(to bottom, #C6C6C6 0%, #E0E0E0 25%, #ffffff 50%, #E0E0E0 75%, #C6C6C6 100%);
 
 }
 
 @media only screen and (max-width: 768px) {
     .pageDiv {
-        width: 83.33vw;
-        height: 9.5vw;
+        width: 100%;
+        height: 11%;
 
-        top: 0vw;
+        bottom: -11.2%;
+        position: absolute;
     }
 }
 
