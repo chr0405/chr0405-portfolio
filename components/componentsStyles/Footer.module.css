@@ -61,7 +61,7 @@
 
 .centerDetailDiv h2 {
     font-size: 1.3vw;
-    color: white;
+    color: #F5F5F5;
 }
 
 @media only screen and (max-width: 768px) {
@@ -72,7 +72,7 @@
         margin-left: 1vw;
         
         /* color: #4D4D4D; */
-        color: white;
+        color: #F5F5F5;
         text-decoration: none;
     }
 }
@@ -95,7 +95,7 @@
 .rightDiv h3 {
     font-size: 1.3vw;
     /* color: #9B9B9B; */
-    color: white;
+    color: #F5F5F5;
 }
 
 @media only screen and (max-width: 768px) {
