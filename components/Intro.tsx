@@ -21,7 +21,7 @@ export default function Intro() {
         // 별 개수 조정
         let numStars: number;
         if (windowWidth <= 480) {
-            numStars = 100;
+            numStars = 80;
         } else {
             numStars = 50;
         }
