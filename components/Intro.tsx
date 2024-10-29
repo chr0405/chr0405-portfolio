@@ -18,10 +18,13 @@ export default function Intro() {
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
         
-        let numStars: number;
-
         // 별 개수 조정
-        numStars = 50;
+        let numStars: number;
+        if (windowWidth <= 480) {
+            numStars = 100;
+        } else {
+            numStars = 50;
+        }
 
         function getRandomValue(max: number) {
             return Math.floor(Math.random() * max);
