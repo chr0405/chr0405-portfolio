@@ -33,21 +33,17 @@ import comment1 from "../img/Tnovel/comment1.jpg";
 
 import portfolioMain from "../img/CHRportfolio/portfolioMain.png";
 import intro from "../img/CHRportfolio/intro.png";
-import introAnimation from "../img/CHRportfolio/introAnimation.png";
 import portfolioProfile from "../img/CHRportfolio/profile.png";
 import skill from "../img/CHRportfolio/skill.png";
-import project from "../img/CHRportfolio/project.jpg";
-import projectYouTubeEmbed from "../img/CHRportfolio/projectYouTubeEmbed.jpg";
-import projectModal1 from "../img/CHRportfolio/projectModal1.jpg";
-import projectModal2 from "../img/CHRportfolio/projectModal2.jpg";
-import projectModal3 from "../img/CHRportfolio/projectModal3.jpg";
-import projectModalYouTubeEmbed from "../img/CHRportfolio/projectModalYouTubeEmbed.jpg";
+import project from "../img/CHRportfolio/project.png";
+import projectYouTubeEmbed from "../img/CHRportfolio/projectYouTubeEmbed.png";
+import projectModal from "../img/CHRportfolio/projectModal.png";
 
-import dailyControlMain from "../img/DailyControl/dailyControlMain.png";
-import start from "../img/DailyControl/start.jpg";
-import weatherNow from "../img/DailyControl/weatherNow.jpg";
-import dayCounter from "../img/DailyControl/dayCounter.jpg";
-import dayCounter2 from "../img/DailyControl/dayCounter2.jpg";
+// import dailyControlMain from "../img/DailyControl/dailyControlMain.png";
+// import start from "../img/DailyControl/start.jpg";
+// import weatherNow from "../img/DailyControl/weatherNow.jpg";
+// import dayCounter from "../img/DailyControl/dayCounter.jpg";
+// import dayCounter2 from "../img/DailyControl/dayCounter2.jpg";
 
 export const ProjectArray = [
     {
@@ -264,27 +260,19 @@ Gridge에서 제공한 화면 설계서, 개발 가이드라인, GUI, 서버 API
         "mainCapture" : portfolioMain,
         "capture" : [
             intro,
-            introAnimation,
             portfolioProfile,
             skill,
             project,
             projectYouTubeEmbed,
-            projectModal1,
-            projectModal2,
-            projectModal3,
-            projectModalYouTubeEmbed,
+            projectModal,
         ],
         "aboutCapture" : [
             "자기소개",
-            "자기소개 애니메이션",
-            "내 프로필",
+            "프로필",
             "기술 스택",
-            "참여한 프로젝트 내역",
-            "참여한 프로젝트 내역 (유튜브 임베디드)",
-            "프로젝트 세부 내용 모달 1",
-            "프로젝트 세부 내용 모달 2",
-            "프로젝트 세부 내용 모달 3",
-            "프로젝트 세부 내용 모달 (유튜브 임베디드)",
+            "프로젝트",
+            "프로젝트 (유튜브 임베디드)",
+            "프로젝트 모달",
         ],
         "name" : "CHR portfolio",
         "period" : "2024.04 ~ 2024.06",

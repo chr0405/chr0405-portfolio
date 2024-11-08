@@ -71,8 +71,8 @@
 
 .projectPictureDiv img {
     width: 46vw;
-    height: calc(46vw * 9 / 16);
-    object-fit: fill;
+    height: calc(46vw * 303 / 640);
+    object-fit:cover;
 
     margin-bottom: 1vw;
 
