@@ -4,12 +4,11 @@
 디자인 기획부터 개발 구현까지 전 과정을 단독으로 수행한 1인 프로젝트입니다.\
 자기소개, 기술 스택 그리고 참여한 프로젝트 내역이 포함되어 있습니다.\
 반응형 웹을 고려하여 데스크톱은 물론 휴대폰에서도 최적화된 UX를 제공합니다.\
-미니멀하고 절제된 UI 디자인으로 직관적인 정보 전달과 사용성에 초점을 맞춘 웹 사이트입니다.
 
  ## 💫Demo
  
 Web site : [CHR portfolio](https://chr0405-portfolio.vercel.app/)\
-youtube : [시연 연상](https://youtu.be/fh2z5ffxiVk)
+youtube : [시연 연상](https://www.youtube.com/watch?v=XhR_4vWfBvo)
 
 ## 🔔개발 기간
 
@@ -23,10 +22,9 @@ youtube : [시연 연상](https://youtu.be/fh2z5ffxiVk)
 </p>
 
 ## 🔑주요 기능
-🔸 데스크톱과 휴대폰에 최적화된 UX를 제공을 위해 반응형 디자인 제작과 적용\
-🔸 가시적인 정보 전달을 목적으로 ‘useState’와 애니메이션 효과를 적용한 스위치를 통한 정보 전환 기능 구현\
-🔸 ‘window.scrollBy’를 응용해 헤더  내에 있는 페이지명에서 클릭한 페이지로 부드러운 스크롤 이동 구현. 브라우저 API와 이벤트 리스너를 이용해 현재 페이지를 추적, 이에 따른 반응형 디자인 구현\
-🔸 React의 ‘useState’, ‘useEffect', Next.js의 ‘usePathname', 그리고 브라우저의 ‘window.history.pushState'를 사용하여 모달 창 구현과 페이지 상태 관리
+🔸 Figma를 이용하여 데스크톱과 휴대폰에 최적화된 반응형 디자인 제작과 적용\
+🔸 브라우저 API와 이벤트 리스너를 이용해 버튼 클릭 시 부드러운 스크롤 이동과 섹션 별 URL 변경 구현\
+🔸 React Hook과 브라우저 API를 이용하여 모달 창 구현
 
 ## 📙파일 구조
 ```
